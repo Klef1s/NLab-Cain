@@ -23,6 +23,7 @@ namespace NLab_Cain.Pages
         public RegisterPage()
         {
             InitializeComponent();
+            //
         }
     }
 }
