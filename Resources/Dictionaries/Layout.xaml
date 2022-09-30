@@ -44,4 +44,12 @@
         <Setter Property="VerticalAlignment" Value="Top"/>
     </Style>
 
+    <Style x:Key="Frame.Authorization" TargetType="Frame">
+        <Setter Property="Width" Value="400"/>
+        <Setter Property="Height" Value="672"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="NavigationUIVisibility" Value="Hidden"/>
+    </Style>
+
 </ResourceDictionary>

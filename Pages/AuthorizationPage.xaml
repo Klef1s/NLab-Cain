@@ -1,0 +1,72 @@
+﻿<Page x:Class="NLab_Cain.Pages.AuthorizationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NLab_Cain.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:fa5="http://schemas.fontawesome.com/icons/"
+      xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+      mc:Ignorable="d" 
+      d:DesignHeight="672" d:DesignWidth="400">
+
+    <Border Style="{StaticResource Border.Background}">
+        <Grid>
+            <StackPanel Style="{StaticResource StackPanel.Base}" 
+                            Orientation="Vertical"
+                            Margin="0,40,0,0">
+                <TextBlock Text="Авторизация" 
+                               Style="{StaticResource TextBlock.Heading}"/>
+                <TextBlock Text="Авторизуйтесь для продолжения" 
+                               Style="{StaticResource TextBlock.Subtitle}"/>
+                <Border Style="{StaticResource Border.Underline}"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource StackPanel.Base}" 
+                            Orientation="Vertical" 
+                            Margin="0,224,0,0">
+                <TextBox Style="{StaticResource TextBox.Base}"
+                         materialDesign:HintAssist.Hint="Логин / Email" Cursor="Arrow"/>
+                <PasswordBox Style="{StaticResource PasswordBox.Base}"
+                             materialDesign:HintAssist.Hint="Пароль" 
+                             Margin="0,16,0,0"/>
+                <DockPanel Margin="0,16,3,0">
+                    <CheckBox Style="{StaticResource CheckBox.Base}">
+                        <TextBlock Style="{StaticResource TextBlock.MiniSubtitle}"
+                                       Text="Запомнить меня"
+                                       VerticalAlignment="Bottom"/>
+                    </CheckBox>
+                    <Button Style="{StaticResource Button.Link}"
+                                HorizontalAlignment="Right">
+                        <TextBlock Style="{StaticResource TextBlock.MiniSubtitle}"
+                                       Text="Забыл пароль"
+                                       TextDecorations="Underline"
+                                       Foreground="White"/>
+                    </Button>
+                </DockPanel>
+            </StackPanel>
+            <StackPanel Style="{StaticResource StackPanel.Base}" 
+                            Orientation="Vertical"
+                            Margin="0,400,0,0">
+                <Button Content="Войти"
+                            Style="{StaticResource Button.LogIn}"/>
+                <TextBlock Style="{StaticResource TextBlock.Subtitle}"
+                               Text="Войти с помощю"
+                               HorizontalAlignment="Center"
+                               Margin="0,12,0,0"/>
+                <StackPanel Style="{StaticResource StackPanel.Base}"
+                                Orientation="Horizontal"
+                                Margin="0,12,0,0">
+                    <Button Style="{StaticResource Button.AlternativeSignIn.Google}"
+                                Margin="0,0,10,0"/>
+                    <Button Style="{StaticResource Button.AlternativeSignIn.Vk}"/>
+                </StackPanel>
+            </StackPanel>
+            <Button Style="{StaticResource Button.Link}" 
+                        Margin="0,600,0,0"
+                        VerticalAlignment="Top" HorizontalAlignment="Center">
+                <TextBlock Text="У меня нет аккаунта"
+                           TextDecorations="Underline" />
+            </Button>
+        </Grid>
+    </Border>
+</Page>

@@ -1,0 +1,26 @@
+﻿<Window x:Class="NLab_Cain.Windows.AuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NLab_Cain.Windows"
+        
+        mc:Ignorable="d"
+        AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="Transparent"
+        Height="768" Width="1280">
+    <Grid>
+        <Rectangle Style="{StaticResource Rectangle.Background}"/>
+
+        <Grid Grid.Column="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="123*"/>
+            </Grid.RowDefinitions>
+            <Button Style="{StaticResource Button.CloseApp}" 
+                    Margin="1238,0,0,0"/>
+            <Button Style="{StaticResource Button.HideApp}" 
+                    Margin="1198,0,0,0" />
+        </Grid>
+        <Frame Style="{StaticResource Frame.Authorization}"/>
+    </Grid>
+</Window>
