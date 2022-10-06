@@ -4,7 +4,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NLab_Cain.Windows"
-        
         mc:Ignorable="d"
         AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="Transparent"
         Height="768" Width="1280">
@@ -21,6 +20,8 @@
             <Button Style="{StaticResource Button.HideApp}" 
                     Margin="1198,0,0,0" />
         </Grid>
-        <Frame Style="{StaticResource Frame.Authorization}" Source="\Pages\AuthorizationPage.xaml"/>
+        <Frame Style="{StaticResource Frame.Authorization}" 
+               Name="AuthFrame"
+               Source="\Pages\AuthorizationPage.xaml"/>
     </Grid>
 </Window>
