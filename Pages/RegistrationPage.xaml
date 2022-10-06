@@ -47,9 +47,13 @@
                         Name="regButton"
                         Style="{StaticResource Button.LogIn}" Click="regButton_Click"/>
             </StackPanel>
-            <Button Style="{StaticResource Button.Link}" 
-                        Margin="0,589,0,0"
-                        VerticalAlignment="Top" HorizontalAlignment="Center">
+            <Button Style="{StaticResource Button.Link}"
+                    Name="BackToAuthorizationButton"
+                    Height="34" 
+                    Width="220" 
+                    Margin="0,589,0,0"
+                    VerticalAlignment="Top" HorizontalAlignment="Center" 
+                    Click="BackToAuthorizationButton_Click">
                 <TextBlock Text="У меня уже есть аккаунт"
                            TextDecorations="Underline" />
             </Button>

@@ -26,6 +26,7 @@ namespace NLab_Cain.Pages
         public AuthorizationPage()
         {
             InitializeComponent();
+            
         }
 
         async private void logInButton_Click(object sender, RoutedEventArgs e)
@@ -51,6 +52,11 @@ namespace NLab_Cain.Pages
             {
                //ошибка, такого аккаунта не существует
             }
+        }
+
+        private void toRegistrationPage_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new RegistrationPage());
         }
     }
 }

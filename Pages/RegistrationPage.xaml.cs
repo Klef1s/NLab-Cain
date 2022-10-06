@@ -64,6 +64,10 @@ namespace NLab_Cain.Pages
             else MessageBox.Show("error.");
         }
 
+        private void BackToAuthorizationButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AuthorizationPage());
+        }
     }
 
     public static class ValidatorExtensions

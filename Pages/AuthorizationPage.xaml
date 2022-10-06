@@ -66,9 +66,13 @@
                     <Button Style="{StaticResource Button.AlternativeSignIn.Vk}"/>
                 </StackPanel>
             </StackPanel>
-            <Button Style="{StaticResource Button.Link}" 
-                        Margin="0,600,0,0"
-                        VerticalAlignment="Top" HorizontalAlignment="Center">
+            <Button Style="{StaticResource Button.Link}"
+                    Name="toRegistrationPage"
+                    Width="186"
+                    Height="34"
+                    Margin="0,600,0,0"
+                    VerticalAlignment="Top" HorizontalAlignment="Center" 
+                    Click="toRegistrationPage_Click">
                 <TextBlock Text="У меня нет аккаунта"
                            TextDecorations="Underline" />
             </Button>
