@@ -22,6 +22,6 @@
         </Grid>
         <Frame Style="{StaticResource Frame.Authorization}" 
                Name="AuthFrame"
-               Source="\Pages\AuthorizationPage.xaml"/>
+               Source="\Pages\RegistrationPage.xaml"/>
     </Grid>
 </Window>

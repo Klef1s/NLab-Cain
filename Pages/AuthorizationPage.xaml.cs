@@ -23,8 +23,6 @@ namespace NLab_Cain.Pages
     /// </summary>
     public partial class AuthorizationPage : Page
     {
-        ApplicationContext db = new ApplicationContext();
-
         public AuthorizationPage()
         {
             InitializeComponent();

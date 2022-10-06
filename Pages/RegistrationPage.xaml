@@ -24,14 +24,19 @@
             <StackPanel Style="{StaticResource StackPanel.Base}" 
                             Orientation="Vertical" Height="252" VerticalAlignment="Center">
                 <TextBox Style="{StaticResource TextBox.Base}"
+                         Name="inputLogin"
                          materialDesign:HintAssist.Hint="Логин" Cursor="Arrow"/>
                 <TextBox Style="{StaticResource TextBox.Base}"
-                         materialDesign:HintAssist.Hint="Email" Cursor="Arrow" 
+                         Name="inputEmail"
+                         materialDesign:HintAssist.Hint="Email" 
+                         Cursor="Arrow" 
                          Margin="0,25,0,0"/>
                 <PasswordBox Style="{StaticResource PasswordBox.Base}"
+                             Name="inputPassword"
                              materialDesign:HintAssist.Hint="Пароль" 
                              Margin="0,25,0,0"/>
                 <PasswordBox Style="{StaticResource PasswordBox.Base}"
+                             Name="inputRepeatPassword"
                              materialDesign:HintAssist.Hint="Повторите пароль" 
                              Margin="0,25,0,0"/>
             </StackPanel>
@@ -39,7 +44,8 @@
                             Orientation="Vertical"
                             Margin="0,512,0,0">
                 <Button Content="Зарегистрироваться"
-                            Style="{StaticResource Button.LogIn}"/>
+                        Name="regButton"
+                        Style="{StaticResource Button.LogIn}" Click="regButton_Click"/>
             </StackPanel>
             <Button Style="{StaticResource Button.Link}" 
                         Margin="0,589,0,0"
