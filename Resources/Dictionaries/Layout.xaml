@@ -72,4 +72,14 @@
         <Setter Property="IsIndeterminate" Value="True"/>
     </Style>
 
+    <Style x:Key="Rectangle.MainBackground" TargetType="Rectangle">
+        <Setter Property="Fill" Value="#FF0C0C0C"/>
+        <Setter Property="RadiusX" Value="10"/>
+        <Setter Property="RadiusY" Value="10"/>
+        <Setter Property="Width" Value="1280"/>
+        <Setter Property="Height" Value="768"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
 </ResourceDictionary>

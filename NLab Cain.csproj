@@ -12,6 +12,9 @@
     <None Remove="Resources\Images\Icons\Cross.svg" />
     <None Remove="Resources\Images\Icons\Google.svg" />
     <None Remove="Resources\Images\Icons\HideApp.svg" />
+    <None Remove="Resources\Images\Icons\Home.svg" />
+    <None Remove="Resources\Images\Icons\Library.svg" />
+    <None Remove="Resources\Images\Icons\Settings.svg" />
     <None Remove="Resources\Images\Icons\Vk.svg" />
   </ItemGroup>
 
@@ -28,6 +31,9 @@
     <Resource Include="Resources\Images\Icons\Cross.svg" />
     <Resource Include="Resources\Images\Icons\Google.svg" />
     <Resource Include="Resources\Images\Icons\HideApp.svg" />
+    <Resource Include="Resources\Images\Icons\Home.svg" />
+    <Resource Include="Resources\Images\Icons\Library.svg" />
+    <Resource Include="Resources\Images\Icons\Settings.svg" />
     <Resource Include="Resources\Images\Icons\Vk.svg" />
   </ItemGroup>
 

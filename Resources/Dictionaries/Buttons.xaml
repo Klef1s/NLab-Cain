@@ -143,4 +143,44 @@
         </Setter>
     </Style>
 
+    <Style x:Key="Button.Home" TargetType="Button" BasedOn="{StaticResource Button.Animation}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <svgc:SvgViewbox Source="\Resources\Images\Icons\Home.svg" Width="36" Height="36">
+                    </svgc:SvgViewbox>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Background" Value="#FF673AB7"/>
+        <Setter Property="Width" Value="36"/>
+        <Setter Property="Height" Value="36"/>
+    </Style>
+    <Style x:Key="Button.Library" TargetType="Button" BasedOn="{StaticResource Button.Animation}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <svgc:SvgViewbox Source="\Resources\Images\Icons\Library.svg" Width="36" Height="36">
+                    </svgc:SvgViewbox>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Background" Value="#FF673AB7"/>
+        <Setter Property="Width" Value="36"/>
+        <Setter Property="Height" Value="36"/>
+    </Style>
+    <Style x:Key="Button.Settings" TargetType="Button" BasedOn="{StaticResource Button.Animation}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <svgc:SvgViewbox Source="\Resources\Images\Icons\Settings.svg" Width="36" Height="36">
+                    </svgc:SvgViewbox>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Background" Value="#FF673AB7"/>
+        <Setter Property="Width" Value="36"/>
+        <Setter Property="Height" Value="36"/>
+    </Style>
+
 </ResourceDictionary>
