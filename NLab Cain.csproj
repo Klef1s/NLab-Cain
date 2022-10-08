@@ -9,12 +9,42 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Images\ChartIcons\AllOverTheWorld.svg" />
+    <None Remove="Resources\Images\ChartIcons\Argentina.svg" />
+    <None Remove="Resources\Images\ChartIcons\Australia.svg" />
+    <None Remove="Resources\Images\ChartIcons\Austria.svg" />
+    <None Remove="Resources\Images\ChartIcons\Belarus.svg" />
+    <None Remove="Resources\Images\ChartIcons\Belgium.svg" />
+    <None Remove="Resources\Images\ChartIcons\Brazil.svg" />
+    <None Remove="Resources\Images\ChartIcons\Velikobritaniya.svg" />
+    <None Remove="Resources\Images\Icons\Cross.svg" />
+    <None Remove="Resources\Images\Icons\Google.svg" />
+    <None Remove="Resources\Images\Icons\HideApp.svg" />
+    <None Remove="Resources\Images\Icons\Vk.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FontAwesome5" Version="2.1.11" />
     <PackageReference Include="MaterialDesignThemes" Version="4.6.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="6.0.9" />
     <PackageReference Include="SharpVectors.Wpf" Version="1.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\ChartIcons\AllOverTheWorld.svg" />
+    <Resource Include="Resources\Images\ChartIcons\Argentina.svg" />
+    <Resource Include="Resources\Images\ChartIcons\Australia.svg" />
+    <Resource Include="Resources\Images\ChartIcons\Austria.svg" />
+    <Resource Include="Resources\Images\ChartIcons\Belarus.svg" />
+    <Resource Include="Resources\Images\ChartIcons\Belgium.svg" />
+    <Resource Include="Resources\Images\ChartIcons\Brazil.svg" />
+    <Resource Include="Resources\Images\ChartIcons\Velikobritaniya.svg" />
+    <Resource Include="Resources\Images\Icons\Cross.svg" />
+    <Resource Include="Resources\Images\Icons\Google.svg" />
+    <Resource Include="Resources\Images\Icons\HideApp.svg" />
+    <Resource Include="Resources\Images\Icons\Vk.svg" />
   </ItemGroup>
 
 </Project>
