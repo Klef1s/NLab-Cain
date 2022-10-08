@@ -9,44 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Resources\Languages\**" />
-    <EmbeddedResource Remove="Resources\Languages\**" />
-    <None Remove="Resources\Languages\**" />
-    <Page Remove="Resources\Languages\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="Resources\Images\Background\Background_authorization.jpg" />
-    <None Remove="Resources\Images\Background\Foreground_border.png" />
-    <None Remove="Resources\Images\Icons\Cross.svg" />
-    <None Remove="Resources\Images\Icons\Google.svg" />
-    <None Remove="Resources\Images\Icons\HideApp.svg" />
-    <None Remove="Resources\Images\Icons\Vk.svg" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="FontAwesome5" Version="2.1.11" />
     <PackageReference Include="MaterialDesignThemes" Version="4.6.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="6.0.9" />
     <PackageReference Include="SharpVectors.Wpf" Version="1.8.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Resources\Images\Background\Background_authorization.jpg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Images\Background\Foreground_border.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Images\Icons\Cross.svg" />
-    <Resource Include="Resources\Images\Icons\Google.svg" />
-    <Resource Include="Resources\Images\Icons\HideApp.svg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Resources\Images\Icons\Vk.svg" />
   </ItemGroup>
 
 </Project>
