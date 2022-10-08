@@ -31,7 +31,7 @@ namespace NLab_Cain.Pages
 
         async private void logInButton_Click(object sender, RoutedEventArgs e)
         { 
-            string login = inputLogin.Text.Trim();
+            string email = inputEmail.Text.Trim();
             string password = inputPassword.Password.Trim();
 
             User? authUser = null;
@@ -40,7 +40,7 @@ namespace NLab_Cain.Pages
             {
                 using (var db = new ApplicationContext())
                 {
-                    authUser = db.Users.Where(b => b.Login == login && b.Password == password).FirstOrDefault();
+                    authUser = db.Users.Where(b => b.Email == email && b.Password == password).FirstOrDefault();
                 }
             });
 

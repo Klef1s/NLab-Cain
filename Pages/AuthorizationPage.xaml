@@ -25,25 +25,26 @@
                             Orientation="Vertical" 
                             Margin="0,224,0,0">
                 <TextBox Style="{StaticResource TextBox.Base}"
-                         Name="inputLogin"
-                         materialDesign:HintAssist.Hint="Логин / Email" 
+                         Name="inputEmail"
+                         materialDesign:HintAssist.Hint="Email" 
                          Cursor="Arrow"/>
                 <PasswordBox Style="{StaticResource PasswordBox.Base}"
                              Name="inputPassword"
                              materialDesign:HintAssist.Hint="Пароль" 
-                             Margin="0,16,0,0"/>
+                             Margin="0,16,0,0" Cursor="Arrow"/>
                 <DockPanel Margin="0,16,3,0">
                     <CheckBox Style="{StaticResource CheckBox.Base}">
                         <TextBlock Style="{StaticResource TextBlock.MiniSubtitle}"
-                                       Text="Запомнить меня"
-                                       VerticalAlignment="Bottom"/>
+                                       Text="Не выходить"
+                                       VerticalAlignment="Bottom" FontSize="12"
+                                       Margin="0,0,0,1"/>
                     </CheckBox>
                     <Button Style="{StaticResource Button.Link}"
                                 HorizontalAlignment="Right">
                         <TextBlock Style="{StaticResource TextBlock.MiniSubtitle}"
-                                       Text="Забыл пароль"
+                                       Text="Забыли пароль?"
                                        TextDecorations="Underline"
-                                       Foreground="White"/>
+                                       Foreground="White" FontSize="12"/>
                     </Button>
                 </DockPanel>
             </StackPanel>
@@ -76,6 +77,9 @@
                 <TextBlock Text="У меня нет аккаунта"
                            TextDecorations="Underline" />
             </Button>
+            <Border Style="{StaticResource Border.Loadnig}">
+                <ProgressBar Style="{StaticResource ProgressBar}"/>
+            </Border>
         </Grid>
     </Border>
 </Page>

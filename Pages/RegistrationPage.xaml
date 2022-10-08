@@ -22,15 +22,12 @@
                 <Border Style="{StaticResource Border.Underline}"/>
             </StackPanel>
             <StackPanel Style="{StaticResource StackPanel.Base}" 
-                            Orientation="Vertical" Height="252" VerticalAlignment="Center">
-                <TextBox Style="{StaticResource TextBox.Base}"
-                         Name="inputLogin"
-                         materialDesign:HintAssist.Hint="Логин" Cursor="Arrow"/>
+                            Orientation="Vertical" Height="176" Margin="0,218,0,0">
                 <TextBox Style="{StaticResource TextBox.Base}"
                          Name="inputEmail"
                          materialDesign:HintAssist.Hint="Email" 
                          Cursor="Arrow" 
-                         Margin="0,25,0,0"/>
+                         Margin="0,0,0,0"/>
                 <PasswordBox Style="{StaticResource PasswordBox.Base}"
                              Name="inputPassword"
                              materialDesign:HintAssist.Hint="Пароль" 
@@ -38,12 +35,12 @@
                 <PasswordBox Style="{StaticResource PasswordBox.Base}"
                              Name="inputRepeatPassword"
                              materialDesign:HintAssist.Hint="Повторите пароль" 
-                             Margin="0,25,0,0"/>
+                             Margin="0,25,0,0" Cursor="Arrow"/>
             </StackPanel>
             <StackPanel Style="{StaticResource StackPanel.Base}" 
                             Orientation="Vertical"
-                            Margin="0,512,0,0">
-                <Button Content="Зарегистрироваться"
+                            Margin="0,500,0,0">
+                <Button Content="Продолжить"
                         Name="regButton"
                         Style="{StaticResource Button.LogIn}" Click="regButton_Click"/>
             </StackPanel>
@@ -51,12 +48,15 @@
                     Name="BackToAuthorizationButton"
                     Height="34" 
                     Width="220" 
-                    Margin="0,589,0,0"
+                    Margin="0,590,0,0"
                     VerticalAlignment="Top" HorizontalAlignment="Center" 
                     Click="BackToAuthorizationButton_Click">
                 <TextBlock Text="У меня уже есть аккаунт"
                            TextDecorations="Underline" />
             </Button>
+            <Border Style="{StaticResource Border.Loadnig}">
+                <ProgressBar Style="{StaticResource ProgressBar}"/>
+            </Border>
         </Grid>
     </Border>
 </Page>

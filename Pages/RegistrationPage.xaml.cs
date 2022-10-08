@@ -32,17 +32,15 @@ namespace NLab_Cain.Pages
 
         async private void regButton_Click(object sender, RoutedEventArgs e)
         {
-            string login = inputLogin.Text.Trim();
             string email = inputEmail.Text.Trim();
             string password = inputPassword.Password.Trim();
             string repeatPassword = inputRepeatPassword.Password.Trim();
 
-            bool resultValidLogin = ValidatorExtensions.IsValidLogin(login);
             bool resultValidEmail = ValidatorExtensions.IsValidEmailAddress(email);
             bool resultValidPassword = ValidatorExtensions.IsValidPassword(password);
             bool resultvalidRepeatPassword = repeatPassword == password;
 
-            User addUser = new User {Login = login, Email = email, Password = password};
+            User addUser = new User {Email = email, Password = password};
 
             User? authUser = null;
 
@@ -50,11 +48,11 @@ namespace NLab_Cain.Pages
             {
                 using (var db = new ApplicationContext())
                 {
-                    authUser = db.Users.Where(b => b.Login == login && b.Password == password).FirstOrDefault();
+                    authUser = db.Users.Where(b => b.Email == email && b.Password == password).FirstOrDefault();
                 }
             });
 
-            if (resultValidLogin && resultValidEmail && resultValidPassword && resultvalidRepeatPassword == true)
+            if (resultValidEmail && resultValidPassword && resultvalidRepeatPassword == true)
             {
                 db.Users.Add(addUser);
                 db.SaveChanges();
@@ -72,11 +70,6 @@ namespace NLab_Cain.Pages
 
     public static class ValidatorExtensions
     {
-        public static bool IsValidLogin(this string s)
-        {
-            Regex regex = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{4,16}$");
-            return regex.IsMatch(s);
-        }
         public static bool IsValidEmailAddress(this string s)
         {
             Regex regex = new Regex(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
