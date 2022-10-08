@@ -143,4 +143,10 @@
         </Setter>
     </Style>
 
+    <Style x:Key="Button.Chart" TargetType="Button" BasedOn="{StaticResource Button.Base}">
+        <Setter Property="Width" Value="200"/>
+        <Setter Property="Height" Value="206"/>
+        <Setter Property="Cursor" Value="Arrow"/>
+    </Style>
+
 </ResourceDictionary>
