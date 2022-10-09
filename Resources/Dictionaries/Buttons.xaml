@@ -143,4 +143,21 @@
         </Setter>
     </Style>
 
+    <Style x:Key="Button.RepeatCode" TargetType="Button" BasedOn="{StaticResource Button.Animation}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" CornerRadius="10" Background="Transparent" BorderBrush="#FFFFFFFF" BorderThickness="1">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Foreground" Value="{StaticResource Button.Foreground}"/>
+        <Setter Property="Width" Value="248"/>
+        <Setter Property="Height" Value="42"/>
+        <Setter Property="FontFamily" Value="/Resources/Fonts/#Montserrat Medium"/>
+        <Setter Property="FontSize" Value="16"/>
+    </Style>
+
 </ResourceDictionary>
