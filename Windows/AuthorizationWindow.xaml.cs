@@ -27,7 +27,7 @@ namespace NLab_Cain.Windows
         }
         private void AuthFrame_Navigating(object sender, NavigatingCancelEventArgs e)
         {
-            var fa = new DoubleAnimation(0, 1, TimeSpan.FromSeconds(0.3));
+            var fa = new DoubleAnimation(0, 1, TimeSpan.FromSeconds(0.35));
             AuthFrame.BeginAnimation(OpacityProperty, fa);
         }
     }

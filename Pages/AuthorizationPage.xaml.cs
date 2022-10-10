@@ -28,6 +28,14 @@ namespace NLab_Cain.Pages
             InitializeComponent();
         }
 
+        private void OpenMainWindow()
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+
+            Application.Current.MainWindow.Close();
+        }
+
         async private void logInButton_Click(object sender, RoutedEventArgs e)
         {
             borderLoading.Visibility = Visibility.Visible;
@@ -35,28 +43,45 @@ namespace NLab_Cain.Pages
             string email = inputEmail.Text.Trim();
             string password = inputPassword.Password.Trim();
 
+            bool resultValidEmail = ValidatorExtensions.IsValidEmailAddress(email);
+            bool resultValidPassword = ValidatorExtensions.IsValidPassword(password);
+
             User? authUser = null;
 
-            await Task.Run(() =>
+            
+            if (resultValidEmail && resultValidPassword == true)
             {
-                using (var db = new ApplicationContext())
+                await Task.Run(() =>
                 {
-                    authUser = db.Users.Where(b => b.Email == email && b.Password == password).FirstOrDefault();
+                    using (var db = new ApplicationContext())
+                    {
+                        authUser = db.Users.Where(b => b.Email == email && b.Password == password).FirstOrDefault();
+                    }
+                });
+
+                //Открытие нового окна
+                if (authUser != null)
+                {
+                    borderLoading.Visibility = Visibility.Collapsed;
+
+                    OpenMainWindow();
                 }
-            });
+                else
+                {
+                    borderLoading.Visibility = Visibility.Hidden;
 
-            if (authUser != null)
-            {
-                borderLoading.Visibility = Visibility.Collapsed;
-
-                //переход на основное окно
+                    //ошибка, такого аккаунта не существует
+                    MessageBox.Show("net");
+                }
             }
             else
             {
-                borderLoading.Visibility = Visibility.Collapsed;
-
-                //ошибка, такого аккаунта не существует
+                borderLoading.Visibility = Visibility.Hidden;
+                //Ошибка ввода полей
+                MessageBox.Show("Ошибка ввода полей");
             }
+
+
         }
 
         private void toRegistrationPage_Click(object sender, RoutedEventArgs e)

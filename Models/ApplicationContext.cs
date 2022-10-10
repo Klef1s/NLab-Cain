@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +11,12 @@ namespace NLab_Cain.Models
     public class ApplicationContext : DbContext
     {
         public DbSet<User> Users { get; set; } = null!;
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+
+        public ApplicationContext() => Database.EnsureCreated();
+
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            optionsBuilder.UseSqlite("Data Source=DataBase.db");
+            options.UseSqlite($"Data Source=UserDataBase.db");
         }
     }
 }

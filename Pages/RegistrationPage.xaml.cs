@@ -28,6 +28,7 @@ namespace NLab_Cain.Pages
         public RegistrationPage()
         {
             InitializeComponent();
+            
         }
 
         async private void regButton_Click(object sender, RoutedEventArgs e)
@@ -46,35 +47,41 @@ namespace NLab_Cain.Pages
 
             User? authUser = null;
 
-            await Task.Run(() =>
+            if (resultValidEmail && resultValidPassword && resultvalidRepeatPassword == true)
             {
-                using (var db = new ApplicationContext())
+                await Task.Run(() =>
                 {
-                    authUser = db.Users.Where(b => b.Email == email && b.Password == password).FirstOrDefault();
+                    using (var db = new ApplicationContext())
+                    {
+                        authUser = db.Users.Where(b => b.Email == email).FirstOrDefault();
+                    }
+                });
+
+                if (authUser != null)
+                {
+                    borderLoading.Visibility = Visibility.Hidden;
+
+                    //Такой аккаунт уже существует
+                    MessageBox.Show("Такой аккаунт уже существует");
                 }
-            });
 
-            if (authUser != null)
-            {
-                borderLoading.Visibility = Visibility.Hidden;
-
-                if (resultValidEmail && resultValidPassword && resultvalidRepeatPassword == true)
+                else
                 {
+                    borderLoading.Visibility = Visibility.Hidden;
+
                     db.Users.Add(addUser);
                     db.SaveChanges();
 
-                    //Переход на основное окно
-                }
-                else
-                {
-                    //Ошибка полей
+                    MessageBox.Show("существует");
+                      
                 }
             }
             else
             {
                 borderLoading.Visibility = Visibility.Hidden;
 
-                MessageBox.Show("error.");
+                //Ошибка полей
+                MessageBox.Show("Ошибка полей");
             }
         }
 

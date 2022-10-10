@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:NLab_Cain.Windows"
         mc:Ignorable="d"
         AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="Transparent"
-        Height="768" Width="1280">
+        Height="768" Width="1280"
+        x:Name="authWindow">
     <Grid>
         <Rectangle Style="{StaticResource Rectangle.Background}"/>
 
