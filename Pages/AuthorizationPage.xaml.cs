@@ -26,11 +26,12 @@ namespace NLab_Cain.Pages
         public AuthorizationPage()
         {
             InitializeComponent();
-            
         }
 
         async private void logInButton_Click(object sender, RoutedEventArgs e)
-        { 
+        {
+            borderLoading.Visibility = Visibility.Visible;
+
             string email = inputEmail.Text.Trim();
             string password = inputPassword.Password.Trim();
 
@@ -46,11 +47,15 @@ namespace NLab_Cain.Pages
 
             if (authUser != null)
             {
+                borderLoading.Visibility = Visibility.Collapsed;
+
                 //переход на основное окно
             }
             else
             {
-               //ошибка, такого аккаунта не существует
+                borderLoading.Visibility = Visibility.Collapsed;
+
+                //ошибка, такого аккаунта не существует
             }
         }
 

@@ -9,6 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Images\Background\Background_authorization.jpg" />
+    <None Remove="Resources\Images\Background\Foreground_border.png" />
     <None Remove="Resources\Images\Icons\Cross.svg" />
     <None Remove="Resources\Images\Icons\Google.svg" />
     <None Remove="Resources\Images\Icons\HideApp.svg" />
@@ -28,6 +30,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Images\Background\Background_authorization.jpg" />
+    <Resource Include="Resources\Images\Background\Foreground_border.png" />
     <Resource Include="Resources\Images\Icons\Cross.svg" />
     <Resource Include="Resources\Images\Icons\Google.svg" />
     <Resource Include="Resources\Images\Icons\HideApp.svg" />

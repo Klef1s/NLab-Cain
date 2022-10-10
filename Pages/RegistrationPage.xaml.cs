@@ -32,6 +32,8 @@ namespace NLab_Cain.Pages
 
         async private void regButton_Click(object sender, RoutedEventArgs e)
         {
+            borderLoading.Visibility = Visibility.Visible;
+
             string email = inputEmail.Text.Trim();
             string password = inputPassword.Password.Trim();
             string repeatPassword = inputRepeatPassword.Password.Trim();
@@ -52,14 +54,28 @@ namespace NLab_Cain.Pages
                 }
             });
 
-            if (resultValidEmail && resultValidPassword && resultvalidRepeatPassword == true)
+            if (authUser != null)
             {
-                db.Users.Add(addUser);
-                db.SaveChanges();
+                borderLoading.Visibility = Visibility.Hidden;
 
-                //Переход на основное окно
+                if (resultValidEmail && resultValidPassword && resultvalidRepeatPassword == true)
+                {
+                    db.Users.Add(addUser);
+                    db.SaveChanges();
+
+                    //Переход на основное окно
+                }
+                else
+                {
+                    //Ошибка полей
+                }
             }
-            else MessageBox.Show("error.");
+            else
+            {
+                borderLoading.Visibility = Visibility.Hidden;
+
+                MessageBox.Show("error.");
+            }
         }
 
         private void BackToAuthorizationButton_Click(object sender, RoutedEventArgs e)

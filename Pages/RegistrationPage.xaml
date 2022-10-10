@@ -54,7 +54,7 @@
                 <TextBlock Text="У меня уже есть аккаунт"
                            TextDecorations="Underline" />
             </Button>
-            <Border Style="{StaticResource Border.Loadnig}">
+            <Border Style="{StaticResource Border.Loadnig}" Name="borderLoading">
                 <ProgressBar Style="{StaticResource ProgressBar}"/>
             </Border>
         </Grid>
