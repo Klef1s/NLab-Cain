@@ -28,7 +28,7 @@ namespace NLab_Cain.Pages
         public RegistrationPage()
         {
             InitializeComponent();
-            
+
         }
 
         async private void regButton_Click(object sender, RoutedEventArgs e)
@@ -43,7 +43,7 @@ namespace NLab_Cain.Pages
             bool resultValidPassword = ValidatorExtensions.IsValidPassword(password);
             bool resultvalidRepeatPassword = repeatPassword == password;
 
-            User addUser = new User {Email = email, Password = password};
+            User addUser = new User { Email = email, Password = password };
 
             User? authUser = null;
 
@@ -73,7 +73,7 @@ namespace NLab_Cain.Pages
                     db.SaveChanges();
 
                     MessageBox.Show("существует");
-                      
+
                 }
             }
             else
@@ -104,4 +104,6 @@ namespace NLab_Cain.Pages
             return regex.IsMatch(s);
         }
     }
+
+   
 }

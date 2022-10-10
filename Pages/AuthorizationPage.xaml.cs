@@ -88,5 +88,11 @@ namespace NLab_Cain.Pages
         {
             NavigationService.Navigate(new RegistrationPage());
         }
+
+        private void forgotPasswordButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new PasswordRecoveryConfirmationPage());
+        }
+
     }
 }
