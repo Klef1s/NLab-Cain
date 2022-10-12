@@ -58,27 +58,26 @@ namespace NLab_Cain.Pages
                 {
                     bool sendMail = true;
 
+                    SmtpClient Smtp = new SmtpClient("smtp.mail.ru", 587);
+                    Smtp.EnableSsl = true;
+                    Smtp.Credentials = new NetworkCredential("aristrax337@mail.ru", "P85ummqpM1LKCD0v4nHT");
+                    MailMessage Message = new MailMessage();
+                    Message.From = new MailAddress("aristrax337@mail.ru");
+                    Message.To.Add(new MailAddress(email));
+                    Message.Subject = "Восстановление пароля";
+                    Message.IsBodyHtml = true;
+                    Message.Body = htmlText;
+
                     await Task.Run(() =>
                     {
                         try
                         {
-                            SmtpClient Smtp = new SmtpClient("smtp.mail.ru", 465);
-                            Smtp.EnableSsl = true;
-                            Smtp.Credentials = new NetworkCredential("nlab-cain-supprt@mail.ru", "FNtu1QjMr4scP3D6B9KJ");
-                            MailMessage Message = new MailMessage();
-                            Message.From = new MailAddress("nlab-cain-supprt@mail.ru");
-                            Message.To.Add(new MailAddress(email));
-                            Message.Subject = "Восстановление пароля";
-                            Message.IsBodyHtml = false;
-                            Message.Body = htmlText;
                             Smtp.Send(Message);
-
-                            MessageBox.Show("VSE OK");
                         }
-                        catch
+                        catch (Exception ex)
                         {
                             sendMail = false;
-                            MessageBox.Show("PIIIZDA");
+                            MessageBox.Show(ex.Message);
                         }
                     });
 

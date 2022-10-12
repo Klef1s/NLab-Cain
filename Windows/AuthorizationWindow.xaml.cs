@@ -30,5 +30,20 @@ namespace NLab_Cain.Windows
             var fa = new DoubleAnimation(0, 1, TimeSpan.FromSeconds(0.35));
             AuthFrame.BeginAnimation(OpacityProperty, fa);
         }
+
+        private void closeApp_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void hideApp_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void moveArea_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
     }
 }

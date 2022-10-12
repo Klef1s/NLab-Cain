@@ -6,24 +6,26 @@
         xmlns:local="clr-namespace:NLab_Cain.Windows"
         mc:Ignorable="d"
         AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="Transparent"
-        Height="768" Width="1280"
-        x:Name="authWindow">
+        Height="768" Width="1280">
     <Grid>
         <Rectangle Style="{StaticResource Rectangle.Background}"/>
-
-        <Grid Grid.Column="1" >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="5*"/>
-                <RowDefinition Height="123*"/>
-            </Grid.RowDefinitions>
-            <Button Style="{StaticResource Button.CloseApp}" 
-                    Margin="1238,0,0,0" Cursor="Arrow"/>
-            <Button Style="{StaticResource Button.HideApp}" 
-                    Margin="1198,0,0,0" />
-        </Grid>
         <Frame Style="{StaticResource Frame.Authorization}" 
                Name="AuthFrame"
                Source="\Pages\RegistrationPage.xaml"
 			   Navigating="AuthFrame_Navigating"/>
+
+        <Grid x:Name="moveArea" 
+              MouseLeftButtonDown="moveArea_MouseLeftButtonDown" 
+              HorizontalAlignment="Center" VerticalAlignment="Top"
+              Width="1280" Height="28">
+            <Button Style="{StaticResource Button.CloseApp}" 
+                    Name="closeApp"
+                    Margin="1238,0,0,0"
+                    Click="closeApp_Click"/>
+            <Button Style="{StaticResource Button.HideApp}" 
+                    Name="hideApp"
+                    Margin="1198,0,0,0" 
+                    Click="hideApp_Click"/>
+        </Grid>
     </Grid>
 </Window>
