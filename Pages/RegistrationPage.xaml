@@ -23,19 +23,34 @@
             </StackPanel>
             <StackPanel Style="{StaticResource StackPanel.Base}" 
                             Orientation="Vertical" Height="auto" Margin="0,218,0,0">
-                <TextBox Style="{StaticResource TextBox.Base}"
+                <StackPanel>
+                    <TextBox Style="{StaticResource TextBox.Base}"
                          Name="inputEmail"
                          materialDesign:HintAssist.Hint="Email" 
                          Cursor="Arrow" 
                          Margin="0,0,0,0"/>
-                <PasswordBox Style="{StaticResource PasswordBox.Base}"
+                    <TextBlock Text="AAA" Visibility="Visible" Style="{StaticResource TextBlock.ErrorMessage}" 
+                           Name="mailErrorMessage"
+                           Margin="0,10,0,0"/>
+                </StackPanel>
+                <StackPanel>
+                    <PasswordBox Style="{StaticResource PasswordBox.Base}"
                              Name="inputPassword"
                              materialDesign:HintAssist.Hint="Пароль" 
                              Margin="0,22,0,0" Cursor="Arrow"/>
-                <PasswordBox Style="{StaticResource PasswordBox.Base}"
+                    <TextBlock Text="AAA" Visibility="Visible" Style="{StaticResource TextBlock.ErrorMessage}" 
+                           Name="passwordErrorMessage"
+                           Margin="0,10,0,0"/>
+                </StackPanel>
+                <StackPanel>
+                    <PasswordBox Style="{StaticResource PasswordBox.Base}"
                              Name="inputRepeatPassword"
                              materialDesign:HintAssist.Hint="Повторите пароль" 
                              Margin="0,22,0,0" Cursor="Arrow"/>
+                    <TextBlock Text="AAA" Visibility="Visible" Style="{StaticResource TextBlock.ErrorMessage}" 
+                           Name="repeatPasswordErrorMessage"
+                           Margin="0,10,0,0"/>
+                </StackPanel>
             </StackPanel>
             <StackPanel Style="{StaticResource StackPanel.Base}" 
                             Orientation="Vertical"

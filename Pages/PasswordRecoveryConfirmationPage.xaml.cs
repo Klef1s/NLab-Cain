@@ -24,8 +24,6 @@ namespace NLab_Cain.Pages
     /// </summary>
     public partial class PasswordRecoveryConfirmationPage : Page
     {
-        StreamReader sr = new StreamReader("D:/Application/C#/NLab Cain/Resources/Files/text.txt", Encoding.UTF8);
-
 
         public PasswordRecoveryConfirmationPage()
         {
@@ -34,7 +32,7 @@ namespace NLab_Cain.Pages
 
         async private void continueButton_Click(object sender, RoutedEventArgs e)
         {
-            string htmlText = sr.ReadToEnd();
+            string htmlText = "";
 
             borderLoading.Visibility = Visibility.Visible;
 

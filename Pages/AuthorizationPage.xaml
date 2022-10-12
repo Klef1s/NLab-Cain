@@ -28,16 +28,21 @@
                          Name="inputEmail"
                          materialDesign:HintAssist.Hint="Email" 
                          Cursor="Arrow"/>
-                <PasswordBox Style="{StaticResource PasswordBox.Base}"
-                             Name="inputPassword"
-                             materialDesign:HintAssist.Hint="Пароль" 
-                             Margin="0,22,0,0" Cursor="Arrow"/>
+                <StackPanel>
+                    <PasswordBox Style="{StaticResource PasswordBox.Base}"
+                                 Name="inputPassword"
+                                 materialDesign:HintAssist.Hint="Пароль" 
+                                 Margin="0,22,0,0"/>
+                    <TextBlock Text="AAA" Visibility="Visible" Style="{StaticResource TextBlock.ErrorMessage}" 
+                               Name="authPasswordErrorMessage"
+                               Margin="0,10,0,0"/>
+                </StackPanel>
                 <DockPanel Margin="0,22,3,0">
                     <CheckBox Style="{StaticResource CheckBox.Base}">
                         <TextBlock Style="{StaticResource TextBlock.MiniSubtitle}"
-                                       Text="Не выходить"
-                                       VerticalAlignment="Bottom" FontSize="12"
-                                       Margin="0,0,0,1"/>
+                                   Text="Не выходить"
+                                   VerticalAlignment="Bottom" FontSize="12"
+                                   Margin="0,0,0,1"/>
                     </CheckBox>
                     <Button Style="{StaticResource Button.Link}"
                             Name="forgotPasswordButton"
