@@ -6,16 +6,23 @@
       xmlns:local="clr-namespace:NLab_Cain.Pages"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:fa5="http://schemas.fontawesome.com/icons/"
-      xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+      xmlns:svgc="http://sharpvectors.codeplex.com/svgc/" 
+      xmlns:viewmodel="clr-namespace:NLab_Cain.ViewModel"
       mc:Ignorable="d" 
-      d:DesignHeight="1080" d:DesignWidth="1920">
-    <DockPanel Background="#4C121212">
-        <Grid Width="828" Height="636"
+      d:DesignHeight="768" d:DesignWidth="1280">
+
+    <Page.DataContext>
+        <viewmodel:ChartViewModel/>
+    </Page.DataContext>
+
+    <DockPanel Background="#E5000000">
+        <Border Width="828" Height="636"
+                CornerRadius="10"
                 Background="#181818">
-            <StackPanel Height="Auto" 
-                        VerticalAlignment="Top"
-                        Margin="0,22,0,0">
+            <StackPanel Height="636" Width="828"
+                        VerticalAlignment="Center" HorizontalAlignment="Center" >
                 <TextBlock Height="Auto"
+                           Margin="0,22,0,0"
                            Text="Топ-50 треков(во всем мире)"
                            FontSize="32" 
                            FontFamily="Montserrat" 
@@ -23,15 +30,44 @@
                            Foreground="White"
                            TextAlignment="Center" 
                            HorizontalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" 
+                                Height="auto" Width="auto"
+                                Margin="0,48,0,0">
+                    <TextBlock Text="№"
+                                   FontSize="18" 
+                                   FontFamily="Montserrat"
+                                   FontWeight="SemiBold"
+                                   Foreground="White"
+                                   Margin="48,0,0,0"/>
+                    <TextBlock Text="Название"
+                                   FontSize="18" 
+                                   FontFamily="Montserrat"
+                                   FontWeight="SemiBold"
+                                   Foreground="White"
+                                   Margin="18,0,0,0"/>
+                    <TextBlock Text="Релиз"
+                                   FontSize="18" 
+                                   FontFamily="Montserrat"
+                                   FontWeight="SemiBold"
+                                   Foreground="White"
+                                   Margin="188,0,0,0"/>
+                    <TextBlock Text="Альбом"
+                                   FontSize="18" 
+                                   FontFamily="Montserrat"
+                                   FontWeight="SemiBold"
+                                   Foreground="White"
+                                   Margin="106,0,0,0"/>
+                </StackPanel>
+                <Border Style="{StaticResource Border.Underline}" 
+                        Width="auto" Margin="20,12,20,0"/>
+                <ListView Width="788" Height="470"
+                              Margin="0,22,0,0"
+                              Background="#181818"
+                              ScrollViewer.CanContentScroll="False" 
+                              HorizontalAlignment="Center"
+                              ItemsSource="{Binding Tracks}"
+                              Style="{StaticResource ListStyle}"/>
             </StackPanel>
-            <ListView Width="788"
-                      Margin="0,112,0,0"
-                      Background="#181818"
-                      ScrollViewer.CanContentScroll="False"
-                      ItemsSource="{Binding Songs}"
-                      Style="{StaticResource ListStyle}">
-
-            </ListView>
-        </Grid>
+        </Border>
     </DockPanel>
 </Page>

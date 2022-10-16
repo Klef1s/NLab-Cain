@@ -19,6 +19,7 @@
                    Width="1" Height="668" 
                    HorizontalAlignment="Left" VerticalAlignment="Center"/>
         <Frame Style="{StaticResource Frame.MainWindow}"
-               Name="frameMainWindow"/>
+               Name="frameMainWindow"
+               Source="\Pages\TracksViewPage.xaml" Margin="10,0,0,0"/>
     </Grid>
 </Window>

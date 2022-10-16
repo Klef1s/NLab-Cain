@@ -8,7 +8,7 @@ namespace NLab_Cain.Models.ChartModel
 {
     public class UrlChart
     {
-        public static string url { get; set; }
+        public static string url = "https://api.spotify.com/v1/playlists/37i9dQZEVXbMDoHDwVN2tF/tracks?";
     }
 
     public partial class ChartModel
@@ -53,7 +53,7 @@ namespace NLab_Cain.Models.ChartModel
         public string Name { get; set; }
 
         [JsonProperty("release_date")]
-        public ReleaseDate ReleaseDate { get; set; }
+        public DateTimeOffset ReleaseDate { get; set; }
     }
 
     public partial class Image
@@ -74,15 +74,6 @@ namespace NLab_Cain.Models.ChartModel
         public string Name { get; set; }
     }
 
-    public partial struct ReleaseDate
-    {
-        public DateTimeOffset? DateTime;
-        public long? Integer;
-
-        public static implicit operator ReleaseDate(DateTimeOffset DateTime) => new ReleaseDate { DateTime = DateTime };
-        public static implicit operator ReleaseDate(long Integer) => new ReleaseDate { Integer = Integer };
-    }
-
     public partial class ChartModel
     {
         public static ChartModel FromJson(string json) => JsonConvert.DeserializeObject<ChartModel>(json, Models.ChartModel.Converter.Settings);
@@ -101,55 +92,11 @@ namespace NLab_Cain.Models.ChartModel
             DateParseHandling = DateParseHandling.None,
             Converters =
             {
-                ReleaseDateConverter.Singleton,
-                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
+                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeLocal }
+
             },
         };
     }
-
-    internal class ReleaseDateConverter : JsonConverter
-    {
-        public override bool CanConvert(Type t) => t == typeof(ReleaseDate) || t == typeof(ReleaseDate?);
-
-        public override object ReadJson(JsonReader reader, Type t, object existingValue, JsonSerializer serializer)
-        {
-            switch (reader.TokenType)
-            {
-                case JsonToken.String:
-                case JsonToken.Date:
-                    var stringValue = serializer.Deserialize<string>(reader);
-                    DateTimeOffset dt;
-                    if (DateTimeOffset.TryParse(stringValue, out dt))
-                    {
-                        return new ReleaseDate { DateTime = dt };
-                    }
-                    long l;
-                    if (Int64.TryParse(stringValue, out l))
-                    {
-                        return new ReleaseDate { Integer = l };
-                    }
-                    break;
-            }
-            throw new Exception("Cannot unmarshal type ReleaseDate");
-        }
-
-        public override void WriteJson(JsonWriter writer, object untypedValue, JsonSerializer serializer)
-        {
-            var value = (ReleaseDate)untypedValue;
-            if (value.DateTime != null)
-            {
-                serializer.Serialize(writer, value.DateTime.Value.ToString("o", System.Globalization.CultureInfo.InvariantCulture));
-                return;
-            }
-            if (value.Integer != null)
-            {
-                serializer.Serialize(writer, value.Integer.Value.ToString());
-                return;
-            }
-            throw new Exception("Cannot marshal type ReleaseDate");
-        }
-
-        public static readonly ReleaseDateConverter Singleton = new ReleaseDateConverter();
-    }
 }
+
 

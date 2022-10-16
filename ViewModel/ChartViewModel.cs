@@ -26,14 +26,21 @@ namespace NLab_Cain.ViewModel
         void PopulateCollection()
         {
             var client = new RestClient();
-            client.Authenticator = new OAuth2AuthorizationRequestHeaderAuthenticator("BQDQe5D6nkJF7Xx6zTggp4KuFzvYOamMNZd-uuufy9mY1_XLFWfhZG8rdRhKYRxvg_NJlv1S8Dc5qIlIzlEq7J9kzXiLYn79ONh83OIpyYa-f4qhTmsjdMu1gQYETbSviHZR79hOgejqZRx3nFrVbXK_qYZ3-Z0FcUqV1FtUheE8OdQMMlOdkGojB5X7_88", "Bearer");
+            client.Authenticator = new OAuth2AuthorizationRequestHeaderAuthenticator("BQBnXNeXOVRNq0J79TMgt3ycvxehKzNX5i_w51HsLWt8XTbdu4VQkFUZ1rwY1LJ8y1GfoshyQTZVc42DkLqLapow-QG8kvfbcxt5D62KpGQCWwuxEVji5aliYCEjfZ7BxeCIv2p8zQ7XWgTB3ftk8uriyx4ezzooXzTd9V_a4bFgvSAIhjPd15tIpT9xeRM", "Bearer");
 
-            var request = new RestRequest(UrlChart.url, Method.Get);
+            var request = new RestRequest("https://api.spotify.com/v1/playlists/37i9dQZEVXbKPTKrnFPD0G/tracks", Method.Get);
             request.AddHeader("Accept", "application/json");
             request.AddHeader("Content-Type", "application/json");
 
             var response = client.GetAsync(request).GetAwaiter().GetResult();
+
             var data = JsonConvert.DeserializeObject<ChartModel>(response.Content);
+
+            for (int i = 0; i < data.Items.Length; i++)
+            {
+                var tracks = data.Items[i];
+                Tracks.Add(tracks);
+            }
         }
     }
 }

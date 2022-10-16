@@ -54,8 +54,8 @@
     </Style>
 
     <Style x:Key="Frame.MainWindow" TargetType="Frame">
-        <Setter Property="Width" Value="1124"/>
-        <Setter Property="Height" Value="668"/>
+        <Setter Property="Width" Value="1280"/>
+        <Setter Property="Height" Value="768"/>
         <Setter Property="Margin" Value="128,0,0,0"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
@@ -110,12 +110,12 @@
         <Setter Property="ItemTemplate">
             <Setter.Value>
                 <DataTemplate>
-                    <DockPanel Margin="4">
-                        <DockPanel.Style>
-                            <Style TargetType="DockPanel">
+                    <Border CornerRadius="6">
+                        <Border.Style>
+                            <Style TargetType="Border">
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#181818"/>
+                                        <Setter Property="Background" Value="#333333"/>
                                     </Trigger>
                                     <Trigger Property="IsMouseOver" Value="False">
                                         <Setter Property="Background" Value="Transparent"/>
@@ -123,23 +123,55 @@
                                     <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, 
                                                                    AncestorType={x:Type ListBoxItem}}, 
                                                                    Path=IsSelected}" Value="True">
-                                        <Setter Property="Background" Value="#181818"/>
+                                        <Setter Property="Background" Value="#333333"/>
                                     </DataTrigger>
                                 </Style.Triggers>
                             </Style>
-                        </DockPanel.Style>
-                        <Image Source="{Binding }" Width="50" Height="50" DockPanel.Dock="Left"/>
-                        <StackPanel Margin="4,0,0,0">
-                            <TextBlock Text="{Binding}" Foreground="White"
-                                       FontSize="14"
+                        </Border.Style>
+                        <StackPanel Orientation="Horizontal" Margin="0,6,0,6">
+                            <Rectangle Width="42" Height="42" 
+                                   DockPanel.Dock="Left"
+                                   RadiusX="3" RadiusY="3" 
+                                   Margin="64,0,0,0">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="{Binding Track.Album.Images[2].Url}" />
+                            </Rectangle.Fill>
+                            </Rectangle>
+                            <StackPanel Margin="10,0,0,0">
+                                <TextBlock Text="{Binding Track.Name}"
+                                       Width="200"
+                                       MaxWidth="200"
+                                       HorizontalAlignment="Left"
+                                       Foreground="White"
+                                       FontSize="16"
                                        FontWeight="Medium"/>
-                            <TextBlock Text="{Binding}" Foreground="Gray"
-                                       FontSize="14"/>
+                                <TextBlock Text="{Binding Track.Artists[0].Name}" 
+                                       Width="214"
+                                       MaxWidth="214"
+                                       Foreground="Gray"
+                                       HorizontalAlignment="Left"
+                                       FontSize="16"
+                                       FontWeight="Medium"/>
+
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Track.Album.ReleaseDate}"
+                                       Margin="13,0,0,0"
+                                       Width="90"
+                                       MaxWidth="90"
+                                       Foreground="Gray"
+                                       FontSize="16"
+                                       FontWeight="Medium"/>
+                                <TextBlock Text="{Binding Track.Album.Name}"
+                                       Margin="74,0,0,0"
+                                       Width="228"
+                                       MaxWidth="228"
+                                       Foreground="Gray"
+                                       FontSize="16"
+                                       FontWeight="Medium"/>
+                            </StackPanel>
                         </StackPanel>
-                        <Grid HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,8,0">
-                            <TextBlock Text="{Binding Duration}" FontWeight="Medium" Foreground="#181818"/>
-                        </Grid>
-                    </DockPanel>
+                    </Border>
                 </DataTemplate>
             </Setter.Value>
         </Setter>
@@ -156,6 +188,7 @@
         </Setter>
     </Style>
 
+
     <Style x:Key="ScrollbarButton" TargetType="{x:Type RepeatButton}">
         <Setter Property="Template">
             <Setter.Value>
@@ -171,28 +204,30 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
+
     <Style x:Key="ScrollbarThumbVertical" TargetType="{x:Type Thumb}">
         <Setter Property="OverridesDefaultStyle" Value="True"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Thumb}">
-                    <Rectangle x:Name="rectangle"
+                    <Border CornerRadius="5" Background="#424242">
+                        <Rectangle x:Name="rectangle"
                             SnapsToDevicePixels="True"
-                            Fill="#424242"
                             Width="{TemplateBinding Width}"
                             Height="{TemplateBinding Height}"/>
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
 
     <Style TargetType="{x:Type ScrollBar}">
-        <Setter Property="Background" Value="#181818"/>
-        <Setter Property="BorderBrush" Value="#181818"/>
+        <Setter Property="Background" Value="#202020"/>
+        <Setter Property="BorderBrush" Value="#202020"/>
         <Setter Property="BorderThickness" Value="1,0"/>
-        <Setter Property="Width" Value="12"/>
-        <Setter Property="MinWidth" Value="12"/>
+        <Setter Property="Width" Value="10"/>
+        <Setter Property="MinWidth" Value="10"/>
+        <Setter Property="Margin" Value="0,20,0,20"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ScrollBar}">
@@ -202,6 +237,7 @@
                         </Grid.RowDefinitions>
                         <Border BorderThickness="{TemplateBinding BorderThickness}"
                                 Grid.Row="1"
+                                CornerRadius="5"
                                 Background="{TemplateBinding Background}"
                                 BorderBrush="{TemplateBinding BorderBrush}"/>
                         <Track IsDirectionReversed="True"
@@ -215,5 +251,5 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
+
 </ResourceDictionary>
