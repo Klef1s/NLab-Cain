@@ -34,7 +34,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="108.0.2" />
     <PackageReference Include="SharpVectors.Wpf" Version="1.8.0" />
+    <PackageReference Include="SpotifyAPI.Web" Version="6.3.0" />
+    <PackageReference Include="SpotifyAPI.Web.Auth" Version="6.3.0" />
   </ItemGroup>
 
   <ItemGroup>
