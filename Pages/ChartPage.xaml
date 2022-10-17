@@ -10,16 +10,17 @@
       Title="ChartPage">
 
     <Grid>
-        <ScrollViewer>
-            <WrapPanel Width="890" Margin="20,20,217,0" Height="auto">
+        <ScrollViewer Height="668" HorizontalAlignment="Center" Width="1155" VerticalAlignment="Bottom">
+            <WrapPanel Width="890" Margin="20,20,0,20" Height="auto" HorizontalAlignment="Left">
                 <Button Style="{StaticResource Button.Chart}"
-                        Name="allWorld" Click="allWorld_Click" Cursor="Arrow">
+                        Name="allWorld" Click="allWorld_Click">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_large.jpg" 
                            Stretch="Fill"/>
                     <!--Весь мир-->
                 </Button>
                 <Button Margin="30,0,0,0"
-                    Style="{StaticResource Button.Chart}">
+                        Style="{StaticResource Button.Chart}"
+                        Name="avstralia" Click="avstralia_Click" Cursor="Arrow">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_au_large.jpg" 
                            Stretch="Fill"/>
                     <!--Австралия-->

@@ -20,6 +20,6 @@
                    HorizontalAlignment="Left" VerticalAlignment="Center"/>
         <Frame Style="{StaticResource Frame.MainWindow}"
                Name="frameMainWindow"
-               Source="\Pages\ChartPage.xaml" Margin="97,0,0,0" Width="1155"/>
+               Source="\Pages\ChartPage.xaml"/>
     </Grid>
 </Window>

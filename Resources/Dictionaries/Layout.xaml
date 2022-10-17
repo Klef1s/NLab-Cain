@@ -54,9 +54,9 @@
     </Style>
 
     <Style x:Key="Frame.MainWindow" TargetType="Frame">
-        <Setter Property="Width" Value="1124"/>
+        <Setter Property="Width" Value="1155"/>
         <Setter Property="Height" Value="668"/>
-        <Setter Property="Margin" Value="128,0,0,0"/>
+        <Setter Property="Margin" Value="97,0,0,0"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="NavigationUIVisibility" Value="Hidden"/>
@@ -82,13 +82,181 @@
     </Style>
 
     <Style x:Key="Rectangle.MainBackground" TargetType="Rectangle">
-        <Setter Property="Fill" Value="#FF0C0C0C"/>
+        <Setter Property="Fill" Value="#181818"/>
         <Setter Property="RadiusX" Value="10"/>
         <Setter Property="RadiusY" Value="10"/>
         <Setter Property="Width" Value="1280"/>
         <Setter Property="Height" Value="768"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="ListStyle" TargetType="ListView">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="ItemContainerStyle">
+            <Setter.Value>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListViewItem">
+                                <ContentPresenter/>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ItemTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Border CornerRadius="6">
+                        <Border.Style>
+                            <Style TargetType="Border">
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#333333"/>
+                                    </Trigger>
+                                    <Trigger Property="IsMouseOver" Value="False">
+                                        <Setter Property="Background" Value="Transparent"/>
+                                    </Trigger>
+                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, 
+                                                                   AncestorType={x:Type ListBoxItem}}, 
+                                                                   Path=IsSelected}" Value="True">
+                                        <Setter Property="Background" Value="#333333"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                        <StackPanel Orientation="Horizontal" Margin="0,6,0,6">
+                            <TextBlock Text="{Binding Track.Number}"
+                                       Width="20"
+                                       MaxWidth="20"
+                                       Margin="32,0,0,0"
+                                       VerticalAlignment="Center"
+                                       Foreground="Gray"
+                                       FontSize="16"
+                                       FontWeight="Medium"/>
+                            <Rectangle Width="42" Height="42" 
+                                       DockPanel.Dock="Left"
+                                       RadiusX="3" RadiusY="3" 
+                                       Margin="16,0,0,0">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="{Binding Track.Album.Images[2].Url}" />
+                            </Rectangle.Fill>
+                            </Rectangle>
+                            <StackPanel Margin="10,0,0,0">
+                                <TextBlock Text="{Binding Track.Name}"
+                                       Width="300"
+                                       MaxWidth="300"
+                                       HorizontalAlignment="Left"
+                                       Foreground="White"
+                                       FontSize="16"
+                                       FontWeight="Medium"/>
+                                <TextBlock Text="{Binding Track.Artists[0].Name}" 
+                                       Width="314"
+                                       MaxWidth="314"
+                                       Foreground="Gray"
+                                       HorizontalAlignment="Left"
+                                       FontSize="16"
+                                       FontWeight="Medium"/>
+
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <!--<TextBlock Text="{Binding Track.Album.ReleaseDate}"
+                                       Margin="13,0,0,0"
+                                       Width="90"
+                                       MaxWidth="90"
+                                       Foreground="Gray"
+                                       FontSize="16"
+                                       FontWeight="Medium"/>-->
+                                <TextBlock Text="{Binding Track.Album.Name}"
+                                       Margin="176,0,0,0"
+                                       Foreground="Gray"
+                                       VerticalAlignment="Center"
+                                       FontSize="16"
+                                       FontWeight="Medium"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="RepeatButtonTransparent" TargetType="{x:Type RepeatButton}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Rectangle Fill="{TemplateBinding Background}"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="ScrollbarButton" TargetType="{x:Type RepeatButton}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border x:Name="Border"
+                            BorderThickness="1"
+                            SnapsToDevicePixels="True"
+                            Background="#181818"
+                            BorderBrush="#181818">
+                        <ContentPresenter/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ScrollbarThumbVertical" TargetType="{x:Type Thumb}">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Border CornerRadius="5" Background="#424242">
+                        <Rectangle x:Name="rectangle"
+                            SnapsToDevicePixels="True"
+                            Width="{TemplateBinding Width}"
+                            Height="{TemplateBinding Height}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ScrollBar}">
+        <Setter Property="Background" Value="#202020"/>
+        <Setter Property="BorderBrush" Value="#202020"/>
+        <Setter Property="BorderThickness" Value="1,0"/>
+        <Setter Property="Width" Value="10"/>
+        <Setter Property="MinWidth" Value="10"/>
+        <Setter Property="Margin" Value="0,20,0,20"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ScrollBar}">
+                    <Grid SnapsToDevicePixels="True">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Border BorderThickness="{TemplateBinding BorderThickness}"
+                                Grid.Row="1"
+                                CornerRadius="5"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"/>
+                        <Track IsDirectionReversed="True"
+                               Grid.Row="1">
+                            <Track.Thumb>
+                                <Thumb Style="{DynamicResource ScrollbarThumbVertical}"/>
+                            </Track.Thumb>
+                        </Track>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 
 </ResourceDictionary>

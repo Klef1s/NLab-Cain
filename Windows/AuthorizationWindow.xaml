@@ -21,7 +21,7 @@
             <Button Style="{StaticResource Button.CloseApp}" 
                     Name="closeApp"
                     Margin="1238,0,0,0"
-                    Click="closeApp_Click"/>
+                    Click="closeApp_Click" Cursor="Arrow"/>
             <Button Style="{StaticResource Button.HideApp}" 
                     Name="hideApp"
                     Margin="1198,0,0,0" 
