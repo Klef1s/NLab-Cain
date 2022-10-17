@@ -6,38 +6,38 @@
       xmlns:local="clr-namespace:NLab_Cain.Pages"
       xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
       mc:Ignorable="d" 
-      d:DesignHeight="668" d:DesignWidth="1124"
+      d:DesignHeight="668" d:DesignWidth="1155"
       Title="ChartPage">
 
     <Grid>
         <ScrollViewer>
-            <WrapPanel Width="890" Margin="0,0,217,0">
-                <Button Margin="0,50,0,0"
-                    Style="{StaticResource Button.Chart}">
+            <WrapPanel Width="890" Margin="20,20,217,0" Height="auto">
+                <Button Style="{StaticResource Button.Chart}"
+                        Name="allWorld" Click="allWorld_Click" Cursor="Arrow">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_large.jpg" 
                            Stretch="Fill"/>
                     <!--Весь мир-->
                 </Button>
-                <Button Margin="30,50,0,0"
+                <Button Margin="30,0,0,0"
                     Style="{StaticResource Button.Chart}">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_au_large.jpg" 
                            Stretch="Fill"/>
                     <!--Австралия-->
                 </Button>
-                <Button Margin="30,50,0,0" 
+                <Button Margin="30,0,0,0" 
                     Style="{StaticResource Button.Chart}">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_at_large.jpg" 
                            Stretch="Fill"/>
                     <!--Австрия-->
                 </Button>
-                <Button Margin="30,50,0,0" 
+                <Button Margin="30,0,0,0" 
                     Style="{StaticResource Button.Chart}">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_ar_large.jpg" 
                            Stretch="Fill"/>
                     <!--Аргентина-->
                 </Button>
                 <Button Margin="0,24,0,0" 
-                    Style="{StaticResource Button.Chart}">
+                    Style="{StaticResource Button.Chart}" Cursor="Arrow">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_by_large.jpg" 
                            Stretch="Fill"/>
                     <!--Беларусь-->

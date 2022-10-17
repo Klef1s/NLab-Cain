@@ -25,6 +25,9 @@ namespace NLab_Cain.Pages
             InitializeComponent();
         }
 
-        
+        private void allWorld_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
