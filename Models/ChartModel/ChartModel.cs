@@ -42,6 +42,8 @@ namespace NLab_Cain.Models.ChartModel
 
         [JsonProperty("name")]
         public string Name { get; set; }
+
+        public int Number { get; set; }
     }
 
     public partial class Album
@@ -93,7 +95,6 @@ namespace NLab_Cain.Models.ChartModel
             Converters =
             {
                 new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeLocal }
-
             },
         };
     }

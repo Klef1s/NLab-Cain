@@ -129,10 +129,16 @@
                             </Style>
                         </Border.Style>
                         <StackPanel Orientation="Horizontal" Margin="0,6,0,6">
+                            <TextBlock Text="{Binding Track.Number}"
+                                       Margin="32,0,0,0"
+                                       VerticalAlignment="Center"
+                                       Foreground="Gray"
+                                       FontSize="16"
+                                       FontWeight="Medium"/>
                             <Rectangle Width="42" Height="42" 
                                    DockPanel.Dock="Left"
                                    RadiusX="3" RadiusY="3" 
-                                   Margin="64,0,0,0">
+                                   Margin="30,0,0,0">
                             <Rectangle.Fill>
                                 <ImageBrush ImageSource="{Binding Track.Album.Images[2].Url}" />
                             </Rectangle.Fill>

@@ -26,7 +26,7 @@ namespace NLab_Cain.ViewModel
         void PopulateCollection()
         {
             var client = new RestClient();
-            client.Authenticator = new OAuth2AuthorizationRequestHeaderAuthenticator("BQBnXNeXOVRNq0J79TMgt3ycvxehKzNX5i_w51HsLWt8XTbdu4VQkFUZ1rwY1LJ8y1GfoshyQTZVc42DkLqLapow-QG8kvfbcxt5D62KpGQCWwuxEVji5aliYCEjfZ7BxeCIv2p8zQ7XWgTB3ftk8uriyx4ezzooXzTd9V_a4bFgvSAIhjPd15tIpT9xeRM", "Bearer");
+            client.Authenticator = new OAuth2AuthorizationRequestHeaderAuthenticator("BQBXUHgZ9I07MDxjyOi_CuIqmniiaNwAEXRZq_toW_7Tt1hy6bkxOrwAE9v8BMrQpEpVtjLwhcrOFSA4dq6RR5uqNml_Zo7tlXZZ-DXyVQlpWZyvAza6GuX2K52RXQS4ZW6tesLRqGHfHlfTbHCqTj_OlCwT__UTQZmZb6mBVRI4KtV0Dwo3PtDHYrjHLsY", "Bearer");
 
             var request = new RestRequest("https://api.spotify.com/v1/playlists/37i9dQZEVXbKPTKrnFPD0G/tracks", Method.Get);
             request.AddHeader("Accept", "application/json");
@@ -39,6 +39,7 @@ namespace NLab_Cain.ViewModel
             for (int i = 0; i < data.Items.Length; i++)
             {
                 var tracks = data.Items[i];
+                tracks.Track.Number = i + 1;
                 Tracks.Add(tracks);
             }
         }
