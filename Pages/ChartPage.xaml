@@ -1,0 +1,138 @@
+﻿<Page x:Class="NLab_Cain.Pages.ChartPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NLab_Cain.Pages"
+      xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+      mc:Ignorable="d" 
+      d:DesignHeight="668" d:DesignWidth="1124"
+      Title="ChartPage">
+
+    <Grid>
+        <ScrollViewer>
+            <WrapPanel Width="890" Margin="0,0,217,0">
+                <Button Margin="0,50,0,0"
+                    Style="{StaticResource Button.Chart}">
+                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_large.jpg" 
+                           Stretch="Fill"/>
+                    <!--Весь мир-->
+                </Button>
+                <Button Margin="30,50,0,0"
+                    Style="{StaticResource Button.Chart}">
+                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_au_large.jpg" 
+                           Stretch="Fill"/>
+                    <!--Австралия-->
+                </Button>
+                <Button Margin="30,50,0,0" 
+                    Style="{StaticResource Button.Chart}">
+                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_at_large.jpg" 
+                           Stretch="Fill"/>
+                    <!--Австрия-->
+                </Button>
+                <Button Margin="30,50,0,0" 
+                    Style="{StaticResource Button.Chart}">
+                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_ar_large.jpg" 
+                           Stretch="Fill"/>
+                    <!--Аргентина-->
+                </Button>
+                <Button Margin="0,24,0,0" 
+                    Style="{StaticResource Button.Chart}">
+                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_by_large.jpg" 
+                           Stretch="Fill"/>
+                    <!--Беларусь-->
+                </Button>
+                <Button Margin="30,24,0,0" 
+                    Style="{StaticResource Button.Chart}">
+                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_be_large.jpg" 
+                           Stretch="Fill"/>
+                    <!--Бельгия-->
+                </Button>
+                <Button Margin="30,24,0,0" 
+                    Style="{StaticResource Button.Chart}">
+                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_bg_large.jpg" 
+                           Stretch="Fill"/>
+                    <!--Болгария-->
+                </Button>
+                <Button Margin="30,24,0,0" 
+                    Style="{StaticResource Button.Chart}" Cursor="Arrow">
+                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_br_large.jpg" 
+                           Stretch="Fill"/>
+                    <!--Бразилия-->
+                </Button>
+                <Button Margin="0,24,0,0" 
+                    Style="{StaticResource Button.Chart}">
+                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_gb_large.jpg" 
+                           Stretch="Fill"/>
+                    <!--Великобритания-->
+                </Button>
+                <Button Margin="30,24,0,0" 
+                    Style="{StaticResource Button.Chart}">
+                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_hu_large.jpg" 
+                           Stretch="Fill"/>
+                    <!--Венгрия-->
+                </Button>
+                <Button Margin="30,24,0,0" 
+                    Style="{StaticResource Button.Chart}">
+                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_ve_large.jpg" 
+                           Stretch="Fill"/>
+                    <!--Венесуэла-->
+                </Button>
+                <Button Margin="30,24,0,0" 
+                    Style="{StaticResource Button.Chart}">
+                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_de_large.jpg" 
+                           Stretch="Fill"/>
+                    <!--Германия-->
+                </Button>
+                <Button Margin="0,24,0,0"
+                    Style="{StaticResource Button.Chart}">
+                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_hk_large.jpg" 
+                           Stretch="Fill"/>
+                    <!--Гонконг-->
+                </Button>
+                <Button Margin="30,24,0,0" 
+                    Style="{StaticResource Button.Chart}">
+                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_gr_large.jpg" 
+                           Stretch="Fill"/>
+                    <!--Греция-->
+                </Button>
+                <Button Margin="30,24,0,0" 
+                    Style="{StaticResource Button.Chart}">
+                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_dk_large.jpg" 
+                           Stretch="Fill"/>
+                    <!--Доминикана-->
+                </Button>
+                <Button Margin="30,24,0,0"
+                    Style="{StaticResource Button.Chart}">
+                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_eg_large.jpg" 
+                           Stretch="Fill"/>
+                    <!--Египет-->
+                </Button>
+                <Button Margin="0,24,0,0"
+                    Style="{StaticResource Button.Chart}">
+                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_il_large.jpg" 
+                           Stretch="Fill"/>
+                    <!--Израиль-->
+                </Button>
+                <Button Margin="30,24,0,0"
+                    Style="{StaticResource Button.Chart}">
+                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_in_large.jpg" 
+                           Stretch="Fill"/>
+                    <!--Индия-->
+                </Button>
+                <Button Margin="30,24,0,0"
+                    Style="{StaticResource Button.Chart}">
+                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_lu_large.jpg" 
+                           Stretch="Fill"/>
+                    <!--Люксембург-->
+                </Button>
+                <Button Margin="30,24,0,0"
+                    Style="{StaticResource Button.Chart}">
+                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_pt_large.jpg" 
+                           Stretch="Fill"/>
+                    <!--Португалия-->
+                </Button>
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
