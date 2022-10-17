@@ -25,7 +25,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="Button.Animation" TargetType="Button">
+    <Style x:Key="Button.Animation" TargetType="Button" BasedOn="{StaticResource Button.Base}">
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Trigger.EnterActions>
@@ -143,10 +143,12 @@
         </Setter>
     </Style>
 
-    <Style x:Key="Button.Chart" TargetType="Button" BasedOn="{StaticResource Button.Base}">
+    <Style x:Key="Button.Chart" TargetType="Button" BasedOn="{StaticResource Button.Animation}">
+        
         <Setter Property="Width" Value="200"/>
         <Setter Property="Height" Value="206"/>
         <Setter Property="Cursor" Value="Arrow"/>
+        <Setter Property="Padding" Value="0"/>
     </Style>
 
 </ResourceDictionary>
