@@ -22,14 +22,15 @@
                 <Button Style="{StaticResource Button.Chart}"
                         Name="allWorld" Click="allWorld_Click">
                     <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
-                        <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                        <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top">
                             <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_large.jpg"
                                    Stretch="Fill">
                                 <Image.Effect>
                                     <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                 </Image.Effect>
                             </Image>
-                            <TextBlock Text="Топ 50 (во всем мире)" FontSize="14" FontWeight="SemiBold" FontFamily="Montserrat" Foreground="White" Margin="0,8,0,0"/>
+                            <TextBlock Text="Топ 50 (Во всем мире)" 
+                                       Style="{StaticResource TextBlock.ChartButton}"/>
                         </StackPanel>
                     </Border>
                     <!--Весь мир-->
@@ -45,138 +46,319 @@
                                     <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                 </Image.Effect>
                             </Image>
-                            <TextBlock Text="Топ 50 (во всем мире)" FontSize="14" FontWeight="SemiBold" FontFamily="Montserrat" Foreground="White" Margin="0,8,0,0"/>
+                                <TextBlock Text="Топ 50 (Австралия)" 
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
                         </StackPanel>
                     </Border>
                     <!--Австралия-->
                 </Button>
-                <Button Margin="30,0,0,0"
+                    <Button Margin="30,0,0,0"
                         Style="{StaticResource Button.Chart}"
-                        Name="austria" Click="austria_Click">
-                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_at_large.jpg" 
-                           Stretch="Fill"/>
-                    <!--Австрия-->
-                </Button>
-                <Button Margin="30,0,0,0"
+                        Name="austria" Click="austria_Click" Cursor="Arrow">
+                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_at_large.jpg" 
+                                   Stretch="Fill">
+                                    <Image.Effect>
+                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                    </Image.Effect>
+                                </Image>
+                                <TextBlock Text="Топ 50 (Австрия)" 
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Австрия-->
+                    </Button>
+                    <Button Margin="30,0,0,0"
                         Style="{StaticResource Button.Chart}"
-                        Name="argentina" Click="argentina_Click">
-                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_ar_large.jpg" 
-                           Stretch="Fill"/>
-                    <!--Аргентина-->
-                </Button>
-                <Button Margin="0,24,0,0"
+                        Name="argentina" Click="argentina_Click" Cursor="Arrow">
+                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_ar_large.jpg" 
+                                   Stretch="Fill">
+                                    <Image.Effect>
+                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                    </Image.Effect>
+                                </Image>
+                                <TextBlock Text="Топ 50 (Аргентина)" 
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Аргентина-->
+                    </Button>
+                    <Button Margin="0,24,0,0"
                         Style="{StaticResource Button.Chart}"
-                        Name="belarus" Click="belarus_Click">
-                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_by_large.jpg" 
-                           Stretch="Fill"/>
-                    <!--Беларусь-->
-                </Button>
-                <Button Margin="30,24,0,0" 
+                        Name="belarus" Click="belarus_Click" Cursor="Arrow">
+                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_by_large.jpg" 
+                                   Stretch="Fill">
+                                    <Image.Effect>
+                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                    </Image.Effect>
+                                </Image>
+                                <TextBlock Text="Топ 50 (Беларусь)" 
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Беларусь-->
+                    </Button>
+                    <Button Margin="30,24,0,0"
                         Style="{StaticResource Button.Chart}"
-                        Name="belgium" Click="belgium_Click">
-                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_be_large.jpg" 
-                           Stretch="Fill"/>
-                    <!--Бельгия-->
-                </Button>
-                <Button Margin="30,24,0,0" 
+                        Name="belgium" Click="belgium_Click" Cursor="Arrow">
+                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_be_large.jpg" 
+                                   Stretch="Fill">
+                                    <Image.Effect>
+                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                    </Image.Effect>
+                                </Image>
+                                <TextBlock Text="Топ 50 (Бельгия)" 
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Бельгия-->
+                    </Button>
+                    <Button Margin="30,24,0,0"
                         Style="{StaticResource Button.Chart}"
-                        Name="bulgaria" Click="bulgaria_Click">
-                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_bg_large.jpg" 
-                           Stretch="Fill"/>
-                    <!--Болгария-->
-                </Button>
-                <Button Margin="30,24,0,0" 
-                        Style="{StaticResource Button.Chart}" 
-                        Name="brazil" Click="brazil_Click">
-                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_br_large.jpg" 
-                           Stretch="Fill"/>
-                    <!--Бразилия-->
-                </Button>
-                <Button Margin="0,24,0,0" 
+                        Name="bulgaria" Click="bulgaria_Click" Cursor="Arrow">
+                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_bg_large.jpg" 
+                                   Stretch="Fill">
+                                    <Image.Effect>
+                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                    </Image.Effect>
+                                </Image>
+                                <TextBlock Text="Топ 50 (Болгария)" 
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Болгария-->
+                    </Button>
+                    <Button Margin="30,24,0,0"
                         Style="{StaticResource Button.Chart}"
-                        Name="uk" Click="uk_Click">
-                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_gb_large.jpg" 
-                           Stretch="Fill"/>
-                    <!--Великобритания-->
-                </Button>
-                <Button Margin="30,24,0,0" 
+                        Name="brazil" Click="brazil_Click" Cursor="Arrow">
+                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_br_large.jpg" 
+                                   Stretch="Fill">
+                                    <Image.Effect>
+                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                    </Image.Effect>
+                                </Image>
+                                <TextBlock Text="Топ 50 (Бразилия)" 
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Бразилия-->
+                    </Button>
+                    <Button Margin="0,24,0,0"
                         Style="{StaticResource Button.Chart}"
-                        Name="hungary" Click="hungary_Click">
-                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_hu_large.jpg" 
-                           Stretch="Fill"/>
-                    <!--Венгрия-->
-                </Button>
-                <Button Margin="30,24,0,0" 
+                        Name="uk" Click="uk_Click" Cursor="Arrow">
+                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_gb_large.jpg" 
+                                   Stretch="Fill">
+                                    <Image.Effect>
+                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                    </Image.Effect>
+                                </Image>
+                                <TextBlock Text="Топ 50 (Великобритания)" 
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Великобритания-->
+                    </Button>
+                    <Button Margin="30,24,0,0"
                         Style="{StaticResource Button.Chart}"
-                        Name="venezuela" Click="venezuela_Click">
-                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_ve_large.jpg" 
-                           Stretch="Fill"/>
-                    <!--Венесуэла-->
-                </Button>
-                <Button Margin="30,24,0,0" 
+                        Name="hungary" Click="hungary_Click" Cursor="Arrow">
+                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_hu_large.jpg" 
+                                   Stretch="Fill">
+                                    <Image.Effect>
+                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                    </Image.Effect>
+                                </Image>
+                                <TextBlock Text="Топ 50 (Венгрия)" 
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Венгрия-->
+                    </Button>
+                    <Button Margin="30,24,0,0"
                         Style="{StaticResource Button.Chart}"
-                        Name="germany" Click="germany_Click">
-                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_de_large.jpg" 
-                           Stretch="Fill"/>
-                    <!--Германия-->
-                </Button>
-                <Button Margin="0,24,0,0"
+                        Name="venezuela" Click="venezuela_Click" Cursor="Arrow">
+                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_ve_large.jpg" 
+                                   Stretch="Fill">
+                                    <Image.Effect>
+                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                    </Image.Effect>
+                                </Image>
+                                <TextBlock Text="Топ 50 (Венесуэла)" 
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Венесуэла-->
+                    </Button>
+                    <Button Margin="30,24,0,0"
                         Style="{StaticResource Button.Chart}"
-                        Name="hongKong" Click="hongKong_Click">
-                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_hk_large.jpg" 
-                           Stretch="Fill"/>
-                    <!--Гонконг-->
-                </Button>
-                <Button Margin="30,24,0,0" 
+                        Name="germany" Click="germany_Click" Cursor="Arrow">
+                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_de_large.jpg" 
+                                   Stretch="Fill">
+                                    <Image.Effect>
+                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                    </Image.Effect>
+                                </Image>
+                                <TextBlock Text="Топ 50 (Германия)" 
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Германия-->
+                    </Button>
+                    <Button Margin="0,24,0,0"
                         Style="{StaticResource Button.Chart}"
-                        Name="greece" Click="greece_Click">
-                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_gr_large.jpg" 
-                           Stretch="Fill"/>
-                    <!--Греция-->
-                </Button>
-                <Button Margin="30,24,0,0" 
+                        Name="hongKong" Click="hongKong_Click" Cursor="Arrow">
+                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_hk_large.jpg" 
+                                   Stretch="Fill">
+                                    <Image.Effect>
+                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                    </Image.Effect>
+                                </Image>
+                                <TextBlock Text="Топ 50 (Гонконг)" 
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Гонконг-->
+                    </Button>
+                    <Button Margin="30,24,0,0"
                         Style="{StaticResource Button.Chart}"
-                        Name="dominicana" Click="dominicana_Click">
-                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_dk_large.jpg" 
-                           Stretch="Fill"/>
-                    <!--Доминикана-->
-                </Button>
-                <Button Margin="30,24,0,0"
+                        Name="greece" Click="greece_Click" Cursor="Arrow">
+                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_gr_large.jpg" 
+                                   Stretch="Fill">
+                                    <Image.Effect>
+                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                    </Image.Effect>
+                                </Image>
+                                <TextBlock Text="Топ 50 (Греция)" 
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Греция-->
+                    </Button>
+                    <Button Margin="30,24,0,0"
                         Style="{StaticResource Button.Chart}"
-                        Name="egypt" Click="egypt_Click">
-                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_eg_large.jpg" 
-                           Stretch="Fill"/>
-                    <!--Египет-->
-                </Button>
-                <Button Margin="0,24,0,0"
+                        Name="dominicana" Click="dominicana_Click" Cursor="Arrow">
+                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_dk_large.jpg" 
+                                   Stretch="Fill">
+                                    <Image.Effect>
+                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                    </Image.Effect>
+                                </Image>
+                                <TextBlock Text="Топ 50 (Доминикана)" 
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Доминикана-->
+                    </Button>
+                    <Button Margin="30,24,0,0"
                         Style="{StaticResource Button.Chart}"
-                        Name="israel" Click="israel_Click">
-                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_il_large.jpg" 
-                           Stretch="Fill"/>
-                    <!--Израиль-->
-                </Button>
-                <Button Margin="30,24,0,0"
+                        Name="egypt" Click="egypt_Click" Cursor="Arrow">
+                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_eg_large.jpg" 
+                                   Stretch="Fill">
+                                    <Image.Effect>
+                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                    </Image.Effect>
+                                </Image>
+                                <TextBlock Text="Топ 50 (Египет)" 
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Египет-->
+                    </Button>
+                    <Button Margin="0,24,0,0"
                         Style="{StaticResource Button.Chart}"
-                        Name="india" Click="india_Click">
-                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_in_large.jpg" 
-                           Stretch="Fill"/>
-                    <!--Индия-->
-                </Button>
-                <Button Margin="30,24,0,0"
+                        Name="israel" Click="israel_Click" Cursor="Arrow">
+                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_il_large.jpg" 
+                                   Stretch="Fill">
+                                    <Image.Effect>
+                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                    </Image.Effect>
+                                </Image>
+                                <TextBlock Text="Топ 50 (Израиль)" 
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Израиль-->
+                    </Button>
+                    <Button Margin="30,24,0,0"
                         Style="{StaticResource Button.Chart}"
-                        Name="luxembourg" Click="luxembourg_Click">
-                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_lu_large.jpg" 
-                           Stretch="Fill"/>
-                    <!--Люксембург-->
-                </Button>
-                <Button Margin="30,24,0,0"
+                        Name="india" Click="india_Click" Cursor="Arrow">
+                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_in_large.jpg" 
+                                   Stretch="Fill">
+                                    <Image.Effect>
+                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                    </Image.Effect>
+                                </Image>
+                                <TextBlock Text="Топ 50 (Индия)" 
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Индия-->
+                    </Button>
+                    <Button Margin="30,24,0,0"
+                        Style="{StaticResource Button.Chart}"
+                        Name="luxembourg" Click="luxembourg_Click" Cursor="Arrow">
+                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_lu_large.jpg" 
+                                   Stretch="Fill">
+                                    <Image.Effect>
+                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                    </Image.Effect>
+                                </Image>
+                                <TextBlock Text="Топ 50 (Люксембург)" 
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Люксембург-->
+                    </Button>
+                    <Button Margin="30,24,0,0"
                         Style="{StaticResource Button.Chart}"
                         Name="portugal" Click="portugal_Click" Cursor="Arrow">
-                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_pt_large.jpg" 
-                           Stretch="Fill"/>
-                    <!--Португалия-->
-                </Button>
-            </WrapPanel>
+                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_pt_large.jpg" 
+                                   Stretch="Fill">
+                                    <Image.Effect>
+                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                    </Image.Effect>
+                                </Image>
+                                <TextBlock Text="Топ 50 (Португалия)" 
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Португалия-->
+                    </Button>
+                </WrapPanel>
             </StackPanel>
         </ScrollViewer>
     </StackPanel>

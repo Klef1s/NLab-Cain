@@ -35,5 +35,12 @@
         <Setter Property="Margin" Value="50,410,0,0"/>
         <Setter Property="Visibility" Value="Collapsed"/>
     </Style>
+    <Style x:Key="TextBlock.ChartButton" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontFamily" Value="Montserrat"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Margin" Value="0,10,0,0"/>
+    </Style>
 
 </ResourceDictionary>
