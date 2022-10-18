@@ -14,15 +14,33 @@
             <WrapPanel Width="890" Margin="20,20,0,20" Height="auto" HorizontalAlignment="Left">
                 <Button Style="{StaticResource Button.Chart}"
                         Name="allWorld" Click="allWorld_Click">
-                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_large.jpg" 
-                           Stretch="Fill"/>
+                    <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                        <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                            <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_large.jpg"
+                                   Stretch="Fill">
+                                <Image.Effect>
+                                    <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                </Image.Effect>
+                            </Image>
+                            <TextBlock Text="Топ 50 (во всем мире)" FontSize="14" FontWeight="SemiBold" FontFamily="Montserrat" Foreground="White" Margin="0,8,0,0"/>
+                        </StackPanel>
+                    </Border>
                     <!--Весь мир-->
                 </Button>
                 <Button Margin="30,0,0,0"
                         Style="{StaticResource Button.Chart}"
                         Name="avstralia" Click="avstralia_Click" Cursor="Arrow">
-                    <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_au_large.jpg" 
-                           Stretch="Fill"/>
+                    <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                        <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                            <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_au_large.jpg" 
+                                   Stretch="Fill">
+                                <Image.Effect>
+                                    <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                </Image.Effect>
+                            </Image>
+                            <TextBlock Text="Топ 50 (во всем мире)" FontSize="14" FontWeight="SemiBold" FontFamily="Montserrat" Foreground="White" Margin="0,8,0,0"/>
+                        </StackPanel>
+                    </Border>
                     <!--Австралия-->
                 </Button>
                 <Button Margin="30,0,0,0" 

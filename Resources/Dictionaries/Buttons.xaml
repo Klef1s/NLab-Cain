@@ -146,7 +146,7 @@
     <Style x:Key="Button.Chart" TargetType="Button" BasedOn="{StaticResource Button.Animation}">
         
         <Setter Property="Width" Value="200"/>
-        <Setter Property="Height" Value="206"/>
+        <Setter Property="Height" Value="226"/>
         <Setter Property="Cursor" Value="Arrow"/>
         <Setter Property="Padding" Value="0"/>
     </Style>
