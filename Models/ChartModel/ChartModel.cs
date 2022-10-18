@@ -8,7 +8,7 @@ namespace NLab_Cain.Models.ChartModel
 {
     public class UrlChart
     {
-        public static string url = "https://api.spotify.com/v1/playlists/37i9dQZEVXbKPTKrnFPD0G/tracks";
+        public static string url { get; set; }
     }
 
     public partial class ChartModel

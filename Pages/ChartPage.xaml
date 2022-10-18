@@ -29,7 +29,7 @@
                 </Button>
                 <Button Margin="30,0,0,0"
                         Style="{StaticResource Button.Chart}"
-                        Name="avstralia" Click="avstralia_Click" Cursor="Arrow">
+                        Name="australia" Click="australia_Click" Cursor="Arrow">
                     <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
                         <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
                             <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_au_large.jpg" 
@@ -43,110 +43,128 @@
                     </Border>
                     <!--Австралия-->
                 </Button>
-                <Button Margin="30,0,0,0" 
-                    Style="{StaticResource Button.Chart}">
+                <Button Margin="30,0,0,0"
+                        Style="{StaticResource Button.Chart}"
+                        Name="austria" Click="austria_Click">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_at_large.jpg" 
                            Stretch="Fill"/>
                     <!--Австрия-->
                 </Button>
-                <Button Margin="30,0,0,0" 
-                    Style="{StaticResource Button.Chart}">
+                <Button Margin="30,0,0,0"
+                        Style="{StaticResource Button.Chart}"
+                        Name="argentina" Click="argentina_Click">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_ar_large.jpg" 
                            Stretch="Fill"/>
                     <!--Аргентина-->
                 </Button>
-                <Button Margin="0,24,0,0" 
-                    Style="{StaticResource Button.Chart}" Cursor="Arrow">
+                <Button Margin="0,24,0,0"
+                        Style="{StaticResource Button.Chart}"
+                        Name="belarus" Click="belarus_Click">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_by_large.jpg" 
                            Stretch="Fill"/>
                     <!--Беларусь-->
                 </Button>
                 <Button Margin="30,24,0,0" 
-                    Style="{StaticResource Button.Chart}">
+                        Style="{StaticResource Button.Chart}"
+                        Name="belgium" Click="belgium_Click">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_be_large.jpg" 
                            Stretch="Fill"/>
                     <!--Бельгия-->
                 </Button>
                 <Button Margin="30,24,0,0" 
-                    Style="{StaticResource Button.Chart}">
+                        Style="{StaticResource Button.Chart}"
+                        Name="bulgaria" Click="bulgaria_Click">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_bg_large.jpg" 
                            Stretch="Fill"/>
                     <!--Болгария-->
                 </Button>
                 <Button Margin="30,24,0,0" 
-                    Style="{StaticResource Button.Chart}" Cursor="Arrow">
+                        Style="{StaticResource Button.Chart}" 
+                        Name="brazil" Click="brazil_Click">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_br_large.jpg" 
                            Stretch="Fill"/>
                     <!--Бразилия-->
                 </Button>
                 <Button Margin="0,24,0,0" 
-                    Style="{StaticResource Button.Chart}">
+                        Style="{StaticResource Button.Chart}"
+                        Name="uk" Click="uk_Click">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_gb_large.jpg" 
                            Stretch="Fill"/>
                     <!--Великобритания-->
                 </Button>
                 <Button Margin="30,24,0,0" 
-                    Style="{StaticResource Button.Chart}">
+                        Style="{StaticResource Button.Chart}"
+                        Name="hungary" Click="hungary_Click">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_hu_large.jpg" 
                            Stretch="Fill"/>
                     <!--Венгрия-->
                 </Button>
                 <Button Margin="30,24,0,0" 
-                    Style="{StaticResource Button.Chart}">
+                        Style="{StaticResource Button.Chart}"
+                        Name="venezuela" Click="venezuela_Click">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_ve_large.jpg" 
                            Stretch="Fill"/>
                     <!--Венесуэла-->
                 </Button>
                 <Button Margin="30,24,0,0" 
-                    Style="{StaticResource Button.Chart}">
+                        Style="{StaticResource Button.Chart}"
+                        Name="germany" Click="germany_Click">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_de_large.jpg" 
                            Stretch="Fill"/>
                     <!--Германия-->
                 </Button>
                 <Button Margin="0,24,0,0"
-                    Style="{StaticResource Button.Chart}">
+                        Style="{StaticResource Button.Chart}"
+                        Name="hongKong" Click="hongKong_Click">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_hk_large.jpg" 
                            Stretch="Fill"/>
                     <!--Гонконг-->
                 </Button>
                 <Button Margin="30,24,0,0" 
-                    Style="{StaticResource Button.Chart}">
+                        Style="{StaticResource Button.Chart}"
+                        Name="greece" Click="greece_Click">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_gr_large.jpg" 
                            Stretch="Fill"/>
                     <!--Греция-->
                 </Button>
                 <Button Margin="30,24,0,0" 
-                    Style="{StaticResource Button.Chart}">
+                        Style="{StaticResource Button.Chart}"
+                        Name="dominicana" Click="dominicana_Click">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_dk_large.jpg" 
                            Stretch="Fill"/>
                     <!--Доминикана-->
                 </Button>
                 <Button Margin="30,24,0,0"
-                    Style="{StaticResource Button.Chart}">
+                        Style="{StaticResource Button.Chart}"
+                        Name="egypt" Click="egypt_Click">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_eg_large.jpg" 
                            Stretch="Fill"/>
                     <!--Египет-->
                 </Button>
                 <Button Margin="0,24,0,0"
-                    Style="{StaticResource Button.Chart}">
+                        Style="{StaticResource Button.Chart}"
+                        Name="israel" Click="israel_Click">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_il_large.jpg" 
                            Stretch="Fill"/>
                     <!--Израиль-->
                 </Button>
                 <Button Margin="30,24,0,0"
-                    Style="{StaticResource Button.Chart}">
+                        Style="{StaticResource Button.Chart}"
+                        Name="india" Click="india_Click">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_in_large.jpg" 
                            Stretch="Fill"/>
                     <!--Индия-->
                 </Button>
                 <Button Margin="30,24,0,0"
-                    Style="{StaticResource Button.Chart}">
+                        Style="{StaticResource Button.Chart}"
+                        Name="luxembourg" Click="luxembourg_Click">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_lu_large.jpg" 
                            Stretch="Fill"/>
                     <!--Люксембург-->
                 </Button>
                 <Button Margin="30,24,0,0"
-                    Style="{StaticResource Button.Chart}">
+                        Style="{StaticResource Button.Chart}"
+                        Name="portugal" Click="portugal_Click" Cursor="Arrow">
                     <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_pt_large.jpg" 
                            Stretch="Fill"/>
                     <!--Португалия-->
