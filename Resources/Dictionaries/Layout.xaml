@@ -145,6 +145,7 @@
                                 <ImageBrush ImageSource="{Binding Track.Album.Images[2].Url}" />
                             </Rectangle.Fill>
                             </Rectangle>
+                            
                             <StackPanel Margin="10,0,0,0">
                                 <TextBlock Text="{Binding Track.Name}"
                                        Width="300"
@@ -194,7 +195,6 @@
             </Setter.Value>
         </Setter>
     </Style>
-
 
     <Style x:Key="ScrollbarButton" TargetType="{x:Type RepeatButton}">
         <Setter Property="Template">
