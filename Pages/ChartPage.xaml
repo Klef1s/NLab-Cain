@@ -9,9 +9,16 @@
       d:DesignHeight="668" d:DesignWidth="1155"
       Title="ChartPage">
 
-    <Grid>
+    <StackPanel>
         <ScrollViewer Height="668" HorizontalAlignment="Center" Width="1155" VerticalAlignment="Bottom">
-            <WrapPanel Width="890" Margin="20,20,0,20" Height="auto" HorizontalAlignment="Left">
+            <StackPanel>
+            <TextBlock Text="Чарты дня: треки" 
+                   Width="auto" Height="auto"
+                   Foreground="White" 
+                   FontSize="22" FontFamily="Montserrat" FontWeight="SemiBold"  
+                   HorizontalAlignment="Left" VerticalAlignment="Top" 
+                   Margin="20,0,0,0"/>
+            <WrapPanel Width="890" Margin="20,20,0,20" Height="auto" HorizontalAlignment="Left" ScrollViewer.CanContentScroll="False">
                 <Button Style="{StaticResource Button.Chart}"
                         Name="allWorld" Click="allWorld_Click">
                     <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
@@ -170,6 +177,7 @@
                     <!--Португалия-->
                 </Button>
             </WrapPanel>
+            </StackPanel>
         </ScrollViewer>
-    </Grid>
+    </StackPanel>
 </Page>
