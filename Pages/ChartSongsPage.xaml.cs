@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLab_Cain.Models.ChartModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace NLab_Cain.Pages
         public ChartSongsPage()
         {
             InitializeComponent();
+            nameChart.Text = NameChart.nameChart;
         }
     }
+
 }

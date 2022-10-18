@@ -23,5 +23,19 @@ namespace NLab_Cain.Windows
         {
             InitializeComponent();
         }
+
+        private void hideApp_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void closeApp_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void moveArea_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
     }
 }

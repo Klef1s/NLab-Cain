@@ -11,6 +11,11 @@ namespace NLab_Cain.Models.ChartModel
         public static string url { get; set; }
     }
 
+    public class NameChart
+    {
+        public static string nameChart { get; set; }
+    }
+
     public partial class ChartModel
     {
         [JsonProperty("items")]
@@ -53,9 +58,6 @@ namespace NLab_Cain.Models.ChartModel
 
         [JsonProperty("name")]
         public string Name { get; set; }
-
-        [JsonProperty("release_date")]
-        public DateTimeOffset ReleaseDate { get; set; }
     }
 
     public partial class Image
@@ -94,7 +96,7 @@ namespace NLab_Cain.Models.ChartModel
             DateParseHandling = DateParseHandling.None,
             Converters =
             {
-                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeLocal }
+                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
             },
         };
     }

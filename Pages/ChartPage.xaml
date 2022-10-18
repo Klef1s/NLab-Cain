@@ -29,8 +29,8 @@
                                     <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                 </Image.Effect>
                             </Image>
-                            <TextBlock Text="Топ 50 (Во всем мире)" 
-                                       Style="{StaticResource TextBlock.ChartButton}"/>
+                                <TextBlock Text="Топ 50 (Во всем мире)" Name="allWorldText"
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
                         </StackPanel>
                     </Border>
                     <!--Весь мир-->
@@ -46,7 +46,7 @@
                                     <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                 </Image.Effect>
                             </Image>
-                                <TextBlock Text="Топ 50 (Австралия)" 
+                                <TextBlock Text="Топ 50 (Австралия)" Name="australiaText"
                                            Style="{StaticResource TextBlock.ChartButton}"/>
                         </StackPanel>
                     </Border>
@@ -63,7 +63,7 @@
                                         <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                     </Image.Effect>
                                 </Image>
-                                <TextBlock Text="Топ 50 (Австрия)" 
+                                <TextBlock Text="Топ 50 (Австрия)" Name="austriaText"
                                            Style="{StaticResource TextBlock.ChartButton}"/>
                             </StackPanel>
                         </Border>
@@ -80,7 +80,7 @@
                                         <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                     </Image.Effect>
                                 </Image>
-                                <TextBlock Text="Топ 50 (Аргентина)" 
+                                <TextBlock Text="Топ 50 (Аргентина)" Name="argentinaText"
                                            Style="{StaticResource TextBlock.ChartButton}"/>
                             </StackPanel>
                         </Border>
@@ -97,7 +97,7 @@
                                         <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                     </Image.Effect>
                                 </Image>
-                                <TextBlock Text="Топ 50 (Беларусь)" 
+                                <TextBlock Text="Топ 50 (Беларусь)" Name="belarusText"
                                            Style="{StaticResource TextBlock.ChartButton}"/>
                             </StackPanel>
                         </Border>
@@ -114,7 +114,7 @@
                                         <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                     </Image.Effect>
                                 </Image>
-                                <TextBlock Text="Топ 50 (Бельгия)" 
+                                <TextBlock Text="Топ 50 (Бельгия)" Name="belgiumText"
                                            Style="{StaticResource TextBlock.ChartButton}"/>
                             </StackPanel>
                         </Border>
@@ -131,7 +131,7 @@
                                         <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                     </Image.Effect>
                                 </Image>
-                                <TextBlock Text="Топ 50 (Болгария)" 
+                                <TextBlock Text="Топ 50 (Болгария)" Name="bulgariaText"
                                            Style="{StaticResource TextBlock.ChartButton}"/>
                             </StackPanel>
                         </Border>
@@ -148,7 +148,7 @@
                                         <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                     </Image.Effect>
                                 </Image>
-                                <TextBlock Text="Топ 50 (Бразилия)" 
+                                <TextBlock Text="Топ 50 (Бразилия)" Name="brazilText"
                                            Style="{StaticResource TextBlock.ChartButton}"/>
                             </StackPanel>
                         </Border>
@@ -165,7 +165,7 @@
                                         <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                     </Image.Effect>
                                 </Image>
-                                <TextBlock Text="Топ 50 (Великобритания)" 
+                                <TextBlock Text="Топ 50 (Великобритания)" Name="ukText"
                                            Style="{StaticResource TextBlock.ChartButton}"/>
                             </StackPanel>
                         </Border>
@@ -182,7 +182,7 @@
                                         <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                     </Image.Effect>
                                 </Image>
-                                <TextBlock Text="Топ 50 (Венгрия)" 
+                                <TextBlock Text="Топ 50 (Венгрия)" Name="hungaryText"
                                            Style="{StaticResource TextBlock.ChartButton}"/>
                             </StackPanel>
                         </Border>
@@ -199,7 +199,7 @@
                                         <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                     </Image.Effect>
                                 </Image>
-                                <TextBlock Text="Топ 50 (Венесуэла)" 
+                                <TextBlock Text="Топ 50 (Венесуэла)" Name="venezuelaText"
                                            Style="{StaticResource TextBlock.ChartButton}"/>
                             </StackPanel>
                         </Border>
@@ -216,7 +216,7 @@
                                         <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                     </Image.Effect>
                                 </Image>
-                                <TextBlock Text="Топ 50 (Германия)" 
+                                <TextBlock Text="Топ 50 (Германия)" Name="germanyText"
                                            Style="{StaticResource TextBlock.ChartButton}"/>
                             </StackPanel>
                         </Border>
@@ -233,7 +233,7 @@
                                         <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                     </Image.Effect>
                                 </Image>
-                                <TextBlock Text="Топ 50 (Гонконг)" 
+                                <TextBlock Text="Топ 50 (Гонконг)" Name="hongKongText"
                                            Style="{StaticResource TextBlock.ChartButton}"/>
                             </StackPanel>
                         </Border>
@@ -250,7 +250,7 @@
                                         <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                     </Image.Effect>
                                 </Image>
-                                <TextBlock Text="Топ 50 (Греция)" 
+                                <TextBlock Text="Топ 50 (Греция)" Name="greeceText"
                                            Style="{StaticResource TextBlock.ChartButton}"/>
                             </StackPanel>
                         </Border>
@@ -267,7 +267,7 @@
                                         <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                     </Image.Effect>
                                 </Image>
-                                <TextBlock Text="Топ 50 (Доминикана)" 
+                                <TextBlock Text="Топ 50 (Доминикана)" Name="dominicanaText"
                                            Style="{StaticResource TextBlock.ChartButton}"/>
                             </StackPanel>
                         </Border>
@@ -284,7 +284,7 @@
                                         <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                     </Image.Effect>
                                 </Image>
-                                <TextBlock Text="Топ 50 (Египет)" 
+                                <TextBlock Text="Топ 50 (Египет)" Name="egyptText"
                                            Style="{StaticResource TextBlock.ChartButton}"/>
                             </StackPanel>
                         </Border>
@@ -301,7 +301,7 @@
                                         <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                     </Image.Effect>
                                 </Image>
-                                <TextBlock Text="Топ 50 (Израиль)" 
+                                <TextBlock Text="Топ 50 (Израиль)" Name="israelText"
                                            Style="{StaticResource TextBlock.ChartButton}"/>
                             </StackPanel>
                         </Border>
@@ -318,7 +318,7 @@
                                         <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                     </Image.Effect>
                                 </Image>
-                                <TextBlock Text="Топ 50 (Индия)" 
+                                <TextBlock Text="Топ 50 (Индия)" Name="indiaText"
                                            Style="{StaticResource TextBlock.ChartButton}"/>
                             </StackPanel>
                         </Border>
@@ -335,7 +335,7 @@
                                         <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                     </Image.Effect>
                                 </Image>
-                                <TextBlock Text="Топ 50 (Люксембург)" 
+                                <TextBlock Text="Топ 50 (Люксембург)" Name="luxembourgText"
                                            Style="{StaticResource TextBlock.ChartButton}"/>
                             </StackPanel>
                         </Border>
@@ -352,7 +352,7 @@
                                         <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
                                     </Image.Effect>
                                 </Image>
-                                <TextBlock Text="Топ 50 (Португалия)" 
+                                <TextBlock Text="Топ 50 (Португалия)" Name="portugalText"
                                            Style="{StaticResource TextBlock.ChartButton}"/>
                             </StackPanel>
                         </Border>
