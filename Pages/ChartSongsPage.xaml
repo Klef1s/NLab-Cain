@@ -17,56 +17,52 @@
         <StackPanel >
             <StackPanel Orientation="Horizontal">
                 <TextBlock Height="Auto"
-                               Margin="326,22,0,0"
-                               Text="Топ-50 треков(во всем мире)"
-                               FontSize="32" 
-                               FontFamily="Montserrat" 
-                               FontWeight="Bold"
-                               Foreground="White"
-                               TextAlignment="Center" 
-                               HorizontalAlignment="Center"/>
-                <Button Style="{StaticResource Button.CloseApp}"
-                            Name="closeApp"
-                            Margin="282,0,0,16"/>
+                           Margin="326,0,0,0"
+                           Text="Топ-50 треков(во всем мире)"
+                           FontSize="32" 
+                           FontFamily="Montserrat" 
+                           FontWeight="Bold"
+                           Foreground="White"
+                           TextAlignment="Center"
+                           HorizontalAlignment="Center"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" 
-                                Height="auto" Width="auto"
-                                Margin="0,48,0,0">
+            
+            <StackPanel Orientation="Horizontal"
+                        Height="auto" Width="auto"
+                        Margin="0,48,0,0">
                 <TextBlock Text="№"
-                                   FontSize="18" 
-                                   FontFamily="Montserrat"
-                                   FontWeight="SemiBold"
-                                   Foreground="White"
-                                   Margin="48,0,0,0"/>
+                           FontSize="18" 
+                           FontFamily="Montserrat"
+                           FontWeight="SemiBold"
+                           Foreground="White"
+                           Margin="48,0,0,0"/>
                 <TextBlock Text="Название"
-                                   FontSize="18" 
-                                   FontFamily="Montserrat"
-                                   FontWeight="SemiBold"
-                                   Foreground="White"
-                                   Margin="18,0,0,0"/>
-                <TextBlock Text="Релиз"
-                                   FontSize="18" 
-                                   FontFamily="Montserrat"
-                                   FontWeight="SemiBold"
-                                   Foreground="White"
-                                   Margin="288,0,0,0"/>
+                           FontSize="18" 
+                           FontFamily="Montserrat"
+                           FontWeight="SemiBold"
+                           Foreground="White"
+                           Margin="18,0,0,0"/>
                 <TextBlock Text="Альбом"
-                                   FontSize="18" 
-                                   FontFamily="Montserrat"
-                                   FontWeight="SemiBold"
-                                   Foreground="White"
-                                   Margin="106,0,0,0"/>
+                           FontSize="18" 
+                           FontFamily="Montserrat"
+                           FontWeight="SemiBold"
+                           Foreground="White"
+                           Margin="338,0,0,0"/>
             </StackPanel>
+            
             <Border Style="{StaticResource Border.Underline}" 
-                        Width="auto" Margin="20,12,20,0"/>
-            <Grid Height="525">
+                    Background="Gray"
+                    Width="auto" 
+                    Margin="20,20,20,0"/>
+            
+            <Grid Height="546">
                 <ListView Width="1114"
-                              Margin="0,10,0,0"
-                              Background="Transparent"
-                              ScrollViewer.CanContentScroll="False" 
-                              HorizontalAlignment="Center"
-                              ItemsSource="{Binding Tracks}"
-                              Style="{StaticResource ListStyle}"/>
+                          Margin="0,10,0,0"
+                          Background="Transparent"
+                          ScrollViewer.CanContentScroll="False"
+                          HorizontalAlignment="Center"
+                          ItemsSource="{Binding Tracks}"
+                          Style="{StaticResource ListStyle}"/>
             </Grid>
         </StackPanel>
     </Grid>
