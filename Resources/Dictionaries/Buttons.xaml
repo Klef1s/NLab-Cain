@@ -155,7 +155,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <svgc:SvgViewbox Source="\Resources\Images\Icons\Home.svg" Width="36" Height="36">
+                    <svgc:SvgViewbox Source="\Resources\Images\Icons\Home.svg" Width="32" Height="32">
                     </svgc:SvgViewbox>
                 </ControlTemplate>
             </Setter.Value>
@@ -168,7 +168,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <svgc:SvgViewbox Source="\Resources\Images\Icons\Library.svg" Width="36" Height="36">
+                    <svgc:SvgViewbox Source="\Resources\Images\Icons\Library.svg" Width="32" Height="32">
                     </svgc:SvgViewbox>
                 </ControlTemplate>
             </Setter.Value>
@@ -181,7 +181,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <svgc:SvgViewbox Source="\Resources\Images\Icons\Settings.svg" Width="36" Height="36">
+                    <svgc:SvgViewbox Source="\Resources\Images\Icons\Settings.svg" Width="32" Height="32">
                     </svgc:SvgViewbox>
                 </ControlTemplate>
             </Setter.Value>

@@ -62,7 +62,8 @@ namespace NLab_Cain.Pages
                     borderLoading.Visibility = Visibility.Hidden;
 
                     //Такой аккаунт уже существует
-                    MessageBox.Show("Такой аккаунт уже существует");
+                    mailErrorMessage.Visibility = Visibility.Visible;
+                    mailErrorMessage.Text = "Аккаунт с таким email уже существует";
                 }
 
                 else
@@ -72,16 +73,40 @@ namespace NLab_Cain.Pages
                     db.Users.Add(addUser);
                     db.SaveChanges();
 
-                    MessageBox.Show("существует");
+                    mailErrorMessage.Visibility = Visibility.Collapsed;
+                    passwordErrorMessage.Visibility = Visibility.Collapsed;
+                    repeatPasswordErrorMessage.Visibility = Visibility.Collapsed;
 
+                    NavigationService.Navigate(new AuthorizationPage());
                 }
             }
             else
             {
                 borderLoading.Visibility = Visibility.Hidden;
 
-                //Ошибка полей
-                MessageBox.Show("Ошибка полей");
+                if (resultValidEmail == false)
+                {
+                    mailErrorMessage.Visibility = Visibility.Visible;
+                    mailErrorMessage.Text = "Введен не коректный email";
+                    
+                }
+                if (resultValidPassword == false)
+                {
+                    passwordErrorMessage.Visibility = Visibility.Visible;
+                    passwordErrorMessage.Text = "Некорректный пароль";
+                }
+                if (resultvalidRepeatPassword == false)
+                {
+                    repeatPasswordErrorMessage.Visibility = Visibility.Visible;
+                    repeatPasswordErrorMessage.Text = "Пароли не совпадают";
+                }
+                else
+                {
+                    mailErrorMessage.Visibility = Visibility.Collapsed;
+                    passwordErrorMessage.Visibility = Visibility.Collapsed;
+                    repeatPasswordErrorMessage.Visibility = Visibility.Collapsed;
+                }
+
             }
         }
 
@@ -103,7 +128,5 @@ namespace NLab_Cain.Pages
             Regex regex = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,32}$");
             return regex.IsMatch(s);
         }
-    }
-
-   
+    }   
 }

@@ -63,22 +63,21 @@ namespace NLab_Cain.Pages
                 if (authUser != null)
                 {
                     borderLoading.Visibility = Visibility.Collapsed;
+                    authPasswordErrorMessage.Visibility = Visibility.Collapsed;
 
                     OpenMainWindow();
                 }
                 else
                 {
                     borderLoading.Visibility = Visibility.Hidden;
-
                     //ошибка, такого аккаунта не существует
-                    MessageBox.Show("net");
+                    ErrorMessage();
                 }
             }
             else
             {
                 borderLoading.Visibility = Visibility.Hidden;
-                //Ошибка ввода полей
-                MessageBox.Show("Ошибка ввода полей");
+                ErrorMessage();
             }
 
 
@@ -94,5 +93,10 @@ namespace NLab_Cain.Pages
             NavigationService.Navigate(new PasswordRecoveryConfirmationPage());
         }
 
+        private void ErrorMessage()
+        {
+            authPasswordErrorMessage.Visibility = Visibility.Visible;
+            authPasswordErrorMessage.Text = "Эта комбинация электронной почты и пароля неверна";
+        }
     }
 }
