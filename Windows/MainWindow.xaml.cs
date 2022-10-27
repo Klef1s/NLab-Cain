@@ -50,5 +50,10 @@ namespace NLab_Cain.Windows
         {
             frameMainWindow.Source = new Uri("/Pages/SettingsPage.xaml", UriKind.Relative);
         }
+
+        private void toCharts_Click(object sender, RoutedEventArgs e)
+        {
+            frameMainWindow.Source = new Uri("/Pages/ChartPage.xaml", UriKind.Relative);
+        }
     }
 }
