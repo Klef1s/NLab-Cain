@@ -260,4 +260,26 @@
         </Setter>
     </Style>
 
+    <Style x:Key="Border.SettingsPageBackground" TargetType="Border">
+        <Setter Property="Background" Value="#222222"/>
+        <Setter Property="Width" Value="400"/>
+        <Setter Property="Height" Value="672"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="CornerRadius" Value="10"/>
+    </Style>
+
+    <Style x:Key="Border.SettingsBackground" TargetType="Border">
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush ImageSource="\Resources\Images\Background\Foreground_border.png" Stretch="None"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Width" Value="400"/>
+        <Setter Property="Height" Value="672"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="CornerRadius" Value="10"/>
+    </Style>
+
 </ResourceDictionary>

@@ -31,6 +31,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Images\Icons\BritishFlag.svg" />
+    <None Remove="Resources\Images\Icons\Clear.svg" />
+    <None Remove="Resources\Images\Icons\Cross.svg" />
+    <None Remove="Resources\Images\Icons\Google.svg" />
+    <None Remove="Resources\Images\Icons\HideApp.svg" />
+    <None Remove="Resources\Images\Icons\Pencil.svg" />
+    <None Remove="Resources\Images\Icons\Quit.svg" />
+    <None Remove="Resources\Images\Icons\RussianFlag.svg" />
+    <None Remove="Resources\Images\Icons\Vk.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FontAwesome5" Version="2.1.11" />
     <PackageReference Include="MaterialDesignThemes" Version="4.6.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
@@ -81,6 +93,18 @@
 
   <ItemGroup>
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\Icons\BritishFlag.svg" />
+    <Resource Include="Resources\Images\Icons\Clear.svg" />
+    <Resource Include="Resources\Images\Icons\Cross.svg" />
+    <Resource Include="Resources\Images\Icons\Google.svg" />
+    <Resource Include="Resources\Images\Icons\HideApp.svg" />
+    <Resource Include="Resources\Images\Icons\Pencil.svg" />
+    <Resource Include="Resources\Images\Icons\Quit.svg" />
+    <Resource Include="Resources\Images\Icons\RussianFlag.svg" />
+    <Resource Include="Resources\Images\Icons\Vk.svg" />
   </ItemGroup>
 
 </Project>
