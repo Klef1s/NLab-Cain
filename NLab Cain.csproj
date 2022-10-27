@@ -13,12 +13,17 @@
     <None Remove="Resources\Images\Background\Background_authorization.jpg" />
     <None Remove="Resources\Images\Background\Foreground_border.png" />
     <None Remove="Resources\Images\Icons\BackPage.svg" />
+	<None Remove="Resources\Images\Icons\BritishFlag.svg" />
+	<None Remove="Resources\Images\Icons\Clear.svg" />
     <None Remove="Resources\Images\Icons\Cross.svg" />
     <None Remove="Resources\Images\Icons\Google.svg" />
     <None Remove="Resources\Images\Icons\HideApp.svg" />
     <None Remove="Resources\Images\Icons\Home.svg" />
     <None Remove="Resources\Images\Icons\Library.svg" />
     <None Remove="Resources\Images\Icons\NextPage.svg" />
+	<None Remove="Resources\Images\Icons\Pencil.svg" />
+	<None Remove="Resources\Images\Icons\Quit.svg" />
+    <None Remove="Resources\Images\Icons\RussianFlag.svg" />
     <None Remove="Resources\Images\Icons\Settings.svg" />
     <None Remove="Resources\Images\Icons\Vk.svg" />
   </ItemGroup>
@@ -27,19 +32,6 @@
     <Resource Include="Resources\Files\token.txt">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\Images\Icons\BackPage.svg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="Resources\Images\Icons\BritishFlag.svg" />
-    <None Remove="Resources\Images\Icons\Clear.svg" />
-    <None Remove="Resources\Images\Icons\Cross.svg" />
-    <None Remove="Resources\Images\Icons\Google.svg" />
-    <None Remove="Resources\Images\Icons\HideApp.svg" />
-    <None Remove="Resources\Images\Icons\Pencil.svg" />
-    <None Remove="Resources\Images\Icons\Quit.svg" />
-    <None Remove="Resources\Images\Icons\RussianFlag.svg" />
-    <None Remove="Resources\Images\Icons\Vk.svg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -66,14 +58,20 @@
   <ItemGroup>
     <Resource Include="Resources\Images\Background\Background_authorization.jpg" />
     <Resource Include="Resources\Images\Background\Foreground_border.png" />
+	<Resource Include="Resources\Images\Icons\BackPage.svg" />
+	<Resource Include="Resources\Images\Icons\BritishFlag.svg" />
+	<Resource Include="Resources\Images\Icons\Clear.svg" />
     <Resource Include="Resources\Images\Icons\Cross.svg" />
     <Resource Include="Resources\Images\Icons\Google.svg" />
     <Resource Include="Resources\Images\Icons\HideApp.svg" />
     <Resource Include="Resources\Images\Icons\Home.svg" />
     <Resource Include="Resources\Images\Icons\Library.svg" />
     <Resource Include="Resources\Images\Icons\NextPage.svg" />
-    <Resource Include="Resources\Images\Icons\Settings.svg" />
+	<Resource Include="Resources\Images\Icons\Pencil.svg" />
+	<Resource Include="Resources\Images\Icons\Quit.svg" />
+	<Resource Include="Resources\Images\Icons\Settings.svg" />
     <Resource Include="Resources\Images\Icons\Vk.svg" />
+	<Resource Include="Resources\Images\Icons\RussianFlag.svg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -93,18 +91,6 @@
 
   <ItemGroup>
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Resources\Images\Icons\BritishFlag.svg" />
-    <Resource Include="Resources\Images\Icons\Clear.svg" />
-    <Resource Include="Resources\Images\Icons\Cross.svg" />
-    <Resource Include="Resources\Images\Icons\Google.svg" />
-    <Resource Include="Resources\Images\Icons\HideApp.svg" />
-    <Resource Include="Resources\Images\Icons\Pencil.svg" />
-    <Resource Include="Resources\Images\Icons\Quit.svg" />
-    <Resource Include="Resources\Images\Icons\RussianFlag.svg" />
-    <Resource Include="Resources\Images\Icons\Vk.svg" />
   </ItemGroup>
 
 </Project>

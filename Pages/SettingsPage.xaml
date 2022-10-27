@@ -11,12 +11,15 @@
       d:DesignHeight="562" d:DesignWidth="348">
 
     <Border Style="{StaticResource Border.SettingsPageBackground}" Height="562" Width="348">
-        <Grid>
-            <TextBlock Text="Язык | Language" 
-                     Margin="34,20,218,636" 
-                     TextAlignment="Center" 
-                     FontSize="13" FontFamily="/Fonts/"
-                     Foreground="#FFCACACA"/>
+        <Grid HorizontalAlignment="Center" Width="348" Height="562" VerticalAlignment="Center">
+            <TextBlock Text="Язык | Language"
+                       Margin="34,0,0,528" 
+                       FontSize="13" 
+                       Foreground="#FFCACACA"
+                       FontFamily="/Resources/Fonts/#Montserrat Medium"
+                       Height="16" Width="auto"
+                       VerticalAlignment="Bottom" HorizontalAlignment="Left" 
+                       TextAlignment="Left"/>
             <Border 
                 Style="{StaticResource Border.SettingsBackground}" 
                 Height="98" Width="308" Margin="0,42,0,0" VerticalAlignment="Top">
@@ -27,9 +30,10 @@
                         Style="{StaticResource MaterialDesignAccentRadioButton}"
                         Height="22" Width="240"
                         Margin="20,18,0,0" 
-                        Background="#FF001BFF">
+                        Background="#0077FF">
                             <TextBlock Style="{StaticResource TextBlock.MiniSubtitle}"
                                        Text="Русский"
+                                       FontFamily="/Resources/Fonts/#Montserrat Medium"
                                        VerticalAlignment="Center" 
                                        FontSize="16" 
                                        HorizontalAlignment="Center"
@@ -37,7 +41,7 @@
                                        Foreground="#FFEFEFEF"/>
                         </RadioButton>
                         <svgc:SvgViewbox Source="\Resources\Images\Icons\RussianFlag.svg" 
-                                         Width="21.27" Height="21.27" 
+                                         Width="22" Height="22" 
                                          Margin="0,17,0,0"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" 
@@ -46,42 +50,45 @@
                         Style="{StaticResource MaterialDesignAccentRadioButton}"
                         Height="22" Width="240" 
                         Margin="20,18,0,0" 
-                        Background="#FF001BFF">
+                        Background="#0077FF">
                             <TextBlock Style="{StaticResource TextBlock.MiniSubtitle}"
                                        Text="English"
+                                       FontFamily="/Resources/Fonts/#Montserrat Medium"
                                        VerticalAlignment="Top"
                                        Margin="15,0,0,0" 
                                        FontSize="16" 
                                        Foreground="#FFEFEFEF"/>
                         </RadioButton>
                         <svgc:SvgViewbox Source="\Resources\Images\Icons\BritishFlag.svg" 
-                                         Width="21.27" Height="21.27" 
+                                         Width="22" Height="22" 
                                          Margin="0,17,0,0"/>
                     </StackPanel>
                 </StackPanel>
             </Border>
             <TextBlock Text="Изменение пароля" 
-                     Margin="34,160,201,495" 
-                     TextAlignment="Center" 
-                     FontSize="13" FontFamily="/Fonts/"
-                     Foreground="#FFCACACA"/>
+                       Margin="35,0,0,391" 
+                       TextAlignment="Left" 
+                       FontSize="13" 
+                       FontFamily="/Resources/Fonts/#Montserrat Medium"
+                       Foreground="#FFCACACA" 
+                       HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                       Width="auto" Height="19"/>
             <Border 
                 Style="{StaticResource Border.SettingsBackground}" 
-                Height="170" Width="308" Margin="0,182,0,0" VerticalAlignment="Top">
-                <StackPanel Style="{StaticResource StackPanel.Settings}" 
+                Height="192" Width="308" Margin="0,175,0,0" VerticalAlignment="Top">
+                <StackPanel 
                             Height="170" Width="308"
                             Orientation="Vertical">
                     <StackPanel
                         Width="308" Orientation="Horizontal">
                         <svgc:SvgViewbox Source="\Resources\Images\Icons\Pencil.svg" 
-                                         Width="21.27" Height="21.27" 
-                                         Margin="18,0,18,0"/>
+                                         Width="20" Height="20" 
+                                         Margin="18,6,18,0"/>
                         <PasswordBox Width="230" Height="45"
                              Style="{StaticResource PasswordBox.Base}"
                              materialDesign:HintAssist.Hint="Пароль" 
-                             Margin="0,0,0,0" 
                              Foreground="#FF8B8B8B" 
-                             BorderBrush="#FF8B8B8B"/>
+                             BorderBrush="#FF8B8B8B" Cursor="Arrow"/>
                     </StackPanel>
                     <PasswordBox Width="230" Height="45"
                              Style="{StaticResource PasswordBox.Base}"
@@ -111,34 +118,39 @@
                         </ToggleButton>
                         <TextBlock Style="{StaticResource TextBlock.MiniSubtitle}"
                                        Text="Компактное боковое меню"
+                                   FontFamily="/Resources/Fonts/#Montserrat Medium"
                                        VerticalAlignment="Center" 
-                                       FontSize="16" 
-                                       HorizontalAlignment="Center"
+                                       FontSize="16"
                                        Margin="10,20,0,0" 
-                                       Foreground="#FFEFEFEF"/>
+                                       Foreground="#FFEFEFEF"
+                                   TextAlignment="Left" Width="252" Height="20"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <svgc:SvgViewbox Source="\Resources\Images\Icons\Clear.svg" 
-                                         Width="21.27" Height="21.27" 
+                                         Width="22" Height="22" 
                                          Margin="18,14,0,0"/>
                         <Button Background="#00000000" BorderBrush="#00000000" 
                                 Content="Очистите локальный кэш" 
-                                FontFamily="Montserrat" 
+                                FontFamily="/Resources/Fonts/#Montserrat Medium" 
                                 FontSize="16" 
                                 FontWeight="Normal" 
+                                
                                 Foreground="#FFC93D3D"
-                                Margin="2,13,0,0" Width="217"/>
+                                Margin="2,13,0,0" Width="266"
+                                HorizontalContentAlignment="Left"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <svgc:SvgViewbox Source="\Resources\Images\Icons\Quit.svg" 
-                                         Width="21.27" Height="21.27" 
+                                         Width="22" Height="22" 
                                          Margin="18,14,0,0"/>
-                        <Button Background="#00000000" BorderBrush="#00000000" 
+                        <Button Background="Transparent" BorderBrush="Transparent" 
                                 Content="Выйти из учётной записи" 
-                                FontFamily="Montserrat" FontSize="16" 
+                                FontFamily="/Resources/Fonts/#Montserrat Medium"
+                                FontSize="16" 
                                 FontWeight="Normal" 
                                 Foreground="#FFC93D3D"
-                                Margin="2,13,0,0" Width="217" />
+                                Margin="2,13,0,0" Width="266"
+                                HorizontalContentAlignment="Left"/>
                     </StackPanel>
                 </StackPanel>
             </Border>

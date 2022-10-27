@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using NLab_Cain.Pages;
 
 namespace NLab_Cain.Windows
 {
@@ -43,6 +44,11 @@ namespace NLab_Cain.Windows
         {
             var fa = new DoubleAnimation(0, 1, TimeSpan.FromSeconds(0.35));
             frameMainWindow.BeginAnimation(OpacityProperty, fa);
+        }
+
+        private void toSettings_Click(object sender, RoutedEventArgs e)
+        {
+            frameMainWindow.Source = new Uri("/Pages/SettingsPage.xaml", UriKind.Relative);
         }
     }
 }
