@@ -26,6 +26,11 @@ namespace NLab_Cain.Pages
             InitializeComponent();
             nameChart.Text = NameChart.nameChart;
         }
+
+        private void backPage_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
     }
 
 }

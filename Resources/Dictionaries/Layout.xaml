@@ -68,7 +68,7 @@
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="CornerRadius" Value="10"/>
-        <Setter Property="Background" Value="#97000000"/>
+        <Setter Property="Background" Value="#181818"/>
         <Setter Property="Visibility" Value="Hidden"/>
     </Style>
 
@@ -115,7 +115,7 @@
                             <Style TargetType="Border">
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#333333"/>
+                                        <Setter Property="Background" Value="#66333333"/>
                                     </Trigger>
                                     <Trigger Property="IsMouseOver" Value="False">
                                         <Setter Property="Background" Value="Transparent"/>
@@ -126,6 +126,7 @@
                                         <Setter Property="Background" Value="#333333"/>
                                     </DataTrigger>
                                 </Style.Triggers>
+                                <Setter Property="Cursor" Value="Arrow"/>
                             </Style>
                         </Border.Style>
                         <StackPanel Orientation="Horizontal" Margin="0,6,0,6">

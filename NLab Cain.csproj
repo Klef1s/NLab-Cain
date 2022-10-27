@@ -9,15 +9,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Files\text.txt" />
     <None Remove="Resources\Images\Background\Background_authorization.jpg" />
     <None Remove="Resources\Images\Background\Foreground_border.png" />
+    <None Remove="Resources\Images\Icons\BackPage.svg" />
     <None Remove="Resources\Images\Icons\Cross.svg" />
     <None Remove="Resources\Images\Icons\Google.svg" />
     <None Remove="Resources\Images\Icons\HideApp.svg" />
     <None Remove="Resources\Images\Icons\Home.svg" />
     <None Remove="Resources\Images\Icons\Library.svg" />
+    <None Remove="Resources\Images\Icons\NextPage.svg" />
     <None Remove="Resources\Images\Icons\Settings.svg" />
     <None Remove="Resources\Images\Icons\Vk.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Files\token.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Icons\BackPage.svg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -49,6 +59,7 @@
     <Resource Include="Resources\Images\Icons\HideApp.svg" />
     <Resource Include="Resources\Images\Icons\Home.svg" />
     <Resource Include="Resources\Images\Icons\Library.svg" />
+    <Resource Include="Resources\Images\Icons\NextPage.svg" />
     <Resource Include="Resources\Images\Icons\Settings.svg" />
     <Resource Include="Resources\Images\Icons\Vk.svg" />
   </ItemGroup>

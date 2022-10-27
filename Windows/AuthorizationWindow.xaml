@@ -16,8 +16,8 @@
 
         <Grid x:Name="moveArea" 
               MouseLeftButtonDown="moveArea_MouseLeftButtonDown" 
-              HorizontalAlignment="Center" VerticalAlignment="Top"
-              Width="1280" Height="28">
+              HorizontalAlignment="Center" VerticalAlignment="Top" Background="Transparent"
+              Width="1280" Height="30">
             <Button Style="{StaticResource Button.CloseApp}" 
                     Name="closeApp"
                     Margin="1238,0,0,0"

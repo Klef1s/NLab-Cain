@@ -6,56 +6,66 @@
       xmlns:local="clr-namespace:NLab_Cain.Pages"
       xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
       mc:Ignorable="d" 
-      d:DesignHeight="668" d:DesignWidth="1155"
-      Title="ChartPage">
+      Width="1155" Height="668">
 
     <StackPanel>
-        <ScrollViewer Height="668" HorizontalAlignment="Center" Width="1155" VerticalAlignment="Bottom">
+        <ScrollViewer Height="668" HorizontalAlignment="Center" Width="1155">
             <StackPanel>
-            <TextBlock Text="Чарты дня: треки" 
+                <TextBlock Text="Чарты дня: треки" 
                    Width="auto" Height="auto"
                    Foreground="White" 
                    FontSize="22" FontFamily="Montserrat" FontWeight="SemiBold"  
                    HorizontalAlignment="Left" VerticalAlignment="Top" 
                    Margin="20,0,0,0"/>
-            <WrapPanel Width="890" Margin="20,20,0,20" Height="auto" HorizontalAlignment="Left" ScrollViewer.CanContentScroll="False">
-                <Button Style="{StaticResource Button.Chart}"
-                        Name="allWorld" Click="allWorld_Click">
-                    <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
-                        <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top">
-                            <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_large.jpg"
-                                   Stretch="Fill">
-                                <Image.Effect>
-                                    <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
-                                </Image.Effect>
-                            </Image>
-                                <TextBlock Text="Топ 50 (Во всем мире)" Name="allWorldText"
-                                           Style="{StaticResource TextBlock.ChartButton}"/>
-                        </StackPanel>
-                    </Border>
-                    <!--Весь мир-->
-                </Button>
-                <Button Margin="30,0,0,0"
-                        Style="{StaticResource Button.Chart}"
-                        Name="australia" Click="australia_Click" Cursor="Arrow">
-                    <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
-                        <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
-                            <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_au_large.jpg" 
-                                   Stretch="Fill">
-                                <Image.Effect>
-                                    <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
-                                </Image.Effect>
-                            </Image>
-                                <TextBlock Text="Топ 50 (Австралия)" Name="australiaText"
-                                           Style="{StaticResource TextBlock.ChartButton}"/>
-                        </StackPanel>
-                    </Border>
-                    <!--Австралия-->
-                </Button>
+                <WrapPanel Width="1125" Margin="20,20,0,20" Height="auto" HorizontalAlignment="Left" ScrollViewer.CanContentScroll="False">
+                    <Button Style="{StaticResource Button.Chart}"
+                        Background="#FF2D2D2D"
+                        Name="allWorld"
+                        Click="allWorld_Click">
+                        <Border Padding="14" 
+                            CornerRadius="10">
+                            <StackPanel Orientation="Vertical" 
+                                    Height="auto" 
+                                    VerticalAlignment="Top">
+                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_large.jpg"
+                                   Stretch="Fill" >
+                                    <Image.Effect>
+                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                    </Image.Effect>
+                                </Image>
+                                <TextBlock Text="Топ 50 (Во всем мире)" 
+                                        Name="allWorldText"
+                                        Style="{StaticResource TextBlock.ChartButton}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Весь мир-->
+                    </Button>
                     <Button Margin="30,0,0,0"
                         Style="{StaticResource Button.Chart}"
-                        Name="austria" Click="austria_Click" Cursor="Arrow">
-                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                        Name="australia" 
+                        Click="australia_Click" 
+                        Background="#FF2D2D2D" Cursor="Arrow">
+                        <Border Padding="14" CornerRadius="10">
+                            <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
+                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_au_large.jpg" 
+                                   Stretch="Fill">
+                                    <Image.Effect>
+                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
+                                    </Image.Effect>
+                                </Image>
+                                <TextBlock Text="Топ 50 (Австралия)" 
+                                           Name="australiaText"
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Австралия-->
+                    </Button>
+                    <Button Margin="30,0,0,0"
+                            Style="{StaticResource Button.Chart}"
+                            Name="austria" 
+                            Click="austria_Click"
+                            Background="#FF2D2D2D">
+                        <Border Padding="14" CornerRadius="10">
                             <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
                                 <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_at_large.jpg" 
                                    Stretch="Fill">
@@ -70,9 +80,11 @@
                         <!--Австрия-->
                     </Button>
                     <Button Margin="30,0,0,0"
-                        Style="{StaticResource Button.Chart}"
-                        Name="argentina" Click="argentina_Click" Cursor="Arrow">
-                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            Style="{StaticResource Button.Chart}"
+                            Name="argentina" 
+                            Click="argentina_Click" 
+                            Background="#FF2D2D2D">
+                        <Border Padding="14" CornerRadius="10">
                             <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
                                 <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_ar_large.jpg" 
                                    Stretch="Fill">
@@ -86,10 +98,12 @@
                         </Border>
                         <!--Аргентина-->
                     </Button>
-                    <Button Margin="0,24,0,0"
-                        Style="{StaticResource Button.Chart}"
-                        Name="belarus" Click="belarus_Click" Cursor="Arrow">
-                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                    <Button Margin="30,0,0,0"
+                            Style="{StaticResource Button.Chart}"
+                            Name="belarus" 
+                            Click="belarus_Click" 
+                            Background="#FF2D2D2D">
+                        <Border Padding="14" CornerRadius="10">
                             <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
                                 <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_by_large.jpg" 
                                    Stretch="Fill">
@@ -103,10 +117,11 @@
                         </Border>
                         <!--Беларусь-->
                     </Button>
-                    <Button Margin="30,24,0,0"
-                        Style="{StaticResource Button.Chart}"
-                        Name="belgium" Click="belgium_Click" Cursor="Arrow">
-                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                    <Button Margin="0,24,0,0"
+                            Style="{StaticResource Button.Chart}"
+                            Name="belgium" Click="belgium_Click"
+                            Background="#FF2D2D2D">
+                        <Border Padding="14" CornerRadius="10">
                             <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
                                 <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_be_large.jpg" 
                                    Stretch="Fill">
@@ -121,9 +136,10 @@
                         <!--Бельгия-->
                     </Button>
                     <Button Margin="30,24,0,0"
-                        Style="{StaticResource Button.Chart}"
-                        Name="bulgaria" Click="bulgaria_Click" Cursor="Arrow">
-                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            Style="{StaticResource Button.Chart}"
+                            Name="bulgaria" Click="bulgaria_Click"
+                            Background="#FF2D2D2D">
+                        <Border Padding="14" CornerRadius="10">
                             <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
                                 <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_bg_large.jpg" 
                                    Stretch="Fill">
@@ -138,9 +154,11 @@
                         <!--Болгария-->
                     </Button>
                     <Button Margin="30,24,0,0"
-                        Style="{StaticResource Button.Chart}"
-                        Name="brazil" Click="brazil_Click" Cursor="Arrow">
-                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            Style="{StaticResource Button.Chart}"
+                            Name="brazil" 
+                            Click="brazil_Click" 
+                            Background="#FF2D2D2D">
+                        <Border Padding="14" CornerRadius="10">
                             <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
                                 <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_br_large.jpg" 
                                    Stretch="Fill">
@@ -154,10 +172,12 @@
                         </Border>
                         <!--Бразилия-->
                     </Button>
-                    <Button Margin="0,24,0,0"
-                        Style="{StaticResource Button.Chart}"
-                        Name="uk" Click="uk_Click" Cursor="Arrow">
-                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                    <Button Margin="30,24,0,0"
+                            Style="{StaticResource Button.Chart}"
+                            Name="uk" 
+                            Click="uk_Click"
+                            Background="#FF2D2D2D">
+                        <Border Padding="14" CornerRadius="10">
                             <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
                                 <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_gb_large.jpg" 
                                    Stretch="Fill">
@@ -172,9 +192,11 @@
                         <!--Великобритания-->
                     </Button>
                     <Button Margin="30,24,0,0"
-                        Style="{StaticResource Button.Chart}"
-                        Name="hungary" Click="hungary_Click" Cursor="Arrow">
-                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            Style="{StaticResource Button.Chart}"
+                            Name="hungary" 
+                            Click="hungary_Click"
+                            Background="#FF2D2D2D">
+                        <Border Padding="14" CornerRadius="10">
                             <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
                                 <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_hu_large.jpg" 
                                    Stretch="Fill">
@@ -188,10 +210,12 @@
                         </Border>
                         <!--Венгрия-->
                     </Button>
-                    <Button Margin="30,24,0,0"
-                        Style="{StaticResource Button.Chart}"
-                        Name="venezuela" Click="venezuela_Click" Cursor="Arrow">
-                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                    <Button Margin="0,24,0,0"
+                            Style="{StaticResource Button.Chart}"
+                            Name="venezuela" 
+                            Click="venezuela_Click"
+                            Background="#FF2D2D2D">
+                        <Border Padding="14" CornerRadius="10">
                             <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
                                 <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_ve_large.jpg" 
                                    Stretch="Fill">
@@ -206,9 +230,11 @@
                         <!--Венесуэла-->
                     </Button>
                     <Button Margin="30,24,0,0"
-                        Style="{StaticResource Button.Chart}"
-                        Name="germany" Click="germany_Click" Cursor="Arrow">
-                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            Style="{StaticResource Button.Chart}"
+                            Name="germany" 
+                            Click="germany_Click" 
+                            Background="#FF2D2D2D">
+                        <Border Padding="14" CornerRadius="10">
                             <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
                                 <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_de_large.jpg" 
                                    Stretch="Fill">
@@ -222,10 +248,12 @@
                         </Border>
                         <!--Германия-->
                     </Button>
-                    <Button Margin="0,24,0,0"
-                        Style="{StaticResource Button.Chart}"
-                        Name="hongKong" Click="hongKong_Click" Cursor="Arrow">
-                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                    <Button Margin="30,24,0,0"
+                            Style="{StaticResource Button.Chart}"
+                            Name="hongKong"
+                            Click="hongKong_Click" 
+                            Background="#FF2D2D2D">
+                        <Border Padding="14" CornerRadius="10">
                             <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
                                 <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_hk_large.jpg" 
                                    Stretch="Fill">
@@ -240,9 +268,11 @@
                         <!--Гонконг-->
                     </Button>
                     <Button Margin="30,24,0,0"
-                        Style="{StaticResource Button.Chart}"
-                        Name="greece" Click="greece_Click" Cursor="Arrow">
-                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            Style="{StaticResource Button.Chart}"
+                            Name="greece" 
+                            Click="greece_Click" 
+                            Background="#FF2D2D2D">
+                        <Border Padding="14" CornerRadius="10">
                             <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
                                 <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_gr_large.jpg" 
                                    Stretch="Fill">
@@ -257,9 +287,11 @@
                         <!--Греция-->
                     </Button>
                     <Button Margin="30,24,0,0"
-                        Style="{StaticResource Button.Chart}"
-                        Name="dominicana" Click="dominicana_Click" Cursor="Arrow">
-                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            Style="{StaticResource Button.Chart}"
+                            Name="dominicana" 
+                            Click="dominicana_Click" 
+                            Background="#FF2D2D2D">
+                        <Border Padding="14" CornerRadius="10">
                             <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
                                 <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_dk_large.jpg" 
                                    Stretch="Fill">
@@ -273,10 +305,12 @@
                         </Border>
                         <!--Доминикана-->
                     </Button>
-                    <Button Margin="30,24,0,0"
-                        Style="{StaticResource Button.Chart}"
-                        Name="egypt" Click="egypt_Click" Cursor="Arrow">
-                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                    <Button Margin="0,24,0,0"
+                            Style="{StaticResource Button.Chart}"
+                            Name="egypt" 
+                            Click="egypt_Click" 
+                            Background="#FF2D2D2D">
+                        <Border Padding="14" CornerRadius="10">
                             <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
                                 <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_eg_large.jpg" 
                                    Stretch="Fill">
@@ -290,10 +324,12 @@
                         </Border>
                         <!--Египет-->
                     </Button>
-                    <Button Margin="0,24,0,0"
-                        Style="{StaticResource Button.Chart}"
-                        Name="israel" Click="israel_Click" Cursor="Arrow">
-                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                    <Button Margin="30,24,0,0"
+                            Style="{StaticResource Button.Chart}"
+                            Name="israel" 
+                            Click="israel_Click"
+                            Background="#FF2D2D2D">
+                        <Border Padding="14" CornerRadius="10">
                             <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
                                 <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_il_large.jpg" 
                                    Stretch="Fill">
@@ -308,9 +344,11 @@
                         <!--Израиль-->
                     </Button>
                     <Button Margin="30,24,0,0"
-                        Style="{StaticResource Button.Chart}"
-                        Name="india" Click="india_Click" Cursor="Arrow">
-                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            Style="{StaticResource Button.Chart}"
+                            Name="india" 
+                            Click="india_Click" 
+                            Background="#FF2D2D2D">
+                        <Border Padding="14" CornerRadius="10">
                             <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
                                 <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_in_large.jpg" 
                                    Stretch="Fill">
@@ -325,9 +363,11 @@
                         <!--Индия-->
                     </Button>
                     <Button Margin="30,24,0,0"
-                        Style="{StaticResource Button.Chart}"
-                        Name="luxembourg" Click="luxembourg_Click" Cursor="Arrow">
-                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            Style="{StaticResource Button.Chart}"
+                            Name="luxembourg" 
+                            Click="luxembourg_Click" 
+                            Background="#FF2D2D2D">
+                        <Border Padding="14" CornerRadius="10">
                             <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
                                 <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_lu_large.jpg" 
                                    Stretch="Fill">
@@ -342,9 +382,11 @@
                         <!--Люксембург-->
                     </Button>
                     <Button Margin="30,24,0,0"
-                        Style="{StaticResource Button.Chart}"
-                        Name="portugal" Click="portugal_Click" Cursor="Arrow">
-                        <Border Background="#FF2D2D2D" Padding="14" CornerRadius="10">
+                            Style="{StaticResource Button.Chart}"
+                            Name="portugal" 
+                            Click="portugal_Click"
+                            Background="#FF2D2D2D">
+                        <Border Padding="14" CornerRadius="10">
                             <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
                                 <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_pt_large.jpg" 
                                    Stretch="Fill">

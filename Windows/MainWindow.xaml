@@ -22,12 +22,15 @@
                    HorizontalAlignment="Left" VerticalAlignment="Center"/>
         
         <Frame Style="{StaticResource Frame.MainWindow}"
+               Margin="107,0,0,0"
                Name="frameMainWindow"
-               Source="\Pages\ChartPage.xaml"/>
+               Source="\Pages\ChartPage.xaml" 
+               Navigating="frameMainWindow_Navigating"/>
         <Grid x:Name="moveArea" 
               MouseLeftButtonDown="moveArea_MouseLeftButtonDown" 
               HorizontalAlignment="Center" VerticalAlignment="Top"
-              Width="1280" Height="28">
+              Width="1280" Height="30"
+              Background="Transparent">
             <Button Style="{StaticResource Button.CloseApp}" 
                     Name="closeApp"
                     Margin="1238,0,0,0"

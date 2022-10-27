@@ -32,7 +32,7 @@
                     <PasswordBox Style="{StaticResource PasswordBox.Base}"
                                  Name="inputPassword"
                                  materialDesign:HintAssist.Hint="Пароль" 
-                                 Margin="0,22,0,0"/>
+                                 Margin="0,22,0,0" Cursor="Arrow"/>
                     <TextBlock Text="AAA" Style="{StaticResource TextBlock.ErrorMessage}" 
                                Name="authPasswordErrorMessage"
                                Margin="0,10,0,0"/>

@@ -17,7 +17,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border x:Name="border" CornerRadius="10" Background="Transparent">
+                    <Border x:Name="border" CornerRadius="10" Background="{TemplateBinding Background}">
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
                 </ControlTemplate>
@@ -79,8 +79,7 @@
                         <Border x:Name="border" CornerRadius="10" Background="{StaticResource Button.Google}">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
-                        <svgc:SvgViewbox Source="\Resources\Images\Icons\Google.svg" Width="24" Height="24">
-                        </svgc:SvgViewbox>
+                        <svgc:SvgViewbox Source="\Resources\Images\Icons\Google.svg" Width="24" Height="24"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
@@ -145,8 +144,8 @@
 
     <Style x:Key="Button.Chart" TargetType="Button" BasedOn="{StaticResource Button.Animation}">
         
-        <Setter Property="Width" Value="200"/>
-        <Setter Property="Height" Value="226"/>
+        <Setter Property="Width" Value="194"/>
+        <Setter Property="Height" Value="220"/>
         <Setter Property="Cursor" Value="Arrow"/>
         <Setter Property="Padding" Value="0"/>
     </Style>

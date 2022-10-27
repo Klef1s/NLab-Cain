@@ -49,6 +49,8 @@
         <Setter Property="TextAlignment" Value="Center"/>
         <Setter Property="materialDesign:HintAssist.Foreground" Value="{StaticResource InputBox.Hint.Foreground}"/>
         <Setter Property="materialDesign:TextFieldAssist.UnderlineBrush" Value="{StaticResource InputBox.UnderlineBrush}"/>
+        <Setter Property="materialDesign:TextFieldAssist.CharacterCounterVisibility" Value="Collapsed"/>
+        <Setter Property="MaxLength" Value="1"/>
     </Style>
 
 </ResourceDictionary>

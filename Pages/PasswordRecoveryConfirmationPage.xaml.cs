@@ -24,7 +24,6 @@ namespace NLab_Cain.Pages
     /// </summary>
     public partial class PasswordRecoveryConfirmationPage : Page
     {
-
         public PasswordRecoveryConfirmationPage()
         {
             InitializeComponent();
@@ -99,6 +98,31 @@ namespace NLab_Cain.Pages
                 MessageBox.Show("ne, huina");
                 borderLoading.Visibility = Visibility.Hidden;
             }
+        }
+
+        private void firstBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            secondBox.Focus();
+        }
+
+        private void secondBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            thirdBox.Focus();
+        }
+
+        private void thirdBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            fourthBox.Focus();
+        }
+
+        private void fourthBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            fifthBox.Focus();
+        }
+
+        private void fifthBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            sixthBox.Focus();
         }
     }
 }

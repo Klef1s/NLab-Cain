@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
@@ -26,16 +27,22 @@ namespace NLab_Cain.Windows
 
         private void hideApp_Click(object sender, RoutedEventArgs e)
         {
-            this.WindowState = WindowState.Minimized;
+            WindowState = WindowState.Minimized;
         }
 
         private void closeApp_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
         private void moveArea_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
+        }
+
+        private void frameMainWindow_Navigating(object sender, System.Windows.Navigation.NavigatingCancelEventArgs e)
+        {
+            var fa = new DoubleAnimation(0, 1, TimeSpan.FromSeconds(0.35));
+            frameMainWindow.BeginAnimation(OpacityProperty, fa);
         }
     }
 }
