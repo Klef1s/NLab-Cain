@@ -142,10 +142,28 @@
         </Setter>
     </Style>
 
-    <Style x:Key="Button.Chart" TargetType="Button" BasedOn="{StaticResource Button.Animation}">
-        
-        <Setter Property="Width" Value="194"/>
-        <Setter Property="Height" Value="220"/>
+    <Style x:Key="Button.Chart" TargetType="Button" BasedOn="{StaticResource Button.Base}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" To="#FF363636" Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" To="#FF242424" Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+        </Style.Triggers>
+        <Setter Property="Background" Value="#FF242424"/>
+        <Setter Property="Width" Value="196"/>
+        <Setter Property="Height" Value="232"/>
         <Setter Property="Cursor" Value="Arrow"/>
         <Setter Property="Padding" Value="0"/>
     </Style>
@@ -159,7 +177,6 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-        <Setter Property="Background" Value="#FF673AB7"/>
         <Setter Property="Width" Value="36"/>
         <Setter Property="Height" Value="36"/>
     </Style>

@@ -4,38 +4,36 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:NLab_Cain.Pages"
-      xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+      xmlns:svgc="http://sharpvectors.codeplex.com/svgc/" 
       mc:Ignorable="d" 
       Width="1155" Height="668">
 
     <StackPanel>
-        <ScrollViewer Height="668" HorizontalAlignment="Center" Width="1155">
+        <ScrollViewer Height="668" Width="1155" 
+                      HorizontalAlignment="Center" >
             <StackPanel>
                 <TextBlock Text="Чарты дня: треки" 
-                   Width="auto" Height="auto"
-                   Foreground="White" 
-                   FontSize="22" FontFamily="Montserrat" FontWeight="SemiBold"  
-                   HorizontalAlignment="Left" VerticalAlignment="Top" 
-                   Margin="20,0,0,0"/>
-                <WrapPanel Width="1125" Margin="20,20,0,20" Height="auto" HorizontalAlignment="Left" ScrollViewer.CanContentScroll="False">
+                           Foreground="White" 
+                           FontSize="24" 
+                           FontFamily="/Resources/Fonts/#Montserrat Bold"
+                           HorizontalAlignment="Left" VerticalAlignment="Top" 
+                           Margin="20,0,0,0"/>
+                <WrapPanel Width="1125" Height="auto" 
+                           Margin="20,20,0,20" 
+                           HorizontalAlignment="Left" 
+                           ScrollViewer.CanContentScroll="False">
                     <Button Style="{StaticResource Button.Chart}"
-                        Background="#FF2D2D2D"
-                        Name="allWorld"
-                        Click="allWorld_Click">
-                        <Border Padding="14" 
-                            CornerRadius="10">
-                            <StackPanel Orientation="Vertical" 
-                                    Height="auto" 
-                                    VerticalAlignment="Top">
-                                <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_large.jpg"
-                                   Stretch="Fill" >
-                                    <Image.Effect>
-                                        <DropShadowEffect Color="#FF525252" ShadowDepth="2" BlurRadius="20" Direction="275" RenderingBias="Quality"/>
-                                    </Image.Effect>
-                                </Image>
-                                <TextBlock Text="Топ 50 (Во всем мире)" 
-                                        Name="allWorldText"
-                                        Style="{StaticResource TextBlock.ChartButton}"/>
+                            Name="allWorld"
+                            Click="allWorld_Click">
+                        <Border Style="{StaticResource Border.ChartButton}">
+                            <StackPanel Style="{StaticResource StackPanel.ChartButton}">
+                                <Border Style="{StaticResource StackPanel.Border.ChartButton}">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_large.jpg" Stretch="Fill"/>
+                                    </Border.Background>
+                                </Border>
+                                <TextBlock Text="Топ 50 (во всем мире)"
+                                           Style="{StaticResource TextBlock.ChartButton}"/>
                             </StackPanel>
                         </Border>
                         <!--Весь мир-->
@@ -43,8 +41,7 @@
                     <Button Margin="30,0,0,0"
                         Style="{StaticResource Button.Chart}"
                         Name="australia" 
-                        Click="australia_Click" 
-                        Background="#FF2D2D2D" Cursor="Arrow">
+                        Click="australia_Click">
                         <Border Padding="14" CornerRadius="10">
                             <StackPanel Orientation="Vertical" Height="auto" VerticalAlignment="Top" >
                                 <Image Source="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_au_large.jpg" 

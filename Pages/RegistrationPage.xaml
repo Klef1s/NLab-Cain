@@ -13,47 +13,49 @@
     <Border Style="{StaticResource Border.Background}">
         <Grid>
             <StackPanel Style="{StaticResource StackPanel.Base}" 
-                            Orientation="Vertical"
-                            Margin="0,40,0,0">
+                        Orientation="Vertical"
+                        Margin="0,40,0,0">
                 <TextBlock Text="Регистрация" 
-                               Style="{StaticResource TextBlock.Heading}"/>
+                           Style="{StaticResource TextBlock.Heading}"/>
                 <TextBlock Text="Создайте аккаунт для продолжения" 
-                               Style="{StaticResource TextBlock.Subtitle}"/>
+                           Style="{StaticResource TextBlock.Subtitle}"/>
                 <Border Style="{StaticResource Border.Underline}"/>
             </StackPanel>
             <StackPanel Style="{StaticResource StackPanel.Base}" 
-                            Orientation="Vertical" Height="auto" Margin="0,218,0,0">
+                        Orientation="Vertical" 
+                        Height="auto" 
+                        Margin="0,218,0,0">
                 <StackPanel>
                     <TextBox Style="{StaticResource TextBox.Base}"
-                         Name="inputEmail"
-                         materialDesign:HintAssist.Hint="Email" 
-                         Cursor="Arrow"/>
-                    <TextBlock Text="AAA" Style="{StaticResource TextBlock.ErrorMessage}" 
-                           Name="mailErrorMessage"
-                           Margin="0,10,0,0"/>
+                             Name="inputEmail"
+                             materialDesign:HintAssist.Hint="Email"
+                             Cursor="Arrow"/>
+                    <TextBlock Style="{StaticResource TextBlock.ErrorMessage}"
+                               Name="mailErrorMessage"
+                               Margin="0,10,0,0"/>
                 </StackPanel>
                 <StackPanel>
                     <PasswordBox Style="{StaticResource PasswordBox.Base}"
-                             Name="inputPassword"
-                             materialDesign:HintAssist.Hint="Пароль" 
-                             Margin="0,22,0,0" Cursor="Arrow"/>
-                    <TextBlock Text="AAA" Style="{StaticResource TextBlock.ErrorMessage}" 
-                           Name="passwordErrorMessage"
-                           Margin="0,10,0,0"/>
+                                 Name="inputPassword"
+                                 materialDesign:HintAssist.Hint="Пароль" 
+                                 Margin="0,22,0,0"/>
+                    <TextBlock Style="{StaticResource TextBlock.ErrorMessage}" 
+                               Name="passwordErrorMessage"
+                               Margin="0,10,0,0"/>
                 </StackPanel>
                 <StackPanel>
                     <PasswordBox Style="{StaticResource PasswordBox.Base}"
-                             Name="inputRepeatPassword"
-                             materialDesign:HintAssist.Hint="Повторите пароль" 
-                             Margin="0,22,0,0" Cursor="Arrow"/>
-                    <TextBlock Text="AAA" Style="{StaticResource TextBlock.ErrorMessage}" 
-                           Name="repeatPasswordErrorMessage"
-                           Margin="0,10,0,0"/>
+                                 Name="inputRepeatPassword"
+                                 materialDesign:HintAssist.Hint="Повторите пароль" 
+                                 Margin="0,22,0,0"/>
+                    <TextBlock Style="{StaticResource TextBlock.ErrorMessage}"
+                               Name="repeatPasswordErrorMessage"
+                               Margin="0,10,0,0"/>
                 </StackPanel>
             </StackPanel>
             <StackPanel Style="{StaticResource StackPanel.Base}" 
-                            Orientation="Vertical"
-                            Margin="0,500,0,0">
+                        Orientation="Vertical"
+                        Margin="0,500,0,0">
                 <Button Content="Продолжить"
                         Name="regButton"
                         Style="{StaticResource Button.LogIn}" Click="regButton_Click"/>

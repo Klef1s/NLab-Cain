@@ -24,6 +24,28 @@
         <Setter Property="CornerRadius" Value="10"/>
     </Style>
 
+    <Style x:Key="Border.ChartButton" TargetType="Border">
+        <Setter Property="Width" Value="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Button}}, Path=Width}"/>
+        <Setter Property="Height" Value="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Button}}, Path=Height}"/>
+    </Style>
+    <Style x:Key="StackPanel.ChartButton" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Vertical"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Margin" Value="0,14,0,0"/>
+    </Style>
+    <Style x:Key="StackPanel.Border.ChartButton" TargetType="Border">
+        <Setter Property="Width" Value="166"/>
+        <Setter Property="Height" Value="166"/>
+        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect Color="#FF525252" ShadowDepth="3" BlurRadius="10" Direction="275" RenderingBias="Quality"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
     <Style x:Key="Rectangle.Background" TargetType="Rectangle">
         <Setter Property="Fill">
             <Setter.Value>

@@ -26,21 +26,19 @@
     </Style>
     <Style x:Key="TextBlock.ErrorMessage" TargetType="TextBlock">
         <Setter Property="Foreground" Value="{StaticResource TextBlock.ErrorMessage.Foreground}"/>
-        <Setter Property="FontFamily" Value="/Resources/Fonts/#Montserrat"/>
+        <Setter Property="FontFamily" Value="/Resources/Fonts/#Montserrat Regular"/>
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="Width" Value="Auto"/>
         <Setter Property="Height" Value="Auto"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
-        <Setter Property="Margin" Value="50,410,0,0"/>
         <Setter Property="Visibility" Value="Collapsed"/>
     </Style>
     <Style x:Key="TextBlock.ChartButton" TargetType="TextBlock">
         <Setter Property="Foreground" Value="White"/>
-        <Setter Property="FontFamily" Value="Montserrat"/>
+        <Setter Property="FontFamily" Value="/Resources/Fonts/#Montserrat SemiBold"/>
         <Setter Property="FontSize" Value="14"/>
-        <Setter Property="FontWeight" Value="SemiBold"/>
-        <Setter Property="Margin" Value="0,10,0,0"/>
+        <Setter Property="Margin" Value="0,14,0,0"/>
     </Style>
 
 </ResourceDictionary>

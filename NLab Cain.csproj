@@ -10,6 +10,10 @@
 
   <ItemGroup>
     <None Remove="Resources\Files\text.txt" />
+    <None Remove="Resources\Fonts\Montserrat-Bold.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-Medium.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-Regular.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-SemiBold.ttf" />
     <None Remove="Resources\Images\Background\Background_authorization.jpg" />
     <None Remove="Resources\Images\Background\Foreground_border.png" />
     <None Remove="Resources\Images\Icons\BackPage.svg" />
@@ -26,6 +30,13 @@
     <None Remove="Resources\Images\Icons\RussianFlag.svg" />
     <None Remove="Resources\Images\Icons\Settings.svg" />
     <None Remove="Resources\Images\Icons\Vk.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Fonts\Montserrat-Bold.ttf" />
+    <Resource Include="Resources\Fonts\Montserrat-Medium.ttf" />
+    <Resource Include="Resources\Fonts\Montserrat-Regular.ttf" />
+    <Resource Include="Resources\Fonts\Montserrat-SemiBold.ttf" />
   </ItemGroup>
 
   <ItemGroup>
