@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -54,6 +55,37 @@ namespace NLab_Cain.Windows
         private void toCharts_Click(object sender, RoutedEventArgs e)
         {
             frameMainWindow.Source = new Uri("/Pages/ChartPage.xaml", UriKind.Relative);
+        }
+    }
+
+    public static class ValidatorExtensions
+    {
+        public static bool IsValidEmailAddress(this string s)
+        {
+            Regex regex = new Regex(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
+            try
+            {
+                return regex.IsMatch(s);
+            }
+            catch { return false; }
+        }
+        public static bool IsValidPassword(this string s)
+        {
+            Regex regex = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,32}$");
+            try
+            {
+                return regex.IsMatch(s);
+            }
+            catch { return false; }
+        }
+        public static bool IsValidSecurityCode(this string s)
+        {
+            Regex regex = new Regex(@"[0-9]");
+            try
+            {
+                return regex.IsMatch(s);
+            }
+            catch { return false; }
         }
     }
 }

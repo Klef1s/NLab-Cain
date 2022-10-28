@@ -28,8 +28,7 @@
                 <StackPanel>
                     <TextBox Style="{StaticResource TextBox.Base}"
                              Name="inputEmail"
-                             materialDesign:HintAssist.Hint="Email"
-                             Cursor="Arrow"/>
+                             materialDesign:HintAssist.Hint="Email"/>
                     <TextBlock Style="{StaticResource TextBlock.ErrorMessage}"
                                Name="mailErrorMessage"
                                Margin="0,10,0,0"/>

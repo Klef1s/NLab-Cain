@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.EntityFrameworkCore;
-using System.Text.RegularExpressions;
+using NLab_Cain.Windows;
 
 namespace NLab_Cain.Pages
 {
@@ -28,7 +28,6 @@ namespace NLab_Cain.Pages
         public RegistrationPage()
         {
             InitializeComponent();
-
         }
 
         async private void regButton_Click(object sender, RoutedEventArgs e)
@@ -61,8 +60,10 @@ namespace NLab_Cain.Pages
                 {
                     borderLoading.Visibility = Visibility.Hidden;
 
-                    //Такой аккаунт уже существует
                     mailErrorMessage.Visibility = Visibility.Visible;
+                    passwordErrorMessage.Visibility = Visibility.Collapsed;
+                    repeatPasswordErrorMessage.Visibility = Visibility.Collapsed;
+
                     mailErrorMessage.Text = "Аккаунт с таким email уже существует";
                 }
 
@@ -86,26 +87,24 @@ namespace NLab_Cain.Pages
 
                 if (resultValidEmail == false)
                 {
-                    mailErrorMessage.Visibility = Visibility.Visible;
+                    mailErrorMessage.Visibility = Visibility;
                     mailErrorMessage.Text = "Введен не коректный email";
-                    
                 }
+                else if (resultValidEmail == true) mailErrorMessage.Visibility = Visibility.Collapsed;
+
                 if (resultValidPassword == false)
                 {
                     passwordErrorMessage.Visibility = Visibility.Visible;
                     passwordErrorMessage.Text = "Некорректный пароль";
                 }
-                if (resultvalidRepeatPassword == false)
+                else if (resultValidPassword == true) passwordErrorMessage.Visibility = Visibility.Collapsed;
+
+                if (resultvalidRepeatPassword == false || repeatPassword == null)
                 {
                     repeatPasswordErrorMessage.Visibility = Visibility.Visible;
                     repeatPasswordErrorMessage.Text = "Пароли не совпадают";
                 }
-                else
-                {
-                    mailErrorMessage.Visibility = Visibility.Collapsed;
-                    passwordErrorMessage.Visibility = Visibility.Collapsed;
-                    repeatPasswordErrorMessage.Visibility = Visibility.Collapsed;
-                }
+                else if (resultvalidRepeatPassword == true) repeatPasswordErrorMessage.Visibility = Visibility.Collapsed;
 
             }
         }
@@ -116,17 +115,4 @@ namespace NLab_Cain.Pages
         }
     }
 
-    public static class ValidatorExtensions
-    {
-        public static bool IsValidEmailAddress(this string s)
-        {
-            Regex regex = new Regex(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
-            return regex.IsMatch(s);
-        }
-        public static bool IsValidPassword(this string s)
-        {
-            Regex regex = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,32}$");
-            return regex.IsMatch(s);
-        }
-    }   
 }
