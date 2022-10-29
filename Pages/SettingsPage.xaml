@@ -7,6 +7,8 @@
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:fa5="http://schemas.fontawesome.com/icons/"
       xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+      xmlns:language="clr-namespace:NLab_Cain.Resources.Languages"
+      
       mc:Ignorable="d" 
       d:DesignHeight="562" d:DesignWidth="348">
 
@@ -30,7 +32,7 @@
                         Style="{StaticResource MaterialDesignAccentRadioButton}"
                         Height="22" Width="240"
                         Margin="20,18,0,0" 
-                        Background="#0077FF">
+                        Background="#0077FF" Checked="RadioButton_Checked">
                             <TextBlock Style="{StaticResource TextBlock.MiniSubtitle}"
                                        Text="Русский"
                                        FontFamily="/Resources/Fonts/#Montserrat Medium"
@@ -50,7 +52,7 @@
                         Style="{StaticResource MaterialDesignAccentRadioButton}"
                         Height="22" Width="240" 
                         Margin="20,18,0,0" 
-                        Background="#0077FF">
+                        Background="#0077FF" Checked="RadioButton_Checked_1">
                             <TextBlock Style="{StaticResource TextBlock.MiniSubtitle}"
                                        Text="English"
                                        FontFamily="/Resources/Fonts/#Montserrat Medium"
@@ -65,14 +67,15 @@
                     </StackPanel>
                 </StackPanel>
             </Border>
-            <TextBlock Text="Изменение пароля" 
+            <TextBlock Text="{x:Static language:lang_ru.tbChangePassword}" 
                        Margin="35,0,0,391" 
                        TextAlignment="Left" 
                        FontSize="13" 
                        FontFamily="/Resources/Fonts/#Montserrat Medium"
                        Foreground="#FFCACACA" 
                        HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                       Width="auto" Height="19"/>
+                       Width="auto" Height="19"
+                       Name="tbChangePassword"/>
             <Border 
                 Style="{StaticResource Border.SettingsBackground}" 
                 Height="192" Width="308" Margin="0,175,0,0" VerticalAlignment="Top">
@@ -88,20 +91,23 @@
                              Style="{StaticResource PasswordBox.Base}"
                              materialDesign:HintAssist.Hint="Пароль" 
                              Foreground="#FF8B8B8B" 
-                             BorderBrush="#FF8B8B8B" Cursor="Arrow"/>
+                             BorderBrush="#FF8B8B8B" Cursor="Arrow"
+                             Name="currentPassword"/>
                     </StackPanel>
                     <PasswordBox Width="230" Height="45"
                              Style="{StaticResource PasswordBox.Base}"
                              materialDesign:HintAssist.Hint="Новый пароль" 
                              Margin="37,10,0,0" 
                              Foreground="#FF8B8B8B" 
-                             BorderBrush="#FF8B8B8B" Cursor="Arrow"/>
+                             BorderBrush="#FF8B8B8B" Cursor="Arrow"
+                             Name="newPassword"/>
                     <PasswordBox Width="230" Height="45"
                              Style="{StaticResource PasswordBox.Base}"
                              materialDesign:HintAssist.Hint="Повторите новый пароль" 
                              Margin="37,10,0,0" 
                              Foreground="#FF8B8B8B" 
-                             BorderBrush="#FF8B8B8B"/>
+                             BorderBrush="#FF8B8B8B"
+                             Name="repeatNewPassword"/>
                 </StackPanel>
             </Border>
             <Border 
@@ -118,26 +124,28 @@
                         </ToggleButton>
                         <TextBlock Style="{StaticResource TextBlock.MiniSubtitle}"
                                        Text="Компактное боковое меню"
-                                   FontFamily="/Resources/Fonts/#Montserrat Medium"
+                                       FontFamily="/Resources/Fonts/#Montserrat Medium"
                                        VerticalAlignment="Center" 
                                        FontSize="16"
                                        Margin="10,20,0,0" 
                                        Foreground="#FFEFEFEF"
-                                   TextAlignment="Left" Width="252" Height="20"/>
+                                       TextAlignment="Left" Width="252" Height="20"
+                                       Name="tbCompactMenu"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <svgc:SvgViewbox Source="\Resources\Images\Icons\Clear.svg" 
                                          Width="22" Height="22" 
                                          Margin="18,14,0,0"/>
                         <Button Background="#00000000" BorderBrush="#00000000" 
-                                Content="Очистите локальный кэш" 
+                                Content="Очистить локальный кэш" 
                                 FontFamily="/Resources/Fonts/#Montserrat Medium" 
                                 FontSize="16" 
                                 FontWeight="Normal" 
                                 
                                 Foreground="#FFC93D3D"
                                 Margin="2,13,0,0" Width="266"
-                                HorizontalContentAlignment="Left"/>
+                                HorizontalContentAlignment="Left"
+                                Name="tbClearCache"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <svgc:SvgViewbox Source="\Resources\Images\Icons\Quit.svg" 
@@ -150,7 +158,8 @@
                                 FontWeight="Normal" 
                                 Foreground="#FFC93D3D"
                                 Margin="2,13,0,0" Width="266"
-                                HorizontalContentAlignment="Left"/>
+                                HorizontalContentAlignment="Left"
+                                Name="tbSignOut" Cursor="Hand"/>
                     </StackPanel>
                 </StackPanel>
             </Border>

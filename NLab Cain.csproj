@@ -9,40 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\Files\text.txt" />
-    <None Remove="Resources\Fonts\Montserrat-Bold.ttf" />
-    <None Remove="Resources\Fonts\Montserrat-Medium.ttf" />
-    <None Remove="Resources\Fonts\Montserrat-Regular.ttf" />
-    <None Remove="Resources\Fonts\Montserrat-SemiBold.ttf" />
     <None Remove="Resources\Images\Background\Background_authorization.jpg" />
     <None Remove="Resources\Images\Background\Foreground_border.png" />
-    <None Remove="Resources\Images\Icons\BackPage.svg" />
-	<None Remove="Resources\Images\Icons\BritishFlag.svg" />
-	<None Remove="Resources\Images\Icons\Clear.svg" />
     <None Remove="Resources\Images\Icons\Cross.svg" />
     <None Remove="Resources\Images\Icons\Google.svg" />
     <None Remove="Resources\Images\Icons\HideApp.svg" />
     <None Remove="Resources\Images\Icons\Home.svg" />
     <None Remove="Resources\Images\Icons\Library.svg" />
-    <None Remove="Resources\Images\Icons\NextPage.svg" />
-	<None Remove="Resources\Images\Icons\Pencil.svg" />
-	<None Remove="Resources\Images\Icons\Quit.svg" />
-    <None Remove="Resources\Images\Icons\RussianFlag.svg" />
     <None Remove="Resources\Images\Icons\Settings.svg" />
     <None Remove="Resources\Images\Icons\Vk.svg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Resources\Fonts\Montserrat-Bold.ttf" />
-    <Resource Include="Resources\Fonts\Montserrat-Medium.ttf" />
-    <Resource Include="Resources\Fonts\Montserrat-Regular.ttf" />
-    <Resource Include="Resources\Fonts\Montserrat-SemiBold.ttf" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Resources\Files\token.txt">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -69,20 +44,13 @@
   <ItemGroup>
     <Resource Include="Resources\Images\Background\Background_authorization.jpg" />
     <Resource Include="Resources\Images\Background\Foreground_border.png" />
-	<Resource Include="Resources\Images\Icons\BackPage.svg" />
-	<Resource Include="Resources\Images\Icons\BritishFlag.svg" />
-	<Resource Include="Resources\Images\Icons\Clear.svg" />
     <Resource Include="Resources\Images\Icons\Cross.svg" />
     <Resource Include="Resources\Images\Icons\Google.svg" />
     <Resource Include="Resources\Images\Icons\HideApp.svg" />
     <Resource Include="Resources\Images\Icons\Home.svg" />
     <Resource Include="Resources\Images\Icons\Library.svg" />
-    <Resource Include="Resources\Images\Icons\NextPage.svg" />
-	<Resource Include="Resources\Images\Icons\Pencil.svg" />
-	<Resource Include="Resources\Images\Icons\Quit.svg" />
-	<Resource Include="Resources\Images\Icons\Settings.svg" />
+    <Resource Include="Resources\Images\Icons\Settings.svg" />
     <Resource Include="Resources\Images\Icons\Vk.svg" />
-	<Resource Include="Resources\Images\Icons\RussianFlag.svg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -91,6 +59,16 @@
     </Compile>
     <Compile Update="Models\User.cs">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Resources\Languages\lang_ru.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>lang_ru.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Languages\lang_us.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>lang_us.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -102,6 +80,17 @@
 
   <ItemGroup>
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Languages\lang_us.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang_us.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Languages\lang_ru.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang_ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
