@@ -10,10 +10,13 @@
     <Grid>
         <Rectangle Style="{StaticResource Rectangle.MainBackground}"/>
         
-        <StackPanel Orientation="Vertical" Margin="0,0,1180,0" Width="65" Height="668">
-            <Button Style="{StaticResource Button.Home}" Margin="0,172,0,0" Name="toCharts" Click="toCharts_Click"/>
-            <Button Style="{StaticResource Button.Library}" Margin="0,48,0,0"/>
-            <Button Style="{StaticResource Button.Settings}" Margin="0,48,0,0" Name="toSettings" Click="toSettings_Click"/>
+        <StackPanel Orientation="Vertical" Margin="0,50,1184,50" Width="auto" Height="668">
+            <Button Style="{StaticResource Button.Home}" Margin="0,222,0,0" 
+                    Name="toCharts" 
+                    Click="toCharts_Click"/>
+            <Button Style="{StaticResource Button.Settings}" Margin="0,30,0,0" 
+                    Name="toSettings" 
+                    Click="toSettings_Click"/>
         </StackPanel>
         
         <Rectangle Fill="Gray" 

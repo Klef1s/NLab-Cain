@@ -240,7 +240,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Thumb}">
-                    <Border CornerRadius="5" Background="#424242">
+                    <Border CornerRadius="5" Background="#444444">
                         <Rectangle x:Name="rectangle"
                             SnapsToDevicePixels="True"
                             Width="{TemplateBinding Width}"
@@ -252,8 +252,8 @@
     </Style>
 
     <Style TargetType="{x:Type ScrollBar}">
-        <Setter Property="Background" Value="#202020"/>
-        <Setter Property="BorderBrush" Value="#202020"/>
+        <Setter Property="Background" Value="#242424"/>
+        <Setter Property="BorderBrush" Value="#242424"/>
         <Setter Property="BorderThickness" Value="1,0"/>
         <Setter Property="Width" Value="10"/>
         <Setter Property="MinWidth" Value="10"/>
@@ -283,22 +283,19 @@
     </Style>
 
     <Style x:Key="Border.SettingsPageBackground" TargetType="Border">
-        <Setter Property="Background" Value="#222222"/>
-        <Setter Property="Width" Value="400"/>
-        <Setter Property="Height" Value="672"/>
+        <Setter Property="Background" Value="#242424"/>
+        <Setter Property="Width" Value="auto"/>
+        <Setter Property="Height" Value="auto"/>
+        <Setter Property="Padding" Value="20"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="CornerRadius" Value="10"/>
     </Style>
 
-    <Style x:Key="Border.SettingsBackground" TargetType="Border">
-        <Setter Property="Background">
-            <Setter.Value>
-                <ImageBrush ImageSource="\Resources\Images\Background\Foreground_border.png" Stretch="None"/>
-            </Setter.Value>
-        </Setter>
-        <Setter Property="Width" Value="400"/>
-        <Setter Property="Height" Value="672"/>
+    <Style x:Key="Border.CurrentSettingsBackground" TargetType="Border">
+        <Setter Property="Background" Value="#181818"/>
+        <Setter Property="Width" Value="308"/>
+        <Setter Property="Margin" Value="0,8,0,0"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="CornerRadius" Value="10"/>

@@ -18,13 +18,32 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="border" CornerRadius="10" Background="{TemplateBinding Background}">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
 
+    <Style x:Key="Button.SettingsPage" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" CornerRadius="10" Background="Transparent">
+                        <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Foreground" Value="#FFC93D3D"/>
+        <Setter Property="FontFamily" Value="/Resources/Fonts/#Montserrat Medium"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="22,0,0,0"/>
+        <Setter Property="Width" Value="246"/>
+        <Setter Property="Height" Value="32"/>
+        <Setter Property="Cursor" Value="Hand"/>
+    </Style>
+    
     <Style x:Key="Button.Animation" TargetType="Button" BasedOn="{StaticResource Button.Base}">
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
@@ -148,20 +167,20 @@
                 <Trigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" To="#FF363636" Duration="0:0:0.2"/>
+                            <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" To="#383838" Duration="0:0:0.2"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.EnterActions>
                 <Trigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" To="#FF242424" Duration="0:0:0.2" />
+                            <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" To="#242424" Duration="0:0:0.2" />
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.ExitActions>
             </Trigger>
         </Style.Triggers>
-        <Setter Property="Background" Value="#FF242424"/>
+        <Setter Property="Background" Value="#242424"/>
         <Setter Property="Width" Value="196"/>
         <Setter Property="Height" Value="232"/>
         <Setter Property="Cursor" Value="Arrow"/>
@@ -172,39 +191,27 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <svgc:SvgViewbox Source="\Resources\Images\Icons\Home.svg" Width="32" Height="32">
-                    </svgc:SvgViewbox>
+                    <Border x:Name="border" CornerRadius="10" Background="Transparent">
+                        <svgc:SvgViewbox Source="\Resources\Images\Icons\Home.svg" Width="32" Height="32"/>
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-        <Setter Property="Width" Value="36"/>
-        <Setter Property="Height" Value="36"/>
-    </Style>
-    <Style x:Key="Button.Library" TargetType="Button" BasedOn="{StaticResource Button.Animation}">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <svgc:SvgViewbox Source="\Resources\Images\Icons\Library.svg" Width="32" Height="32">
-                    </svgc:SvgViewbox>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-        <Setter Property="Background" Value="#FF673AB7"/>
-        <Setter Property="Width" Value="36"/>
-        <Setter Property="Height" Value="36"/>
+        <Setter Property="Width" Value="68"/>
+        <Setter Property="Height" Value="56"/>
     </Style>
     <Style x:Key="Button.Settings" TargetType="Button" BasedOn="{StaticResource Button.Animation}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <svgc:SvgViewbox Source="\Resources\Images\Icons\Settings.svg" Width="32" Height="32">
-                    </svgc:SvgViewbox>
+                    <Border x:Name="border" CornerRadius="10" Background="Transparent">
+                        <svgc:SvgViewbox Source="\Resources\Images\Icons\Settings.svg" Width="32" Height="32"/>
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-        <Setter Property="Background" Value="#FF673AB7"/>
-        <Setter Property="Width" Value="36"/>
-        <Setter Property="Height" Value="36"/>
+        <Setter Property="Width" Value="68"/>
+        <Setter Property="Height" Value="56"/>
     </Style>
 
     <Style x:Key="Button.RepeatCode" TargetType="Button" BasedOn="{StaticResource Button.Animation}">

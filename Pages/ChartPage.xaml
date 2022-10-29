@@ -33,7 +33,7 @@
                                     </Border.Background>
                                 </Border>
                                 <TextBlock Text="Топ 50 (во всем мире)"
-                                           Style="{StaticResource TextBlock.ChartButton}"/>
+                                           Style="{StaticResource TextBlock.ChartButton}" />
                             </StackPanel>
                         </Border>
                         <!--Весь мир-->
