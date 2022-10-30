@@ -21,6 +21,7 @@
                             Orientation="Vertical">
                     <StackPanel Orientation="Horizontal">
                         <RadioButton Style="{StaticResource MaterialDesignAccentRadioButton}"
+                                     GroupName="Language"
                                      Height="22" Width="246"
                                      Margin="20,20,0,0" 
                                      Background="#0077FF"
@@ -35,6 +36,7 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <RadioButton Style="{StaticResource MaterialDesignAccentRadioButton}"
+                                     GroupName="Language"
                                      Height="22" Width="246"
                                      Margin="20,20,0,20" 
                                      Background="#0077FF" 
@@ -56,17 +58,17 @@
             <Border Style="{StaticResource Border.CurrentSettingsBackground}">
                 <StackPanel Orientation="Vertical">
                     <PasswordBox Style="{StaticResource PasswordBox.Base}"
-                                 Width="268"
+                                 Width="248"
                                  Margin="20,20,20,0"
                                  materialDesign:HintAssist.Hint="Пароль" 
                                  Name="currentPassword"/>
                     <PasswordBox Style="{StaticResource PasswordBox.Base}"
-                                 Width="268"
+                                 Width="248"
                                  materialDesign:HintAssist.Hint="Новый пароль" 
                                  Margin="20,20,20,0" 
                                  Name="newPassword"/>
                     <PasswordBox Style="{StaticResource PasswordBox.Base}"
-                                 Width="268"
+                                 Width="248"
                                  materialDesign:HintAssist.Hint="Повторите новый пароль" 
                                  Margin="20,20,20,20" 
                                  Name="repeatNewPassword"/>

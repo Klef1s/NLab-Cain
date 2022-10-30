@@ -11,7 +11,7 @@
         <Rectangle Style="{StaticResource Rectangle.Background}"/>
         <Frame Style="{StaticResource Frame.Authorization}" 
                Name="AuthFrame"
-               Source="\Pages\RegistrationPage.xaml"
+               Source="\Pages\PasswordRecoveryNewPasswordPage.xaml"
 			   Navigating="AuthFrame_Navigating"/>
 
         <Grid x:Name="moveArea" 

@@ -88,14 +88,14 @@ namespace NLab_Cain.Pages
                 if (resultValidEmail == false)
                 {
                     mailErrorMessage.Visibility = Visibility;
-                    mailErrorMessage.Text = "Введен не коректный email";
+                    mailErrorMessage.Text = "Введен некорректный формат email";
                 }
                 else if (resultValidEmail == true) mailErrorMessage.Visibility = Visibility.Collapsed;
 
                 if (resultValidPassword == false)
                 {
                     passwordErrorMessage.Visibility = Visibility.Visible;
-                    passwordErrorMessage.Text = "Некорректный пароль";
+                    passwordErrorMessage.Text = "Введен некорректный формат пароля";
                 }
                 else if (resultValidPassword == true) passwordErrorMessage.Visibility = Visibility.Collapsed;
 

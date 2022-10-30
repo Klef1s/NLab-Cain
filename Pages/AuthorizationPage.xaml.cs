@@ -28,14 +28,6 @@ namespace NLab_Cain.Pages
             InitializeComponent();
         }
 
-        private void OpenMainWindow()
-        {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
-
-            Application.Current.MainWindow.Close();
-        }
-
         async private void logInButton_Click(object sender, RoutedEventArgs e)
         {
             borderLoading.Visibility = Visibility.Visible;
@@ -47,7 +39,6 @@ namespace NLab_Cain.Pages
             bool resultValidPassword = ValidatorExtensions.IsValidPassword(password);
 
             User? authUser = null;
-
             
             if (resultValidEmail && resultValidPassword == true)
             {
@@ -93,10 +84,18 @@ namespace NLab_Cain.Pages
             NavigationService.Navigate(new PasswordRecoveryConfirmationPage());
         }
 
+        private void OpenMainWindow()
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+
+            Application.Current.MainWindow.Close();
+        }
+
         private void ErrorMessage()
         {
             authPasswordErrorMessage.Visibility = Visibility.Visible;
-            authPasswordErrorMessage.Text = "Эта комбинация электронной почты и пароля неверна";
+            authPasswordErrorMessage.Text = "Электронная почта или пароль неверны";
         }
     }
 }
