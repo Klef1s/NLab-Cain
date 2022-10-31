@@ -76,6 +76,13 @@ namespace NLab_Cain.Pages
 
         private void toRegistrationPage_Click(object sender, RoutedEventArgs e)
         {
+            //await Task.Run(() =>
+            //{
+            //    Dispatcher.Invoke((Action)(() =>
+            //    {
+                   
+            //    }));
+            //});
             NavigationService.Navigate(new RegistrationPage());
         }
 
@@ -90,6 +97,8 @@ namespace NLab_Cain.Pages
             mainWindow.Show();
 
             Application.Current.MainWindow.Close();
+
+            Application.Current.MainWindow = mainWindow;
         }
 
         private void ErrorMessage()

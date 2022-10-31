@@ -21,55 +21,46 @@
                                Style="{StaticResource TextBlock.Subtitle}" TextWrapping="Wrap" TextAlignment="Center" Width="272"/>
                 <Border Style="{StaticResource Border.Underline}"/>
             </StackPanel>
-            <StackPanel Margin="0,288,0,354" 
-                        Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBox Width="34.21" Height="30" 
-                         BorderBrush="White"
-                         Margin="0,0,0,0"
-                         TextAlignment="Center"/>
-                <TextBox Width="34.21" Height="30" 
-                         BorderBrush="White"
-                         Margin="9,0,0,0"
-                         TextAlignment="Center"/>
-                <TextBox Width="34.21" Height="30" 
-                         BorderBrush="White"
-                         Margin="9,0,0,0"
-                         TextAlignment="Center"/>
-                <TextBox Width="34.21" Height="30" 
-                         BorderBrush="White"
-                         Margin="9,0,0,0"
-                         TextAlignment="Center"/>
-                <TextBox Width="34.21" Height="30" 
-                         BorderBrush="White"
-                         Margin="9,0,0,0"
-                         TextAlignment="Center"/>
-                <TextBox Width="34.21" Height="30" 
-                         BorderBrush="White"
-                         Margin="9,0,0,0"
-                         TextAlignment="Center"/>
-            </StackPanel>
-            <StackPanel Margin="0,342,0,0"
-                        Height="42" 
+            <StackPanel Margin="0,288,0,0"
                         HorizontalAlignment="Center" 
                         VerticalAlignment="Top">
+                <TextBox Style="{StaticResource TextBox.Code}"
+                         Name="codeBox"
+                         PreviewTextInput="codeBox_PreviewTextInput"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Top" Cursor="Arrow"/>
+                <TextBlock Style="{StaticResource TextBlock.ErrorMessage}"
+                           Name="codeErrorMessage"
+                           Margin="0,10,0,0"/>
                 <Button Content="Выслать код заново"
-                        Style="{StaticResource Button.RepeatCode}"/>
+                        Name="sendCodeAgain"
+                        Click="sendCodeAgain_Click"
+                        Style="{StaticResource Button.RepeatCode}"
+                        Margin="0,26,0,0"/>
             </StackPanel>
             <StackPanel Style="{StaticResource StackPanel.Base}" 
-                            Orientation="Vertical"
-                            Margin="0,480,0,0" Height="161">
+                        Orientation="Vertical"
+                        Margin="0,480,0,0">
                 <Button Content="Создать"
-                            Style="{StaticResource Button.LogIn}"/>
-                <TextBlock Margin="0,60,0,0" TextWrapping="NoWrap" TextAlignment="Center" FontSize="12" Width="301"
-                           Style="{StaticResource TextBlock.Subtitle}" Foreground="#FF434343">
-                           <Run Text="Нажав Создать, вы подтверждаете, что "/><LineBreak/>
+                        Name="createAccount"
+                        Click="createAccount_Click"
+                        Style="{StaticResource Button.LogIn}"/>
+                <TextBlock Margin="0,60,0,0"
+                           TextAlignment="Center" 
+                           TextWrapping="Wrap"
+                           FontSize="12" Width="300"
+                           Style="{StaticResource TextBlock.Subtitle}" 
+                           Foreground="#595959">
+                           <Run Text="Нажав Создать, вы подтверждаете, что"/>
                            <Run Text="прочитали и полностью понимаете"/> 
-                           <Hyperlink NavigateUri="" Cursor="Hand">условия</Hyperlink><LineBreak/> 
-                           <Hyperlink NavigateUri="" Cursor="Hand">предоставления услуг</Hyperlink> 
+                           <Hyperlink Cursor="Hand" Foreground="#FF0358AB">условия предоставления услуг</Hyperlink>
                            <Run Text="и"/> 
-                           <Hyperlink NavigateUri="" Cursor="Hand">положения политики</Hyperlink><LineBreak/>
-                           <Hyperlink NavigateUri="" Cursor="Hand">конфиденциальности</Hyperlink></TextBlock>
+                           <Hyperlink Cursor="Hand" Foreground="#FF0358AB">положения политики конфиденциальности</Hyperlink>
+                </TextBlock>
             </StackPanel>
+            <Border Style="{StaticResource Border.Loadnig}" Name="borderLoading"> 
+                <ProgressBar Style="{StaticResource ProgressBar}"/>
+            </Border>
         </Grid>
     </Border>
 </Page>

@@ -111,7 +111,8 @@
                         <Button Style="{StaticResource Button.SettingsPage}"
                                 Content="Выйти из учётной записи" 
                                 Margin="24,0,0,0"
-                                x:Name="tbSignOut"/>
+                                x:Name="tbSignOut"
+                                Click="tbSignOut_Click"/>
                     </StackPanel>
                 </StackPanel>
             </Border>

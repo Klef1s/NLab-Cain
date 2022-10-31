@@ -32,5 +32,4 @@ namespace NLab_Cain.Pages
             NavigationService.GoBack();
         }
     }
-
 }

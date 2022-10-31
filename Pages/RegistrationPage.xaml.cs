@@ -25,6 +25,9 @@ namespace NLab_Cain.Pages
     {
         ApplicationContext db = new ApplicationContext();
 
+        public static string email { get; set; }
+        public static string password { get; set; }
+
         public RegistrationPage()
         {
             InitializeComponent();
@@ -34,15 +37,13 @@ namespace NLab_Cain.Pages
         {
             borderLoading.Visibility = Visibility.Visible;
 
-            string email = inputEmail.Text.Trim();
-            string password = inputPassword.Password.Trim();
+            email = inputEmail.Text.Trim();
+            password = inputPassword.Password.Trim();
             string repeatPassword = inputRepeatPassword.Password.Trim();
 
             bool resultValidEmail = ValidatorExtensions.IsValidEmailAddress(email);
             bool resultValidPassword = ValidatorExtensions.IsValidPassword(password);
             bool resultvalidRepeatPassword = repeatPassword == password;
-
-            User addUser = new User { Email = email, Password = password };
 
             User? authUser = null;
 
@@ -70,15 +71,7 @@ namespace NLab_Cain.Pages
                 else
                 {
                     borderLoading.Visibility = Visibility.Hidden;
-
-                    db.Users.Add(addUser);
-                    db.SaveChanges();
-
-                    mailErrorMessage.Visibility = Visibility.Collapsed;
-                    passwordErrorMessage.Visibility = Visibility.Collapsed;
-                    repeatPasswordErrorMessage.Visibility = Visibility.Collapsed;
-
-                    NavigationService.Navigate(new AuthorizationPage());
+                    NavigationService.Navigate(new ConfirmationPage());
                 }
             }
             else
@@ -114,5 +107,4 @@ namespace NLab_Cain.Pages
             NavigationService.Navigate(new AuthorizationPage());
         }
     }
-
 }

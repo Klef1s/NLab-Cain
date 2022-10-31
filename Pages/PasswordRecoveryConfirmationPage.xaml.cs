@@ -29,9 +29,12 @@ namespace NLab_Cain.Pages
         bool isVisibleCodeBox = false;
         bool isSendMessage = false;
 
-        public static string email;
+        public static string email { get; set; }
 
         Random rnd = new Random();
+
+        string body;
+        string heading = "Восстановление пароля";
 
         public PasswordRecoveryConfirmationPage()
         {
@@ -48,9 +51,19 @@ namespace NLab_Cain.Pages
 
             if (isVisibleCodeBox == false)
             {
+                borderLoading.Visibility = Visibility.Visible;
+
                 code = rnd.Next(100000, 999999);
 
-                borderLoading.Visibility = Visibility.Visible;
+                body = "<html><body><br><img src =\"https://c.tenor.com/5tIBP029IYQAAAAC/chips.gif\" alt=\"BGL\"!><br>Здравствуйте уважаемый(я)</b>"
+                + "<br>Высылаем Вам код для сброса пароля."
+                + "<br>"
+                + "<br>Код: "
+                + "<big><b>"
+                + code
+                + "</b></big> "
+                + "<br>"
+                + "<br>Если Вы не пытались восстановить пароль, то проигнорируйте данное сообщение!</body></html>";
 
                 if (resultValidEmail == true)
                 {
@@ -67,13 +80,11 @@ namespace NLab_Cain.Pages
                     {
                         isSendMessage = true;
 
-                        SendMessage(email, Message, Smtp);
-
                         await Task.Run(() =>
                         {
                             try
                             {
-                                Smtp.Send(Message);
+                                SendMailMessage.SendMessage(email, body, heading, code);
                             }
                             catch (Exception ex)
                             {
@@ -128,21 +139,29 @@ namespace NLab_Cain.Pages
 
         private async void sendCodeAgain_Click(object sender, RoutedEventArgs e)
         {
+            code = rnd.Next(100000, 999999);
+
+            body = "<html><body><br><img src =\"https://c.tenor.com/5tIBP029IYQAAAAC/chips.gif\" alt=\"BGL\"!><br>Здравствуйте уважаемый(я)</b>"
+            + "<br>Высылаем Вам код для сброса пароля."
+            + "<br>"
+            + "<br>Код: "
+            + "<big><b>"
+            + code
+            + "</b></big> "
+            + "<br>"
+            + "<br>Если Вы не пытались восстановить пароль, то проигнорируйте данное сообщение!</body></html>";
+
             borderLoading.Visibility = Visibility.Visible;
 
             sendCodeAgain.IsEnabled = false;
 
             bool isVisibleLoading = true;
 
-            code = rnd.Next(100000, 999999);
-
-            SendMessage(email, Message, Smtp);
-
             await Task.Run(() =>
             {
                 try
-                { 
-                    Smtp.Send(Message);
+                {
+                    SendMailMessage.SendMessage(email, body, heading, code);
                 }
                 catch (Exception ex)
                 {
@@ -168,19 +187,27 @@ namespace NLab_Cain.Pages
         {
             NavigationService.Navigate(new AuthorizationPage());
         }
+    }
 
-        SmtpClient Smtp = new SmtpClient("smtp.mail.ru", 587);
-        MailMessage Message = new MailMessage();
-        private void SendMessage(string email, MailMessage Message, SmtpClient Smtp)
+    public class SendMailMessage
+    {
+        private static MailMessage Message = new MailMessage();
+        private static SmtpClient Smtp = new SmtpClient("smtp.mail.ru", 587);
+
+        private static void MessageTemplate(string email, string body, string heading, int code)
         {
             Smtp.EnableSsl = true;
             Smtp.Credentials = new NetworkCredential("aristrax337@mail.ru", "ZUFugBUuRP5qD4Rb2HHz");
             Message.From = new MailAddress("aristrax337@mail.ru");
             Message.To.Add(new MailAddress(email));
-            Message.Subject = "Восстановление пароля";
+            Message.Subject = heading;
             Message.IsBodyHtml = true;
-            Message.Body = "<html><body><br><img src =\"https://c.tenor.com/5tIBP029IYQAAAAC/chips.gif\" alt=\"BGL\"!><br>Здравствуйте уважаемый(я)</b>" + "<br>Высылаем Вам код для сброса пароля." + "<br>" + "<br>Код для сброса пароля: " + "<big><b>" + code + "</b></big> " + "<br>" + "<br>Если Вы не пытались восстановить пароль, то проигнорируйте данное сообщение!</body></html>";
+            Message.Body = body;
         }
-
+        public static void SendMessage(string email, string body, string heading, int code)
+        {
+            MessageTemplate(email, body, heading, code);
+            Smtp.Send(Message);
+        }
     }
 }

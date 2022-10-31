@@ -101,5 +101,3 @@ namespace NLab_Cain.Models.ChartModel
         };
     }
 }
-
-

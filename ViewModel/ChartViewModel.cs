@@ -14,12 +14,8 @@ using System.Threading.Tasks;
 
 namespace NLab_Cain.ViewModel
 {
-
     class ChartViewModel
     {
-        //static StreamReader str = new StreamReader("D:/Application/C#/NLab Cain/Resources/Files/token.txt", Encoding.UTF8);
-        //string token = str.ReadLine();
-
         public ObservableCollection<Item> Tracks { get; set; }
 
         public ChartViewModel()
