@@ -126,6 +126,38 @@ namespace NLab_Cain.Pages
             }
         }
 
+        private async void sendCodeAgain_Click(object sender, RoutedEventArgs e)
+        {
+            borderLoading.Visibility = Visibility.Visible;
+
+            sendCodeAgain.IsEnabled = false;
+
+            bool isVisibleLoading = true;
+
+            code = rnd.Next(100000, 999999);
+
+            SendMessage(email, Message, Smtp);
+
+            await Task.Run(() =>
+            {
+                try
+                { 
+                    Smtp.Send(Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+                isVisibleLoading = false;
+            });
+
+            if (isVisibleLoading == false)
+            {
+                borderLoading.Visibility = Visibility.Hidden;
+            }
+        }
+
         private void codeBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             e.Handled = "0123456789".IndexOf(e.Text) < 0;
@@ -149,5 +181,6 @@ namespace NLab_Cain.Pages
             Message.IsBodyHtml = true;
             Message.Body = "<html><body><br><img src =\"https://c.tenor.com/5tIBP029IYQAAAAC/chips.gif\" alt=\"BGL\"!><br>Здравствуйте уважаемый(я)</b>" + "<br>Высылаем Вам код для сброса пароля." + "<br>" + "<br>Код для сброса пароля: " + "<big><b>" + code + "</b></big> " + "<br>" + "<br>Если Вы не пытались восстановить пароль, то проигнорируйте данное сообщение!</body></html>";
         }
+
     }
 }
