@@ -50,7 +50,6 @@ namespace NLab_Cain.Pages
                     }
                 });
 
-                //Открытие нового окна
                 if (authUser != null)
                 {
                     borderLoading.Visibility = Visibility.Collapsed;
@@ -61,7 +60,6 @@ namespace NLab_Cain.Pages
                 else
                 {
                     borderLoading.Visibility = Visibility.Hidden;
-                    //ошибка, такого аккаунта не существует
                     ErrorMessage();
                 }
             }
@@ -70,19 +68,10 @@ namespace NLab_Cain.Pages
                 borderLoading.Visibility = Visibility.Hidden;
                 ErrorMessage();
             }
-
-
         }
 
         private void toRegistrationPage_Click(object sender, RoutedEventArgs e)
         {
-            //await Task.Run(() =>
-            //{
-            //    Dispatcher.Invoke((Action)(() =>
-            //    {
-                   
-            //    }));
-            //});
             NavigationService.Navigate(new RegistrationPage());
         }
 
