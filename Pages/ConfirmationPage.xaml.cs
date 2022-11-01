@@ -110,10 +110,12 @@ namespace NLab_Cain.Pages
 
         private void OpenMainWindow()
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
 
-            Application.Current.MainWindow.Close();
+                Application.Current.MainWindow.Close();
+
+                Application.Current.MainWindow = mainWindow;
         }
     }
 }
