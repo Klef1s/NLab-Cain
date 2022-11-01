@@ -207,7 +207,15 @@ namespace NLab_Cain.Pages
         public static void SendMessage(string email, string body, string heading, int code)
         {
             MessageTemplate(email, body, heading, code);
-            Smtp.Send(Message);
+            try
+            {
+                Smtp.Send(Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            
         }
     }
 }

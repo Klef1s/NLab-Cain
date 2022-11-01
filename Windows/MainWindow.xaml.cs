@@ -49,11 +49,15 @@ namespace NLab_Cain.Windows
 
         private void toSettings_Click(object sender, RoutedEventArgs e)
         {
+            homeButton.Source = new Uri("/Resources/Images/Icons/Home.svg", UriKind.Relative);
+            settingsButton.Source = new Uri("/Resources/Images/Icons/Settings_filled.svg", UriKind.Relative);
             frameMainWindow.Source = new Uri("/Pages/SettingsPage.xaml", UriKind.Relative);
         }
 
         private void toCharts_Click(object sender, RoutedEventArgs e)
         {
+            homeButton.Source = new Uri("/Resources/Images/Icons/Home_filled.svg", UriKind.Relative);
+            settingsButton.Source = new Uri("/Resources/Images/Icons/Settings.svg", UriKind.Relative);
             frameMainWindow.Source = new Uri("/Pages/ChartPage.xaml", UriKind.Relative);
         }
     }

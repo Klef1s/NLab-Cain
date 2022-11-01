@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:NLab_Cain.Windows"
+        xmlns:local="clr-namespace:NLab_Cain.Windows" xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
         mc:Ignorable="d"
         AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="Transparent"
         Height="768" Width="1280">
@@ -13,10 +13,16 @@
         <StackPanel Orientation="Vertical" Margin="0,50,1184,50" Width="auto" Height="668">
             <Button Style="{StaticResource Button.Home}" Margin="0,222,0,0" 
                     Name="toCharts" 
-                    Click="toCharts_Click"/>
+                    Click="toCharts_Click"
+                    Background="Transparent">
+                <svgc:SvgViewbox Name="homeButton" Source="\Resources\Images\Icons\Home_filled.svg" Width="32" Height="32"/>
+            </Button>
             <Button Style="{StaticResource Button.Settings}" Margin="0,30,0,0" 
                     Name="toSettings" 
-                    Click="toSettings_Click"/>
+                    Click="toSettings_Click"
+                    Background="Transparent">
+                <svgc:SvgViewbox Name="settingsButton" Source="\Resources\Images\Icons\Settings.svg" Width="32" Height="32"/>
+            </Button>
         </StackPanel>
         
         <Rectangle Fill="Gray" 

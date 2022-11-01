@@ -36,6 +36,7 @@ namespace NLab_Cain.Pages
 
         public ConfirmationPage()
         {
+            InitializeComponent();
 
             code = rnd.Next(100000, 999999);
 
@@ -50,8 +51,6 @@ namespace NLab_Cain.Pages
             + "<br>Благодарим вас за регистрацию в приложении Cain!</body></html>";
 
             SendMailMessage.SendMessage(email, body, heading, code);
-
-            InitializeComponent();
         }
 
         private async void createAccount_Click(object sender, RoutedEventArgs e)

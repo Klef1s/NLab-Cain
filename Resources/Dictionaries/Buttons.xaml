@@ -188,30 +188,10 @@
     </Style>
 
     <Style x:Key="Button.Home" TargetType="Button" BasedOn="{StaticResource Button.Animation}">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border x:Name="border" CornerRadius="10" Background="Transparent">
-                        <svgc:SvgViewbox Source="\Resources\Images\Icons\Home.svg" Width="32" Height="32"/>
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
         <Setter Property="Width" Value="68"/>
         <Setter Property="Height" Value="56"/>
     </Style>
-    <Style x:Key="Button.Settings" TargetType="Button" BasedOn="{StaticResource Button.Animation}">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border x:Name="border" CornerRadius="10" Background="Transparent">
-                        <svgc:SvgViewbox Source="\Resources\Images\Icons\Settings.svg" Width="32" Height="32"/>
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-        <Setter Property="Width" Value="68"/>
-        <Setter Property="Height" Value="56"/>
+    <Style x:Key="Button.Settings" TargetType="Button" BasedOn="{StaticResource Button.Home}">
     </Style>
 
     <Style x:Key="Button.RepeatCode" TargetType="Button" BasedOn="{StaticResource Button.Animation}">

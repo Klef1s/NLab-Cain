@@ -25,12 +25,14 @@
     <None Remove="Resources\Images\Icons\Google.svg" />
     <None Remove="Resources\Images\Icons\HideApp.svg" />
     <None Remove="Resources\Images\Icons\Home.svg" />
+    <None Remove="Resources\Images\Icons\Home_filled.svg" />
     <None Remove="Resources\Images\Icons\Library.svg" />
     <None Remove="Resources\Images\Icons\NextPage.svg" />
 	<None Remove="Resources\Images\Icons\Pencil.svg" />
 	<None Remove="Resources\Images\Icons\Quit.svg" />
     <None Remove="Resources\Images\Icons\RussianFlag.svg" />
     <None Remove="Resources\Images\Icons\Settings.svg" />
+    <None Remove="Resources\Images\Icons\Settings_filled.svg" />
     <None Remove="Resources\Images\Icons\Vk.svg" />
   </ItemGroup>
 
@@ -82,11 +84,13 @@
 		<Resource Include="Resources\Images\Icons\Google.svg" />
 		<Resource Include="Resources\Images\Icons\HideApp.svg" />
 		<Resource Include="Resources\Images\Icons\Home.svg" />
+		<Resource Include="Resources\Images\Icons\Home_filled.svg" />
 		<Resource Include="Resources\Images\Icons\Library.svg" />
 		<Resource Include="Resources\Images\Icons\NextPage.svg" />
 		<Resource Include="Resources\Images\Icons\Pencil.svg" />
 		<Resource Include="Resources\Images\Icons\Quit.svg" />
 		<Resource Include="Resources\Images\Icons\Settings.svg" />
+		<Resource Include="Resources\Images\Icons\Settings_filled.svg" />
 		<Resource Include="Resources\Images\Icons\Vk.svg" />
 		<Resource Include="Resources\Images\Icons\RussianFlag.svg" />
 	</ItemGroup>
